@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Brand Name</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="navbar"><div class="container navbar__inner">
+  <a class="navbar__logo" href="index.html">Brand Name</a>
+  <button class="navbar__toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  <ul class="navbar__links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="branches.html">Branches</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html" aria-current="page">Contact</a></li>
+  </ul></div></header>
+<main id="main">
+<section class="section"><div class="container">
+<div class="section__head"><h1>Contact us</h1><p>Questions, orders, or feedback? Send us a message and we will reply within one to two days.</p></div>
+<div class="contact">
+<form class="form" id="contact-form" novalidate>
+<label for="name">Full name</label><input id="name" name="name" type="text" required autocomplete="name">
+<label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email">
+<label for="subject">Subject</label><input id="subject" name="subject" type="text">
+<label for="msg">Message</label><textarea id="msg" name="msg" rows="5" required></textarea>
+<p class="form__status" id="form-status" role="status" aria-live="polite"></p>
+<button class="btn" type="submit">Send message</button></form>
+<aside class="contact__info">
+<div class="card"><div class="card__body"><h3 class="card__title">Get in touch</h3>
+<p class="card__text">Email: email@example.com</p><p class="card__text">Phone: +63 900 000 0000</p>
+<p class="card__text">Facebook: facebook.com/yourpage</p></div></div>
+<div class="card"><div class="card__body"><h3 class="card__title">Opening hours</h3>
+<p class="card__text">Monday to Friday: 9:00 AM to 8:00 PM</p><p class="card__text">Saturday and Sunday: 10:00 AM to 9:00 PM</p></div></div>
+<div class="card"><div class="card__body"><h3 class="card__title">Main branch</h3>
+<p class="card__text">Street, Barangay, City, Philippines</p><a class="btn btn--ghost" href="branches.html">See all branches</a></div></div>
+</aside></div></div></section>
+</main>
+<footer class="footer"><div class="container">
+  <div class="footer__grid">
+    <div><h3>Brand Name</h3><p>Short tagline goes here.</p></div>
+    <div><h3>Pages</h3><ul><li><a href="menu.html">Menu</a></li><li><a href="branches.html">Branches</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h3>Contact</h3><ul><li>email@example.com</li><li>+63 900 000 0000</li></ul></div>
+  </div>
+  <div class="footer__bottom">&copy; <span id="year">2026</span> Brand Name. All rights reserved.</div>
+</div></footer>
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

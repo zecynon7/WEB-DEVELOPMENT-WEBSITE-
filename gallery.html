@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gallery | Brand Name</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="navbar"><div class="container navbar__inner">
+  <a class="navbar__logo" href="index.html">Brand Name</a>
+  <button class="navbar__toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  <ul class="navbar__links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="branches.html">Branches</a></li>
+    <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul></div></header>
+<main id="main">
+<section class="section"><div class="container">
+<div class="section__head"><h1>Gallery</h1><p>A look at our products, branches, and events.</p></div>
+<div class="filters" role="group" aria-label="Filter photos">
+<button class="btn filters__btn is-active" data-filter="all">All</button>
+<button class="btn btn--ghost filters__btn" data-filter="products">Products</button>
+<button class="btn btn--ghost filters__btn" data-filter="branches">Branches</button>
+<button class="btn btn--ghost filters__btn" data-filter="events">Events</button></div>
+<div class="gallery">
+<figure class="gallery__item" data-cat="products"><button class="gallery__btn" data-full="images/gallery-01.jpg" data-caption="Caption 1"><img src="images/gallery-01.jpg" alt="Describe photo 1" loading="lazy"></button><figcaption>Caption 1</figcaption></figure>
+<figure class="gallery__item" data-cat="branches"><button class="gallery__btn" data-full="images/gallery-02.jpg" data-caption="Caption 2"><img src="images/gallery-02.jpg" alt="Describe photo 2" loading="lazy"></button><figcaption>Caption 2</figcaption></figure>
+<figure class="gallery__item" data-cat="products"><button class="gallery__btn" data-full="images/gallery-03.jpg" data-caption="Caption 3"><img src="images/gallery-03.jpg" alt="Describe photo 3" loading="lazy"></button><figcaption>Caption 3</figcaption></figure>
+<figure class="gallery__item" data-cat="events"><button class="gallery__btn" data-full="images/gallery-04.jpg" data-caption="Caption 4"><img src="images/gallery-04.jpg" alt="Describe photo 4" loading="lazy"></button><figcaption>Caption 4</figcaption></figure>
+<figure class="gallery__item" data-cat="branches"><button class="gallery__btn" data-full="images/gallery-05.jpg" data-caption="Caption 5"><img src="images/gallery-05.jpg" alt="Describe photo 5" loading="lazy"></button><figcaption>Caption 5</figcaption></figure>
+<figure class="gallery__item" data-cat="products"><button class="gallery__btn" data-full="images/gallery-06.jpg" data-caption="Caption 6"><img src="images/gallery-06.jpg" alt="Describe photo 6" loading="lazy"></button><figcaption>Caption 6</figcaption></figure>
+<figure class="gallery__item" data-cat="events"><button class="gallery__btn" data-full="images/gallery-07.jpg" data-caption="Caption 7"><img src="images/gallery-07.jpg" alt="Describe photo 7" loading="lazy"></button><figcaption>Caption 7</figcaption></figure>
+<figure class="gallery__item" data-cat="products"><button class="gallery__btn" data-full="images/gallery-08.jpg" data-caption="Caption 8"><img src="images/gallery-08.jpg" alt="Describe photo 8" loading="lazy"></button><figcaption>Caption 8</figcaption></figure>
+</div></div></section>
+<dialog class="lightbox" id="lightbox"><button class="lightbox__close" aria-label="Close">&times;</button><img alt=""><p></p></dialog>
+</main>
+<footer class="footer"><div class="container">
+  <div class="footer__grid">
+    <div><h3>Brand Name</h3><p>Short tagline goes here.</p></div>
+    <div><h3>Pages</h3><ul><li><a href="menu.html">Menu</a></li><li><a href="branches.html">Branches</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h3>Contact</h3><ul><li>email@example.com</li><li>+63 900 000 0000</li></ul></div>
+  </div>
+  <div class="footer__bottom">&copy; <span id="year">2026</span> Brand Name. All rights reserved.</div>
+</div></footer>
+<script src="js/main.js"></script>
+<script src="js/gallery.js"></script>
+</body>
+</html>
