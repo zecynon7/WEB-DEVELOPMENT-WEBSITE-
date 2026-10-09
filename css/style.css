@@ -1,0 +1,11 @@
+/* Main stylesheet: it only imports the smaller files, in this order. */
+@import url("base.css");
+@import url("layout.css");
+@import url("header.css");
+@import url("buttons.css");
+@import url("cards.css");
+@import url("forms.css");
+@import url("gallery.css");
+@import url("staff.css");
+@import url("footer.css");
+@import url("responsive.css");

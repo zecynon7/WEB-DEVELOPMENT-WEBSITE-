@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Staff Access | Café BLK &amp; BRWN</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-box">
+        <a class="brand" href="index.html"
+          ><span class="logo">B</span> Café BLK &amp; BRWN — Staff</a
+        >
+        <span class="badge">Staff Area</span>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section id="login" class="login-box">
+          <form class="form-box" id="login-form">
+            <h1 class="center" style="font-size: 30px">Staff login</h1>
+            <p class="small center">
+              For Café BLK &amp; BRWN staff and branch admins only.
+            </p>
+            <label for="semail">Branch email</label
+            ><input type="email" id="semail" required />
+            <label for="spassword">Password</label
+            ><input type="password" id="spassword" required />
+            <p class="error" id="login-error"></p>
+            <div class="buttons">
+              <button class="btn btn-primary" type="submit" style="width: 100%">
+                Enter Dashboard
+              </button>
+            </div>
+            <p class="small center" style="margin-top: 14px">
+              Demo login: staff@cafeblkbrwn.com / brwn2026
+            </p>
+          </form>
+        </section>
+
+        <section id="dashboard" class="section hidden">
+          <h1>Reservations &amp; Inquiries</h1>
+          <div class="tabs">
+            <button class="tab on" onclick="showTable(this, 'reservations')">
+              Reservations
+            </button>
+            <button class="tab" onclick="showTable(this, 'inquiries')">
+              Contact Inquiries
+            </button>
+            <button class="tab" onclick="logout()">Log out</button>
+          </div>
+          <div class="stats">
+            <div class="stat"><b id="count-pending">3</b>Pending</div>
+            <div class="stat"><b id="count-confirmed">2</b>Confirmed</div>
+            <div class="stat"><b>2</b>New inquiries</div>
+          </div>
+          <div class="table-box" id="reservations">
+            <table>
+              <tr>
+                <th>Guest</th>
+                <th>Branch</th>
+                <th>Date &amp; time</th>
+                <th>Guests</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+              <tr>
+                <td>Maria Santos</td>
+                <td>Trece Martires</td>
+                <td>Sept 22, 6:00 PM</td>
+                <td>4</td>
+                <td><span class="pill pending">Pending</span></td>
+                <td>
+                  <button class="link-button" onclick="confirmBooking(this)">
+                    Mark Confirmed
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>Jake Lorenzo</td>
+                <td>SM City Tanza</td>
+                <td>Sept 22, 7:30 PM</td>
+                <td>2</td>
+                <td><span class="pill confirmed">Confirmed</span></td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>Ana Dela Cruz</td>
+                <td>Kawit</td>
+                <td>Sept 23, 5:00 PM</td>
+                <td>6</td>
+                <td><span class="pill pending">Pending</span></td>
+                <td>
+                  <button class="link-button" onclick="confirmBooking(this)">
+                    Mark Confirmed
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>Paolo Reyes</td>
+                <td>Naic</td>
+                <td>Sept 23, 6:30 PM</td>
+                <td>3</td>
+                <td><span class="pill confirmed">Confirmed</span></td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <td>Grace Villanueva</td>
+                <td>General Trias</td>
+                <td>Sept 24, 4:00 PM</td>
+                <td>5</td>
+                <td><span class="pill pending">Pending</span></td>
+                <td>
+                  <button class="link-button" onclick="confirmBooking(this)">
+                    Mark Confirmed
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="table-box hidden" id="inquiries">
+            <table>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Topic</th>
+                <th>Message</th>
+              </tr>
+              <tr>
+                <td>Lia Cruz</td>
+                <td>lia@example.com</td>
+                <td>Branch inquiry</td>
+                <td>What time does the Kawit branch open?</td>
+              </tr>
+              <tr>
+                <td>Mark Tan</td>
+                <td>mark@example.com</td>
+                <td>Feedback</td>
+                <td>Loved the Lychee juice!</td>
+              </tr>
+            </table>
+          </div>
+          <p class="notice small" style="margin-top: 20px">
+            Demo note: these rows are sample data. A live version needs a
+            backend or a form service so real requests appear here.
+          </p>
+        </section>
+      </div>
+    </main>
+    <script src="js/staff.js"></script>
+  </body>
+</html>

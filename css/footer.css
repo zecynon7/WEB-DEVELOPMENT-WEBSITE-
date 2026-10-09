@@ -1,0 +1,37 @@
+/* Footer */
+.footer {
+    background: #1E1711;
+    color: #EFE5D8;
+    padding: 50px 0 20px;
+    margin-top: 50px;
+}
+
+.footer h3 {
+    color: white;
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+.footer-box {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 30px;
+}
+
+.footer a {
+    display: block;
+    text-decoration: none;
+    padding: 3px 0;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    border-top: 1px solid #3a2e24;
+    margin-top: 30px;
+    padding-top: 16px;
+    font-size: 13px;
+    color: #cdbca8;
+}

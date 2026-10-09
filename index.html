@@ -1,64 +1,222 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Home | Brand Name</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="navbar"><div class="container navbar__inner">
-  <a class="navbar__logo" href="index.html">Brand Name</a>
-  <button class="navbar__toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
-  <ul class="navbar__links">
-    <li><a href="index.html" aria-current="page">Home</a></li>
-    <li><a href="menu.html">Menu</a></li>
-    <li><a href="branches.html">Branches</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul></div></header>
-<main id="main">
-<section class="hero"><div class="container hero__grid">
-  <div><h1>Your main headline goes here</h1><p>One or two sentences that say what this business offers and why people should visit.</p>
-  <div class="hero__actions"><a class="btn" href="menu.html">View menu</a><a class="btn btn--ghost" href="branches.html">Find a branch</a></div></div>
-  <img class="hero__img" src="images/hero.jpg" alt="Hero image">
-</div></section>
-<section class="section"><div class="container"><div class="section__head"><h2>Featured items</h2><p>Reusable card component: copy this block for products, branches or gallery.</p></div>
-<div class="grid">
-<article class="card">
-  <img class="card__img" src="images/placeholder.jpg" alt="Describe the image" loading="lazy">
-  <div class="card__body">
-    <h3 class="card__title">Item name</h3>
-    <p class="card__text">Short description of this item.</p>
-    <span class="card__meta">PHP 000</span>
-  </div></article>
-<article class="card">
-  <img class="card__img" src="images/placeholder.jpg" alt="Describe the image" loading="lazy">
-  <div class="card__body">
-    <h3 class="card__title">Item name</h3>
-    <p class="card__text">Short description of this item.</p>
-    <span class="card__meta">PHP 000</span>
-  </div></article>
-<article class="card">
-  <img class="card__img" src="images/placeholder.jpg" alt="Describe the image" loading="lazy">
-  <div class="card__body">
-    <h3 class="card__title">Item name</h3>
-    <p class="card__text">Short description of this item.</p>
-    <span class="card__meta">PHP 000</span>
-  </div></article>
-</div></div></section>
-</main>
-<footer class="footer"><div class="container">
-  <div class="footer__grid">
-    <div><h3>Brand Name</h3><p>Short tagline goes here.</p></div>
-    <div><h3>Pages</h3><ul><li><a href="menu.html">Menu</a></li><li><a href="branches.html">Branches</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    <div><h3>Contact</h3><ul><li>email@example.com</li><li>+63 900 000 0000</li></ul></div>
-  </div>
-  <div class="footer__bottom">&copy; <span id="year">2026</span> Brand Name. All rights reserved.</div>
-</div></footer>
-<script src="js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home | Café BLK &amp; BRWN</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-box">
+        <a class="brand" href="index.html"
+          ><span class="logo">B</span> Café BLK &amp; BRWN</a
+        >
+        <button
+          class="menu-button"
+          onclick="toggleMenu()"
+          aria-label="Open menu"
+        >
+          &#9776;
+        </button>
+        <nav class="nav" id="nav">
+          <a href="index.html" class="active">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="menu.html">Menu</a>
+          <a href="branches.html">Branches</a>
+          <a href="reserve.html">Reserve</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a class="btn btn-outline header-button" href="branches.html"
+          >Find a Branch</a
+        >
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container hero-box">
+          <div>
+            <p class="label">TANZA, CAVITE · SINCE 2021</p>
+            <h1>Slow down. Sip better.</h1>
+            <p class="lead">
+              A warm place to take a break, meet a friend, or enjoy a good cup
+              of coffee — with branches across Cavite and Metro Manila.
+            </p>
+            <div class="buttons">
+              <a class="btn btn-primary" href="branches.html"
+                >Find Your Nearest Branch</a
+              ><a class="btn btn-dark" href="menu.html">View Menu</a>
+            </div>
+          </div>
+          <div class="ph ph1 ph-hero">Hero photo (placeholder)</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>Who we are</h2>
+          <p class="lead">
+            Café BLK &amp; BRWN started in Barangay Capipisa, Tanza, in May
+            2021. What began as one small coffee shop has grown into a
+            multi-branch café and restaurant serving espresso-based coffee, chai
+            and chocolate drinks, iced drinks, Freskaró fruit juices, and food
+            like pasta and sandwiches.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>Freskaró Juices, made fresh</h2>
+          <p class="lead">Our confirmed best-selling refreshers.</p>
+          <div class="grid">
+            <div class="card">
+              <div class="ph ph1">Photo: Trueberries</div>
+              <h3>Trueberries</h3>
+              <p class="small">Add ₱25 for extra shot</p>
+              <span class="price">₱110</span>
+            </div>
+            <div class="card">
+              <div class="ph ph2">Photo: AVC</div>
+              <h3>AVC</h3>
+              <p class="small">Add ₱25 for extra shot</p>
+              <span class="price">₱100</span>
+            </div>
+            <div class="card">
+              <div class="ph ph3">Photo: Lychee</div>
+              <h3>Lychee</h3>
+              <p class="small">Add ₱25 for extra shot</p>
+              <span class="price">₱100</span>
+            </div>
+            <div class="card">
+              <div class="ph ph4">Photo: Passion Fruit</div>
+              <h3>Passion Fruit</h3>
+              <p class="small">Add ₱25 for extra shot</p>
+              <span class="price">₱100</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="panel">
+            <h2>Which branch is closest to you?</h2>
+            <p>
+              Search all seven branches across Cavite and Metro Manila, and get
+              directions in one tap.
+            </p>
+            <div class="chips">
+              <span class="chip">Capipisa, Tanza — Main Branch</span
+              ><span class="chip">SM City Tanza</span
+              ><span class="chip">Festival Mall Alabang</span
+              ><span class="chip">+4 more</span>
+            </div>
+            <a class="btn btn-primary" href="branches.html"
+              >Open Branch Finder</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>What’s Brewing?</h2>
+          <p class="notice">
+            We don’t have confirmed seasonal drinks or promotions yet. This
+            space is reserved for new products, branch announcements, and
+            seasonal items once the café confirms them.
+            <span class="badge">COMING SOON</span>
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container hero-box">
+          <div>
+            <h2>From one branch in Tanza, to seven</h2>
+            <p class="lead">
+              What started with passion in Barangay Capipisa has grown across
+              Cavite and into Metro Manila — same coffee, same welcome.
+            </p>
+            <a class="btn btn-outline" href="about.html">Read Our Story</a>
+          </div>
+          <div class="ph ph3 ph-wide">Café photo (placeholder)</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>Gallery</h2>
+          <div class="grid">
+            <div class="ph ph1">Photo 1</div>
+            <div class="ph ph2">Photo 2</div>
+            <div class="ph ph3">Photo 3</div>
+            <div class="ph ph4">Photo 4</div>
+          </div>
+          <div class="buttons">
+            <a class="btn btn-outline" href="gallery.html">View Full Gallery</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="panel center">
+            <h2>Follow along</h2>
+            <p>
+              Updates, new branches, and everyday café moments —
+              @cafeblkandbrwn.
+            </p>
+            <div class="buttons" style="justify-content: center">
+              <a
+                class="btn btn-primary"
+                href="https://web.facebook.com/cafeblkandbrwn"
+                target="_blank"
+                >Facebook</a
+              ><a
+                class="btn btn-light"
+                href="https://www.instagram.com/cafeblkandbrwn"
+                target="_blank"
+                >Instagram</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-box">
+          <div>
+            <h3>Café BLK &amp; BRWN</h3>
+            <p class="small">
+              Slow down. Sip better. A coffee shop and restaurant with branches
+              across Cavite and Metro Manila.
+            </p>
+          </div>
+          <div>
+            <h3>Quick links</h3>
+            <a href="index.html">Home</a><a href="about.html">About Us</a
+            ><a href="menu.html">Menu</a><a href="branches.html">Branches</a
+            ><a href="reserve.html">Reserve</a><a href="gallery.html">Gallery</a
+            ><a href="contact.html">Contact</a>
+          </div>
+          <div>
+            <h3>Reach out</h3>
+            <p class="small">
+              +63 927 007 3822<br />cafeblkandbrwn@gmail.com<br />Facebook &amp;
+              Instagram: @cafeblkandbrwn
+            </p>
+          </div>
+        </div>
+        <p class="copyright">
+          © 2026 Café BLK &amp; BRWN. All rights reserved. Website concept: “One
+          Coffee Stop, Wherever You Are” — CC 312 Web Development project.
+        </p>
+      </div>
+    </footer>
+    <script src="js/nav.js"></script>
+  </body>
 </html>

@@ -1,59 +1,227 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Branches | Brand Name</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="navbar"><div class="container navbar__inner">
-  <a class="navbar__logo" href="index.html">Brand Name</a>
-  <button class="navbar__toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
-  <ul class="navbar__links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="menu.html">Menu</a></li>
-    <li><a href="branches.html" aria-current="page">Branches</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul></div></header>
-<main id="main">
-<section class="section"><div class="container"><div class="section__head"><h1>Branches</h1><p>Page Developer: one card per branch (name, address, hours).</p></div>
-<div class="grid">
-<article class="card">
-  <img class="card__img" src="images/placeholder.jpg" alt="Describe the image" loading="lazy">
-  <div class="card__body">
-    <h3 class="card__title">Item name</h3>
-    <p class="card__text">Short description of this item.</p>
-    <span class="card__meta">PHP 000</span>
-  </div></article>
-<article class="card">
-  <img class="card__img" src="images/placeholder.jpg" alt="Describe the image" loading="lazy">
-  <div class="card__body">
-    <h3 class="card__title">Item name</h3>
-    <p class="card__text">Short description of this item.</p>
-    <span class="card__meta">PHP 000</span>
-  </div></article>
-<article class="card">
-  <img class="card__img" src="images/placeholder.jpg" alt="Describe the image" loading="lazy">
-  <div class="card__body">
-    <h3 class="card__title">Item name</h3>
-    <p class="card__text">Short description of this item.</p>
-    <span class="card__meta">PHP 000</span>
-  </div></article>
-</div></div></section>
-</main>
-<footer class="footer"><div class="container">
-  <div class="footer__grid">
-    <div><h3>Brand Name</h3><p>Short tagline goes here.</p></div>
-    <div><h3>Pages</h3><ul><li><a href="menu.html">Menu</a></li><li><a href="branches.html">Branches</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    <div><h3>Contact</h3><ul><li>email@example.com</li><li>+63 900 000 0000</li></ul></div>
-  </div>
-  <div class="footer__bottom">&copy; <span id="year">2026</span> Brand Name. All rights reserved.</div>
-</div></footer>
-<script src="js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Branches | Café BLK &amp; BRWN</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-box">
+        <a class="brand" href="index.html"
+          ><span class="logo">B</span> Café BLK &amp; BRWN</a
+        >
+        <button
+          class="menu-button"
+          onclick="toggleMenu()"
+          aria-label="Open menu"
+        >
+          &#9776;
+        </button>
+        <nav class="nav" id="nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="menu.html">Menu</a>
+          <a href="branches.html" class="active">Branches</a>
+          <a href="reserve.html">Reserve</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a class="btn btn-outline header-button" href="branches.html"
+          >Find a Branch</a
+        >
+      </div>
+    </header>
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1>Find a branch near you</h1>
+          <p class="lead">
+            Search by branch name or area, or filter by region.
+          </p>
+          <input
+            class="search"
+            type="text"
+            id="search"
+            placeholder="Search by branch name or area"
+            onkeyup="filterBranches()"
+            aria-label="Search branches"
+          />
+          <div class="tabs">
+            <button class="tab on" onclick="setRegion(this, 'All')">All</button>
+            <button class="tab" onclick="setRegion(this, 'Cavite')">
+              Cavite
+            </button>
+            <button class="tab" onclick="setRegion(this, 'Metro Manila')">
+              Metro Manila
+            </button>
+          </div>
+          <p class="small" id="count">Showing 7 of 7 branches</p>
+          <p
+            class="notice center"
+            style="margin: 16px 0 26px; padding: 40px 20px"
+          >
+            Interactive map coming soon. Use “Get Directions” on any branch card
+            in the meantime.
+          </p>
+          <div class="grid grid-big">
+            <div class="card branch-card" data-region="Cavite">
+              <p class="region">Cavite</p>
+              <h3>Capipisa, Tanza – Main Branch</h3>
+              <p class="small">Tanza, Cavite</p>
+              <p class="small">Original and main branch of Café BLK & BRWN.</p>
+              <p class="small"><i>Hours coming soon.</i></p>
+              <div class="buttons">
+                <a
+                  class="btn btn-primary"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=Café+BLK+%26+BRWN+Tanza,+Cavite"
+                  target="_blank"
+                  >Get Directions</a
+                >
+                <a class="btn btn-outline" href="reserve.html">Reserve Here</a>
+              </div>
+            </div>
+            <div class="card branch-card" data-region="Cavite">
+              <p class="region">Cavite</p>
+              <h3>Naic Branch</h3>
+              <p class="small">Naic, Cavite</p>
+              <p class="small">Serves customers within the Naic area.</p>
+              <p class="small"><i>Hours coming soon.</i></p>
+              <div class="buttons">
+                <a
+                  class="btn btn-primary"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=Café+BLK+%26+BRWN+Naic,+Cavite"
+                  target="_blank"
+                  >Get Directions</a
+                >
+                <a class="btn btn-outline" href="reserve.html">Reserve Here</a>
+              </div>
+            </div>
+            <div class="card branch-card" data-region="Cavite">
+              <p class="region">Cavite</p>
+              <h3>General Trias Branch</h3>
+              <p class="small">General Trias, Cavite</p>
+              <p class="small">Expands the café’s presence within Cavite.</p>
+              <p class="small"><i>Hours coming soon.</i></p>
+              <div class="buttons">
+                <a
+                  class="btn btn-primary"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=Café+BLK+%26+BRWN+General+Trias,+Cavite"
+                  target="_blank"
+                  >Get Directions</a
+                >
+                <a class="btn btn-outline" href="reserve.html">Reserve Here</a>
+              </div>
+            </div>
+            <div class="card branch-card" data-region="Cavite">
+              <p class="region">Cavite</p>
+              <h3>Kawit Branch</h3>
+              <p class="small">Kawit, Cavite</p>
+              <p class="small">
+                Another accessible location for Cavite customers.
+              </p>
+              <p class="small"><i>Hours coming soon.</i></p>
+              <div class="buttons">
+                <a
+                  class="btn btn-primary"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=Café+BLK+%26+BRWN+Kawit,+Cavite"
+                  target="_blank"
+                  >Get Directions</a
+                >
+                <a class="btn btn-outline" href="reserve.html">Reserve Here</a>
+              </div>
+            </div>
+            <div class="card branch-card" data-region="Cavite">
+              <p class="region">Cavite</p>
+              <h3>Trece Martires Branch</h3>
+              <p class="small">Trece Martires City, Cavite</p>
+              <p class="small">
+                Extends the brand toward the Tanza–Trece Martires area.
+              </p>
+              <p class="small"><i>Hours coming soon.</i></p>
+              <div class="buttons">
+                <a
+                  class="btn btn-primary"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=Café+BLK+%26+BRWN+Trece+Martires+City,+Cavite"
+                  target="_blank"
+                  >Get Directions</a
+                >
+                <a class="btn btn-outline" href="reserve.html">Reserve Here</a>
+              </div>
+            </div>
+            <div class="card branch-card" data-region="Cavite">
+              <p class="region">Cavite</p>
+              <h3>SM City Tanza Branch</h3>
+              <p class="small">SM City Tanza, Cavite</p>
+              <p class="small">
+                Mall-based location serving customers within the area.
+              </p>
+              <p class="small"><i>Hours coming soon.</i></p>
+              <div class="buttons">
+                <a
+                  class="btn btn-primary"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=Café+BLK+%26+BRWN+SM+City+Tanza,+Cavite"
+                  target="_blank"
+                  >Get Directions</a
+                >
+                <a class="btn btn-outline" href="reserve.html">Reserve Here</a>
+              </div>
+            </div>
+            <div class="card branch-card" data-region="Metro Manila">
+              <p class="region">Metro Manila</p>
+              <h3>Festival Mall Alabang Branch</h3>
+              <p class="small">Festival Mall, Alabang, Metro Manila</p>
+              <p class="small">
+                Mall-based location extending the brand into Metro Manila.
+              </p>
+              <p class="small"><i>Hours coming soon.</i></p>
+              <div class="buttons">
+                <a
+                  class="btn btn-primary"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=Café+BLK+%26+BRWN+Festival+Mall,+Alabang,+Metro+Manila"
+                  target="_blank"
+                  >Get Directions</a
+                >
+                <a class="btn btn-outline" href="reserve.html">Reserve Here</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-box">
+          <div>
+            <h3>Café BLK &amp; BRWN</h3>
+            <p class="small">
+              Slow down. Sip better. A coffee shop and restaurant with branches
+              across Cavite and Metro Manila.
+            </p>
+          </div>
+          <div>
+            <h3>Quick links</h3>
+            <a href="index.html">Home</a><a href="about.html">About Us</a
+            ><a href="menu.html">Menu</a><a href="branches.html">Branches</a
+            ><a href="reserve.html">Reserve</a><a href="gallery.html">Gallery</a
+            ><a href="contact.html">Contact</a>
+          </div>
+          <div>
+            <h3>Reach out</h3>
+            <p class="small">
+              +63 927 007 3822<br />cafeblkandbrwn@gmail.com<br />Facebook &amp;
+              Instagram: @cafeblkandbrwn
+            </p>
+          </div>
+        </div>
+        <p class="copyright">
+          © 2026 Café BLK &amp; BRWN. All rights reserved. Website concept: “One
+          Coffee Stop, Wherever You Are” — CC 312 Web Development project.
+        </p>
+      </div>
+    </footer>
+    <script src="js/nav.js"></script>
+    <script src="js/branches.js"></script>
+  </body>
 </html>
