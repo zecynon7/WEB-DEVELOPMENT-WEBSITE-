@@ -25,6 +25,13 @@
     padding: 70px 0;
 }
 
+.hero-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
 .two-col {
     display: grid;
     grid-template-columns: 1fr 1fr;

@@ -43,6 +43,7 @@
   }
 
   /* everything becomes one column */
+  .hero-box,
   .two-col,
   .form-layout,
   .contact-layout,
