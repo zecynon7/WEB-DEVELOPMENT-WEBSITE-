@@ -1,0 +1,68 @@
+/* Phone and tablet layout (screens 800px wide or less) */
+@media (max-width: 800px) {
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .section {
+    padding: 36px 0;
+  }
+
+  /* menu button appears, links hide until it is clicked */
+  .menu-button {
+    display: block;
+  }
+
+  .header-button {
+    display: none;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: #FBF6F0;
+    padding: 10px 20px 20px;
+    border-bottom: 1px solid #EFE5D8;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 12px 0;
+  }
+
+  /* everything becomes one column */
+  .hero-box,
+  .two-col,
+  .form-layout,
+  .contact-layout,
+  .footer-box,
+  .two-fields,
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .ph-hero {
+    height: 260px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery .big {
+    grid-column: span 2;
+    height: 220px;
+  }
+}

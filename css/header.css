@@ -1,0 +1,68 @@
+/* Top bar and navigation */
+.header {
+    background: #FBF6F0;
+    border-bottom: 1px solid #EFE5D8;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Fraunces, Georgia, serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: #1E1711;
+    text-decoration: none;
+}
+
+.logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #1E1711;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav {
+    display: flex;
+    gap: 22px;
+}
+
+.nav a {
+    text-decoration: none;
+    padding: 8px 2px;
+}
+
+.nav a:hover {
+    color: #A34A19;
+}
+
+.nav a.active {
+    color: #8A5A2A;
+    font-weight: 600;
+    border-bottom: 2px solid #8A5A2A;
+}
+
+.menu-button {
+    display: none;
+    font-size: 24px;
+    background: white;
+    border: 1px solid #EFE5D8;
+    border-radius: 8px;
+    width: 46px;
+    height: 46px;
+    cursor: pointer;
+}

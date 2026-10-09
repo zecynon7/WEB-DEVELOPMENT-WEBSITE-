@@ -1,0 +1,25 @@
+/* Gallery page and menu groups */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.gallery .ph {
+    height: 190px;
+}
+
+.gallery .big {
+    grid-column: span 2;
+    grid-row: span 2;
+    height: auto;
+}
+
+/* Menu page: only the chosen category is shown */
+.menu-group {
+    display: none;
+}
+
+.menu-group.show {
+    display: grid;
+}
