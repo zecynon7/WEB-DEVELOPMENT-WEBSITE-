@@ -1,51 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Staff Access | Café BLK &amp; BRWN</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<header class="header">
-  <div class="container header-box">
-    <a class="brand" href="index.html"><span class="logo">B</span> Café BLK &amp; BRWN — Staff</a>
-    <span class="badge">Staff Area</span>
-  </div>
-</header>
-<main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Staff Access | Café BLK &amp; BRWN</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-box">
+        <a class="brand" href="index.html"
+          ><span class="logo">B</span> Café BLK &amp; BRWN — Staff</a
+        >
+        <span class="badge">Staff Area</span>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section id="login" class="login-box">
+          <form class="form-box" id="login-form">
+            <h1 class="center" style="font-size: 30px">Staff login</h1>
+            <p class="small center">
+              For Café BLK &amp; BRWN staff and branch admins only.
+            </p>
+            <label for="semail">Branch email</label
+            ><input type="email" id="semail" />
+            <label for="spassword">Password</label
+            ><input type="password" id="spassword" />
+            <p class="error" id="login-error"></p>
+            <div class="buttons">
+              <button class="btn btn-primary" type="submit" style="width: 100%">
+                Enter Dashboard
+              </button>
+            </div>
+            <p class="small center" style="margin-top: 14px">
+              Demo login: staff@cafeblkbrwn.com / brwn2026
+            </p>
+          </form>
+        </section>
 
-<div class="container">
-  <section id="login" class="login-box">
-    <form class="form-box" id="login-form">
-      <h1 class="center" style="font-size:30px">Staff login</h1>
-      <p class="small center">For Café BLK &amp; BRWN staff and branch admins only.</p>
-      <label for="semail">Branch email</label><input type="email" id="semail">
-      <label for="spassword">Password</label><input type="password" id="spassword">
-      <p class="error" id="login-error"></p>
-      <div class="buttons"><button class="btn btn-primary" type="submit" style="width:100%">Enter Dashboard</button></div>
-      <p class="small center" style="margin-top:14px">Demo login: staff@cafeblkbrwn.com / brwn2026</p>
-    </form>
-  </section>
-
-  <section id="dashboard" class="section" style="display:none">
-    <h1>Reservations &amp; Inquiries</h1>
-    <div class="tabs">
-      <button class="tab on" id="tab-reservations" onclick="changeTab('reservations')">Reservations</button>
-      <button class="tab" id="tab-inquiries" onclick="changeTab('inquiries')">Contact Inquiries</button>
-      <button class="tab" onclick="logout()">Log out</button>
-    </div>
-    <div class="stats">
-      <div class="stat"><b id="count-pending">0</b>Pending</div>
-      <div class="stat"><b id="count-confirmed">0</b>Confirmed</div>
-      <div class="stat"><b id="count-inquiries">0</b>Inquiries</div>
-    </div>
-    <div class="table-box" id="table-area"></div>
-    <p class="notice small" style="margin-top:20px">Demo note: requests are saved in this browser (localStorage) because the site is fully static. A live version would need a shared backend so every branch sees the same data.</p>
-  </section>
-</div>
-</main>
-<script src="js/storage.js"></script>
-<script src="js/staff.js"></script>
-</body>
+        <section id="dashboard" class="section" style="display: none">
+          <h1>Reservations &amp; Inquiries</h1>
+          <div class="tabs">
+            <button
+              class="tab on"
+              id="tab-reservations"
+              onclick="changeTab('reservations')"
+            >
+              Reservations
+            </button>
+            <button
+              class="tab"
+              id="tab-inquiries"
+              onclick="changeTab('inquiries')"
+            >
+              Contact Inquiries
+            </button>
+            <button class="tab" onclick="logout()">Log out</button>
+          </div>
+          <div class="stats">
+            <div class="stat"><b id="count-pending">0</b>Pending</div>
+            <div class="stat"><b id="count-confirmed">0</b>Confirmed</div>
+            <div class="stat"><b id="count-inquiries">0</b>Inquiries</div>
+          </div>
+          <div class="table-box" id="table-area"></div>
+          <p class="notice small" style="margin-top: 20px">
+            Demo note: requests are saved in this browser (localStorage) because
+            the site is fully static. A live version would need a shared backend
+            so every branch sees the same data.
+          </p>
+        </section>
+      </div>
+    </main>
+    <script src="js/storage.js"></script>
+    <script src="js/staff.js"></script>
+  </body>
 </html>

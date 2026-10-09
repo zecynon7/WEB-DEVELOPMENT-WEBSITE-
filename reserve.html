@@ -1,78 +1,161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Reserve a Table | Café BLK &amp; BRWN</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<header class="header">
-  <div class="container header-box">
-    <a class="brand" href="index.html"><span class="logo">B</span> Café BLK &amp; BRWN</a>
-    <button class="menu-button" onclick="toggleMenu()" aria-label="Open menu">&#9776;</button>
-    <nav class="nav" id="nav">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="menu.html">Menu</a>
-      <a href="branches.html">Branches</a>
-      <a href="reserve.html" class="active">Reserve</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <a class="btn btn-outline header-button" href="branches.html">Find a Branch</a>
-  </div>
-</header>
-<main>
-
-<section class="section"><div class="container">
-  <h1>Book a table in a few taps</h1>
-  <div class="two-columns">
-    <form class="form-box" id="reserve-form">
-      <h2>Reservation details</h2>
-      <div class="two-fields">
-        <div><label for="name">Full name</label><input type="text" id="name"></div>
-        <div><label for="phone">Phone number</label><input type="tel" id="phone"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reserve a Table | Café BLK &amp; BRWN</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-box">
+        <a class="brand" href="index.html"
+          ><span class="logo">B</span> Café BLK &amp; BRWN</a
+        >
+        <button
+          class="menu-button"
+          onclick="toggleMenu()"
+          aria-label="Open menu"
+        >
+          &#9776;
+        </button>
+        <nav class="nav" id="nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="menu.html">Menu</a>
+          <a href="branches.html">Branches</a>
+          <a href="reserve.html" class="active">Reserve</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a class="btn btn-outline header-button" href="branches.html"
+          >Find a Branch</a
+        >
       </div>
-      <label for="email">Email address</label><input type="email" id="email">
-      <div class="two-fields">
-        <div><label for="branch">Preferred branch</label><select id="branch"></select></div>
-        <div><label for="guests">Number of guests</label><select id="guests"></select></div>
+    </header>
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1>Book a table in a few taps</h1>
+          <div class="two-columns">
+            <form class="form-box" id="reserve-form">
+              <h2>Reservation details</h2>
+              <div class="two-fields">
+                <div>
+                  <label for="name">Full name</label
+                  ><input type="text" id="name" />
+                </div>
+                <div>
+                  <label for="phone">Phone number</label
+                  ><input type="tel" id="phone" />
+                </div>
+              </div>
+              <label for="email">Email address</label
+              ><input type="email" id="email" />
+              <div class="two-fields">
+                <div>
+                  <label for="branch">Preferred branch</label
+                  ><select id="branch"></select>
+                </div>
+                <div>
+                  <label for="guests">Number of guests</label
+                  ><select id="guests"></select>
+                </div>
+              </div>
+              <div class="two-fields">
+                <div>
+                  <label for="date">Date</label><input type="date" id="date" />
+                </div>
+                <div>
+                  <label for="time">Time</label
+                  ><select id="time"></select>
+                </div>
+              </div>
+              <label for="note">Special request (optional)</label
+              ><textarea id="note"></textarea>
+              <p class="error" id="form-error"></p>
+              <div class="buttons">
+                <button class="btn btn-primary" type="submit">
+                  Request Reservation
+                </button>
+              </div>
+              <p class="small" style="margin-top: 12px">
+                Reservations are requests, not automatic confirmations — a staff
+                member will confirm by call, text, or email.
+              </p>
+              <p class="success" id="success">
+                Thank you! Your reservation request was sent. The branch will
+                confirm it soon.
+              </p>
+            </form>
+            <div>
+              <div class="panel side-box">
+                <h3>Reservation guidelines</h3>
+                <ul>
+                  <li>
+                    Requests are confirmed by the branch within a few hours
+                    during business hours.
+                  </li>
+                  <li>
+                    Walk-ins are always welcome — a reservation just holds your
+                    table.
+                  </li>
+                  <li>Groups of 8 or more, please call the branch directly.</li>
+                  <li>
+                    Kindly cancel or reschedule at least 2 hours before your
+                    slot.
+                  </li>
+                </ul>
+              </div>
+              <div class="notice">
+                <h3>Prefer to call instead?</h3>
+                <p class="small" style="margin: 8px 0 14px">
+                  Every branch has its own details and directions on the Branch
+                  Finder.
+                </p>
+                <a class="btn btn-outline" href="branches.html"
+                  >View Branch Contacts</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-box">
+          <div>
+            <h3>Café BLK &amp; BRWN</h3>
+            <p class="small">
+              Slow down. Sip better. A coffee shop and restaurant with branches
+              across Cavite and Metro Manila.
+            </p>
+          </div>
+          <div>
+            <h3>Quick links</h3>
+            <a href="index.html">Home</a><a href="about.html">About Us</a
+            ><a href="menu.html">Menu</a><a href="branches.html">Branches</a
+            ><a href="reserve.html">Reserve</a><a href="gallery.html">Gallery</a
+            ><a href="contact.html">Contact</a>
+          </div>
+          <div>
+            <h3>Reach out</h3>
+            <p class="small">
+              +63 927 007 3822<br />cafeblkandbrwn@gmail.com<br />Facebook &amp;
+              Instagram: @cafeblkandbrwn
+            </p>
+          </div>
+        </div>
+        <p class="copyright">
+          © 2026 Café BLK &amp; BRWN. All rights reserved. Website concept: “One
+          Coffee Stop, Wherever You Are” — CC 312 Web Development project.
+        </p>
       </div>
-      <div class="two-fields">
-        <div><label for="date">Date</label><input type="date" id="date"></div>
-        <div><label for="time">Time</label><select id="time"></select></div>
-      </div>
-      <label for="note">Special request (optional)</label><textarea id="note"></textarea>
-      <p class="error" id="form-error"></p>
-      <div class="buttons"><button class="btn btn-primary" type="submit">Request Reservation</button></div>
-      <p class="small" style="margin-top:12px">Reservations are requests, not automatic confirmations — a staff member will confirm by call, text, or email.</p>
-      <p class="success" id="success">Thank you! Your reservation request was sent. The branch will confirm it soon.</p>
-    </form>
-    <div>
-      <div class="panel side-box"><h3>Reservation guidelines</h3><ul>
-        <li>Requests are confirmed by the branch within a few hours during business hours.</li>
-        <li>Walk-ins are always welcome — a reservation just holds your table.</li>
-        <li>Groups of 8 or more, please call the branch directly.</li>
-        <li>Kindly cancel or reschedule at least 2 hours before your slot.</li></ul></div>
-      <div class="notice"><h3>Prefer to call instead?</h3><p class="small" style="margin:8px 0 14px">Every branch has its own details and directions on the Branch Finder.</p><a class="btn btn-outline" href="branches.html">View Branch Contacts</a></div>
-    </div>
-  </div>
-</div></section>
-</main>
-<footer class="footer">
-  <div class="container">
-    <div class="footer-box">
-      <div><h3>Café BLK &amp; BRWN</h3><p class="small">Slow down. Sip better. A coffee shop and restaurant with branches across Cavite and Metro Manila.</p></div>
-      <div><h3>Quick links</h3><a href="index.html">Home</a><a href="about.html">About Us</a><a href="menu.html">Menu</a><a href="branches.html">Branches</a><a href="reserve.html">Reserve</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></div>
-      <div><h3>Reach out</h3><p class="small">+63 927 007 3822<br>cafeblkandbrwn@gmail.com<br>Facebook &amp; Instagram: @cafeblkandbrwn</p></div>
-    </div>
-    <p class="copyright">© 2026 Café BLK &amp; BRWN. All rights reserved. Website concept: “One Coffee Stop, Wherever You Are” — CC 312 Web Development project.</p>
-  </div>
-</footer>
-<script src="js/nav.js"></script>
-<script src="js/data.js"></script>
-<script src="js/storage.js"></script>
-<script src="js/reserve.js"></script>
-</body>
+    </footer>
+    <script src="js/nav.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/reserve.js"></script>
+  </body>
 </html>
