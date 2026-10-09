@@ -41,8 +41,186 @@
             Freskaró Juices prices are confirmed. Other categories currently
             show sample items pending confirmed menu details.
           </p>
-          <div class="tabs" id="tabs"></div>
-          <div class="grid" id="menu-grid"></div>
+          <div class="tabs">
+            <button class="tab" onclick="showCategory(this, 'coffee')">
+              Coffee
+            </button>
+            <button class="tab" onclick="showCategory(this, 'kape')">
+              Kape Series
+            </button>
+            <button class="tab" onclick="showCategory(this, 'chai')">
+              Chai Blend
+            </button>
+            <button class="tab" onclick="showCategory(this, 'choco')">
+              Choco Series
+            </button>
+            <button class="tab" onclick="showCategory(this, 'iced')">
+              Over-Ice Series
+            </button>
+            <button class="tab on" onclick="showCategory(this, 'juices')">
+              Freskaró Juices
+            </button>
+            <button class="tab" onclick="showCategory(this, 'hot')">
+              Hot Beverages
+            </button>
+            <button class="tab" onclick="showCategory(this, 'food')">
+              Food &amp; Snacks
+            </button>
+          </div>
+          <div class="grid menu-group" id="coffee">
+            <div class="card">
+              <div class="ph ph1">Photo: Espresso</div>
+              <h3>Espresso</h3>
+              <p class="small">Sample item – details pending.</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <div class="ph ph2">Photo: Americano</div>
+              <h3>Americano</h3>
+              <p class="small">Sample item – details pending.</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <div class="ph ph3">Photo: Latte</div>
+              <h3>Latte</h3>
+              <p class="small">Sample item – details pending.</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+          </div>
+          <div class="grid menu-group" id="kape">
+            <div class="card">
+              <div class="ph ph1">Photo: Kape sample 1</div>
+              <h3>Kape sample 1</h3>
+              <p class="small">Sample item – details pending.</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <div class="ph ph2">Photo: Kape sample 2</div>
+              <h3>Kape sample 2</h3>
+              <p class="small">Sample item – details pending.</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+          </div>
+          <div class="grid menu-group" id="chai">
+            <div class="card">
+              <div class="ph ph1">Photo: Chai sample 1</div>
+              <h3>Chai sample 1</h3>
+              <p class="small">Sample item – details pending.</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <div class="ph ph2">Photo: Chai sample 2</div>
+              <h3>Chai sample 2</h3>
+              <p class="small">Sample item – details pending.</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+          </div>
+          <div class="grid menu-group" id="choco">
+            <div class="card">
+              <div class="ph ph1">Photo: Choco sample 1</div>
+              <h3>Choco sample 1</h3>
+              <p class="small">Sample item – details pending.</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <div class="ph ph2">Photo: Choco sample 2</div>
+              <h3>Choco sample 2</h3>
+              <p class="small">Sample item – details pending.</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+          </div>
+          <div class="grid menu-group" id="iced">
+            <div class="card">
+              <div class="ph ph1">Photo: Iced sample 1</div>
+              <h3>Iced sample 1</h3>
+              <p class="small">Sample item – details pending.</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <div class="ph ph2">Photo: Iced sample 2</div>
+              <h3>Iced sample 2</h3>
+              <p class="small">Sample item – details pending.</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+          </div>
+          <div class="grid menu-group show" id="juices">
+            <div class="card">
+              <div class="ph ph1">Photo: Trueberries</div>
+              <h3>Trueberries</h3>
+              <p class="small">Add ₱25 for extra shot</p>
+              <span class="price">₱110</span>
+            </div>
+            <div class="card">
+              <div class="ph ph2">Photo: AVC</div>
+              <h3>AVC</h3>
+              <p class="small">Add ₱25 for extra shot</p>
+              <span class="price">₱100</span>
+            </div>
+            <div class="card">
+              <div class="ph ph3">Photo: Lychee</div>
+              <h3>Lychee</h3>
+              <p class="small">Add ₱25 for extra shot</p>
+              <span class="price">₱100</span>
+            </div>
+            <div class="card">
+              <div class="ph ph4">Photo: Healtea</div>
+              <h3>Healtea</h3>
+              <p class="small">Add ₱25 for extra shot</p>
+              <span class="price">₱95</span>
+            </div>
+            <div class="card">
+              <div class="ph ph1">Photo: Lemonade</div>
+              <h3>Lemonade</h3>
+              <p class="small">Add ₱25 for extra shot</p>
+              <span class="price">₱95</span>
+            </div>
+            <div class="card">
+              <div class="ph ph2">Photo: Passion Fruit</div>
+              <h3>Passion Fruit</h3>
+              <p class="small">Add ₱25 for extra shot</p>
+              <span class="price">₱100</span>
+            </div>
+            <div class="card">
+              <div class="ph ph3">Photo: Pineapple</div>
+              <h3>Pineapple</h3>
+              <p class="small">Add ₱25 for extra shot</p>
+              <span class="price">₱95</span>
+            </div>
+            <div class="card">
+              <div class="ph ph4">Photo: Four Seasons</div>
+              <h3>Four Seasons</h3>
+              <p class="small">Add ₱25 for extra shot</p>
+              <span class="price">₱95</span>
+            </div>
+          </div>
+          <div class="grid menu-group" id="hot">
+            <div class="card">
+              <div class="ph ph1">Photo: Hot sample 1</div>
+              <h3>Hot sample 1</h3>
+              <p class="small">Sample item – details pending.</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <div class="ph ph2">Photo: Hot sample 2</div>
+              <h3>Hot sample 2</h3>
+              <p class="small">Sample item – details pending.</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+          </div>
+          <div class="grid menu-group" id="food">
+            <div class="card">
+              <div class="ph ph1">Photo: Pasta (sample)</div>
+              <h3>Pasta (sample)</h3>
+              <p class="small">Sample item – details pending.</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <div class="ph ph2">Photo: Sandwich (sample)</div>
+              <h3>Sandwich (sample)</h3>
+              <p class="small">Sample item – details pending.</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -78,7 +256,6 @@
       </div>
     </footer>
     <script src="js/nav.js"></script>
-    <script src="js/data.js"></script>
     <script src="js/menu.js"></script>
   </body>
 </html>

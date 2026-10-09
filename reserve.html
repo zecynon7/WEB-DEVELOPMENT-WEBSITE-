@@ -37,43 +37,78 @@
       <section class="section">
         <div class="container">
           <h1>Book a table in a few taps</h1>
-          <div class="two-columns">
+          <div class="form-layout">
             <form class="form-box" id="reserve-form">
               <h2>Reservation details</h2>
               <div class="two-fields">
                 <div>
                   <label for="name">Full name</label
-                  ><input type="text" id="name" />
+                  ><input type="text" id="name" required />
                 </div>
                 <div>
                   <label for="phone">Phone number</label
-                  ><input type="tel" id="phone" />
+                  ><input type="tel" id="phone" required />
                 </div>
               </div>
               <label for="email">Email address</label
-              ><input type="email" id="email" />
+              ><input type="email" id="email" required />
               <div class="two-fields">
                 <div>
                   <label for="branch">Preferred branch</label
-                  ><select id="branch"></select>
+                  ><select id="branch">
+                    <option>Capipisa, Tanza – Main Branch</option>
+                    <option>Naic Branch</option>
+                    <option>General Trias Branch</option>
+                    <option>Kawit Branch</option>
+                    <option>Trece Martires Branch</option>
+                    <option>SM City Tanza Branch</option>
+                    <option>Festival Mall Alabang Branch</option>
+                  </select>
                 </div>
                 <div>
                   <label for="guests">Number of guests</label
-                  ><select id="guests"></select>
+                  ><select id="guests">
+                    <option value="1">1 guest</option>
+                    <option value="2">2 guests</option>
+                    <option value="3">3 guests</option>
+                    <option value="4">4 guests</option>
+                    <option value="5">5 guests</option>
+                    <option value="6">6 guests</option>
+                    <option value="7">7 guests</option>
+                    <option value="8">8 guests</option>
+                    <option value="9">9 guests</option>
+                    <option value="10">10 guests</option>
+                    <option value="11">11 guests</option>
+                    <option value="12">12 guests</option>
+                  </select>
                 </div>
               </div>
               <div class="two-fields">
                 <div>
-                  <label for="date">Date</label><input type="date" id="date" />
+                  <label for="date">Date</label
+                  ><input type="date" id="date" required />
                 </div>
                 <div>
                   <label for="time">Time</label
-                  ><select id="time"></select>
+                  ><select id="time" required>
+                    <option value="">Select a time</option>
+                    <option>10:00</option>
+                    <option>11:00</option>
+                    <option>12:00</option>
+                    <option>13:00</option>
+                    <option>14:00</option>
+                    <option>15:00</option>
+                    <option>16:00</option>
+                    <option>17:00</option>
+                    <option>18:00</option>
+                    <option>19:00</option>
+                    <option>20:00</option>
+                    <option>21:00</option>
+                  </select>
                 </div>
               </div>
               <label for="note">Special request (optional)</label
               ><textarea id="note"></textarea>
-              <p class="error" id="form-error"></p>
               <div class="buttons">
                 <button class="btn btn-primary" type="submit">
                   Request Reservation
@@ -89,7 +124,7 @@
               </p>
             </form>
             <div>
-              <div class="panel side-box">
+              <div class="panel space">
                 <h3>Reservation guidelines</h3>
                 <ul>
                   <li>
@@ -154,8 +189,6 @@
       </div>
     </footer>
     <script src="js/nav.js"></script>
-    <script src="js/data.js"></script>
-    <script src="js/storage.js"></script>
     <script src="js/reserve.js"></script>
   </body>
 </html>

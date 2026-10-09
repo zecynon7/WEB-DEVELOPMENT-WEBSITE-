@@ -1,0 +1,132 @@
+/* Cards, picture placeholders, panels and small labels */
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 2px 10px rgba(30, 23, 17, 0.08);
+}
+
+.card:hover {
+    box-shadow: 0 8px 22px rgba(30, 23, 17, 0.15);
+}
+
+.card h3 {
+    margin: 12px 0 4px;
+}
+
+.price {
+    display: inline-block;
+    background: #EFE5D8;
+    color: #1E1711;
+    font-weight: 600;
+    padding: 2px 14px;
+    border-radius: 20px;
+    margin-top: 8px;
+}
+
+.soon {
+    font-weight: 400;
+    font-style: italic;
+}
+
+.region {
+    font-size: 13px;
+    font-weight: 600;
+    color: #8A5A2A;
+}
+
+/* Picture placeholders: replace with <img> later */
+.ph {
+    border-radius: 14px;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    height: 200px;
+}
+
+.ph1 {
+    background: linear-gradient(135deg, #8A5A2A, #2c1f15);
+}
+
+.ph2 {
+    background: linear-gradient(135deg, #c28a55, #8a3f12);
+}
+
+.ph3 {
+    background: linear-gradient(135deg, #a9794d, #5a3a1f);
+}
+
+.ph4 {
+    background: linear-gradient(135deg, #4a3526, #1E1711);
+}
+
+.ph-hero {
+    height: 380px;
+    box-shadow: 0 10px 30px rgba(30, 23, 17, 0.25);
+}
+
+.ph-wide {
+    height: 300px;
+}
+
+.panel {
+    background: #1E1711;
+    color: #EFE5D8;
+    border-radius: 18px;
+    padding: 36px;
+}
+
+.panel h2,
+.panel h3 {
+    color: white;
+}
+
+.panel ul {
+    margin: 10px 0 0 20px;
+}
+
+.notice {
+    background: #EFE5D8;
+    border: 1px solid #d9c8b0;
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+
+.badge {
+    background: #8A5A2A;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 10px;
+    border-radius: 20px;
+}
+
+.chip {
+    display: inline-block;
+    border: 1px solid #8A5A2A;
+    border-radius: 20px;
+    padding: 4px 14px;
+    margin: 16px 6px 16px 0;
+    font-size: 14px;
+}
+
+.values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin: 16px 0 30px;
+}
+
+.values div {
+    background: #EFE5D8;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.space {
+    margin-bottom: 20px;
+}

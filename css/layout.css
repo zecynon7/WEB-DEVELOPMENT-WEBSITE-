@@ -1,0 +1,49 @@
+/* Page width, spacing, grids and columns */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 50px 0;
+}
+
+/* Grid: as many columns as will fit the screen */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.grid-big {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.hero {
+    background: linear-gradient(135deg, #FBF6F0, #EFE5D8);
+    padding: 70px 0;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.form-layout {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 30px;
+    align-items: start;
+    margin-top: 24px;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 30px;
+    align-items: start;
+    margin-top: 24px;
+}

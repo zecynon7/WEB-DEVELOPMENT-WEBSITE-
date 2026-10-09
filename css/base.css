@@ -1,0 +1,71 @@
+/* Fonts, reset, colors of text, headings */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=Inter:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #6A5947;
+  background: #FBF6F0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Fraunces, Georgia, serif;
+  color: #1E1711;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 44px;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 19px;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #A34A19;
+  outline-offset: 2px;
+}
+
+.small {
+  font-size: 14px;
+}
+
+.center {
+  text-align: center;
+}
+
+.lead {
+  max-width: 620px;
+  margin-bottom: 24px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #8A5A2A;
+  margin-bottom: 8px;
+}
