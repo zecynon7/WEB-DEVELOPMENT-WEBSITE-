@@ -1,261 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Menu | Café BLK &amp; BRWN</title>
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="container header-box">
-        <a class="brand" href="index.html"
-          ><span class="logo">B</span> Café BLK &amp; BRWN</a
-        >
-        <button
-          class="menu-button"
-          onclick="toggleMenu()"
-          aria-label="Open menu"
-        >
-          &#9776;
-        </button>
-        <nav class="nav" id="nav">
-          <a href="index.html">Home</a>
-          <a href="about.html">About Us</a>
-          <a href="menu.html" class="active">Menu</a>
-          <a href="branches.html">Branches</a>
-          <a href="reserve.html">Reserve</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-        <a class="btn btn-outline header-button" href="branches.html"
-          >Find a Branch</a
-        >
-      </div>
-    </header>
-    <main>
-      <section class="section">
-        <div class="container">
-          <h1>Browse by category</h1>
-          <p class="lead">
-            Freskaró Juices prices are confirmed. Other categories currently
-            show sample items pending confirmed menu details.
-          </p>
-          <div class="tabs">
-            <button class="tab" onclick="showCategory(this, 'coffee')">
-              Coffee
-            </button>
-            <button class="tab" onclick="showCategory(this, 'kape')">
-              Kape Series
-            </button>
-            <button class="tab" onclick="showCategory(this, 'chai')">
-              Chai Blend
-            </button>
-            <button class="tab" onclick="showCategory(this, 'choco')">
-              Choco Series
-            </button>
-            <button class="tab" onclick="showCategory(this, 'iced')">
-              Over-Ice Series
-            </button>
-            <button class="tab on" onclick="showCategory(this, 'juices')">
-              Freskaró Juices
-            </button>
-            <button class="tab" onclick="showCategory(this, 'hot')">
-              Hot Beverages
-            </button>
-            <button class="tab" onclick="showCategory(this, 'food')">
-              Food &amp; Snacks
-            </button>
-          </div>
-          <div class="grid menu-group" id="coffee">
-            <div class="card">
-              <div class="ph ph1">Photo: Espresso</div>
-              <h3>Espresso</h3>
-              <p class="small">Sample item – details pending.</p>
-              <span class="price soon">Price coming soon</span>
-            </div>
-            <div class="card">
-              <div class="ph ph2">Photo: Americano</div>
-              <h3>Americano</h3>
-              <p class="small">Sample item – details pending.</p>
-              <span class="price soon">Price coming soon</span>
-            </div>
-            <div class="card">
-              <div class="ph ph3">Photo: Latte</div>
-              <h3>Latte</h3>
-              <p class="small">Sample item – details pending.</p>
-              <span class="price soon">Price coming soon</span>
-            </div>
-          </div>
-          <div class="grid menu-group" id="kape">
-            <div class="card">
-              <div class="ph ph1">Photo: Kape sample 1</div>
-              <h3>Kape sample 1</h3>
-              <p class="small">Sample item – details pending.</p>
-              <span class="price soon">Price coming soon</span>
-            </div>
-            <div class="card">
-              <div class="ph ph2">Photo: Kape sample 2</div>
-              <h3>Kape sample 2</h3>
-              <p class="small">Sample item – details pending.</p>
-              <span class="price soon">Price coming soon</span>
-            </div>
-          </div>
-          <div class="grid menu-group" id="chai">
-            <div class="card">
-              <div class="ph ph1">Photo: Chai sample 1</div>
-              <h3>Chai sample 1</h3>
-              <p class="small">Sample item – details pending.</p>
-              <span class="price soon">Price coming soon</span>
-            </div>
-            <div class="card">
-              <div class="ph ph2">Photo: Chai sample 2</div>
-              <h3>Chai sample 2</h3>
-              <p class="small">Sample item – details pending.</p>
-              <span class="price soon">Price coming soon</span>
-            </div>
-          </div>
-          <div class="grid menu-group" id="choco">
-            <div class="card">
-              <div class="ph ph1">Photo: Choco sample 1</div>
-              <h3>Choco sample 1</h3>
-              <p class="small">Sample item – details pending.</p>
-              <span class="price soon">Price coming soon</span>
-            </div>
-            <div class="card">
-              <div class="ph ph2">Photo: Choco sample 2</div>
-              <h3>Choco sample 2</h3>
-              <p class="small">Sample item – details pending.</p>
-              <span class="price soon">Price coming soon</span>
-            </div>
-          </div>
-          <div class="grid menu-group" id="iced">
-            <div class="card">
-              <div class="ph ph1">Photo: Iced sample 1</div>
-              <h3>Iced sample 1</h3>
-              <p class="small">Sample item – details pending.</p>
-              <span class="price soon">Price coming soon</span>
-            </div>
-            <div class="card">
-              <div class="ph ph2">Photo: Iced sample 2</div>
-              <h3>Iced sample 2</h3>
-              <p class="small">Sample item – details pending.</p>
-              <span class="price soon">Price coming soon</span>
-            </div>
-          </div>
-          <div class="grid menu-group show" id="juices">
-            <div class="card">
-              <div class="ph ph1">Photo: Trueberries</div>
-              <h3>Trueberries</h3>
-              <p class="small">Add ₱25 for extra shot</p>
-              <span class="price">₱110</span>
-            </div>
-            <div class="card">
-              <div class="ph ph2">Photo: AVC</div>
-              <h3>AVC</h3>
-              <p class="small">Add ₱25 for extra shot</p>
-              <span class="price">₱100</span>
-            </div>
-            <div class="card">
-              <div class="ph ph3">Photo: Lychee</div>
-              <h3>Lychee</h3>
-              <p class="small">Add ₱25 for extra shot</p>
-              <span class="price">₱100</span>
-            </div>
-            <div class="card">
-              <div class="ph ph4">Photo: Healtea</div>
-              <h3>Healtea</h3>
-              <p class="small">Add ₱25 for extra shot</p>
-              <span class="price">₱95</span>
-            </div>
-            <div class="card">
-              <div class="ph ph1">Photo: Lemonade</div>
-              <h3>Lemonade</h3>
-              <p class="small">Add ₱25 for extra shot</p>
-              <span class="price">₱95</span>
-            </div>
-            <div class="card">
-              <div class="ph ph2">Photo: Passion Fruit</div>
-              <h3>Passion Fruit</h3>
-              <p class="small">Add ₱25 for extra shot</p>
-              <span class="price">₱100</span>
-            </div>
-            <div class="card">
-              <div class="ph ph3">Photo: Pineapple</div>
-              <h3>Pineapple</h3>
-              <p class="small">Add ₱25 for extra shot</p>
-              <span class="price">₱95</span>
-            </div>
-            <div class="card">
-              <div class="ph ph4">Photo: Four Seasons</div>
-              <h3>Four Seasons</h3>
-              <p class="small">Add ₱25 for extra shot</p>
-              <span class="price">₱95</span>
-            </div>
-          </div>
-          <div class="grid menu-group" id="hot">
-            <div class="card">
-              <div class="ph ph1">Photo: Hot sample 1</div>
-              <h3>Hot sample 1</h3>
-              <p class="small">Sample item – details pending.</p>
-              <span class="price soon">Price coming soon</span>
-            </div>
-            <div class="card">
-              <div class="ph ph2">Photo: Hot sample 2</div>
-              <h3>Hot sample 2</h3>
-              <p class="small">Sample item – details pending.</p>
-              <span class="price soon">Price coming soon</span>
-            </div>
-          </div>
-          <div class="grid menu-group" id="food">
-            <div class="card">
-              <div class="ph ph1">Photo: Pasta (sample)</div>
-              <h3>Pasta (sample)</h3>
-              <p class="small">Sample item – details pending.</p>
-              <span class="price soon">Price coming soon</span>
-            </div>
-            <div class="card">
-              <div class="ph ph2">Photo: Sandwich (sample)</div>
-              <h3>Sandwich (sample)</h3>
-              <p class="small">Sample item – details pending.</p>
-              <span class="price soon">Price coming soon</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-box">
-          <div>
-            <h3>Café BLK &amp; BRWN</h3>
-            <p class="small">
-              Slow down. Sip better. A coffee shop and restaurant with branches
-              across Cavite and Metro Manila.
-            </p>
-          </div>
-          <div>
-            <h3>Quick links</h3>
-            <a href="index.html">Home</a><a href="about.html">About Us</a
-            ><a href="menu.html">Menu</a><a href="branches.html">Branches</a
-            ><a href="reserve.html">Reserve</a><a href="gallery.html">Gallery</a
-            ><a href="contact.html">Contact</a>
-          </div>
-          <div>
-            <h3>Reach out</h3>
-            <p class="small">
-              +63 927 007 3822<br />cafeblkandbrwn@gmail.com<br />Facebook &amp;
-              Instagram: @cafeblkandbrwn
-            </p>
-          </div>
-        </div>
-        <p class="copyright">
-          © 2026 Café BLK &amp; BRWN. All rights reserved. Website concept: “One
-          Coffee Stop, Wherever You Are” — CC 312 Web Development project.
-        </p>
-      </div>
-    </footer>
-    <script src="js/nav.js"></script>
-    <script src="js/menu.js"></script>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu | Brand Name</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="navbar"><div class="container navbar__inner">
+  <a class="navbar__logo" href="index.html">Brand Name</a>
+  <button class="navbar__toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+  <ul class="navbar__links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="menu.html" aria-current="page">Menu</a></li>
+    <li><a href="branches.html">Branches</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul></div></header>
+<main id="main">
+<section class="section"><div class="container"><div class="section__head"><h1>Menu</h1><p>Page Developer: replace the cards below with the approved products.</p></div>
+<div class="grid">
+<article class="card">
+  <img class="card__img" src="images/placeholder.jpg" alt="Describe the image" loading="lazy">
+  <div class="card__body">
+    <h3 class="card__title">Item name</h3>
+    <p class="card__text">Short description of this item.</p>
+    <span class="card__meta">PHP 000</span>
+  </div></article>
+<article class="card">
+  <img class="card__img" src="images/placeholder.jpg" alt="Describe the image" loading="lazy">
+  <div class="card__body">
+    <h3 class="card__title">Item name</h3>
+    <p class="card__text">Short description of this item.</p>
+    <span class="card__meta">PHP 000</span>
+  </div></article>
+<article class="card">
+  <img class="card__img" src="images/placeholder.jpg" alt="Describe the image" loading="lazy">
+  <div class="card__body">
+    <h3 class="card__title">Item name</h3>
+    <p class="card__text">Short description of this item.</p>
+    <span class="card__meta">PHP 000</span>
+  </div></article>
+</div></div></section>
+</main>
+<footer class="footer"><div class="container">
+  <div class="footer__grid">
+    <div><h3>Brand Name</h3><p>Short tagline goes here.</p></div>
+    <div><h3>Pages</h3><ul><li><a href="menu.html">Menu</a></li><li><a href="branches.html">Branches</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><h3>Contact</h3><ul><li>email@example.com</li><li>+63 900 000 0000</li></ul></div>
+  </div>
+  <div class="footer__bottom">&copy; <span id="year">2026</span> Brand Name. All rights reserved.</div>
+</div></footer>
+<script src="js/main.js"></script>
+</body>
 </html>
