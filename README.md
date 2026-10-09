@@ -1,2 +1,1 @@
-# WEB-DEVELOPMENT-WEBSITE-
-a web development business website for practising
+# Café BLK & BRWN – Static Website (CC 312)
