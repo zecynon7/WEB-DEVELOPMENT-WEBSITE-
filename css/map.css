@@ -1,0 +1,28 @@
+/* Branch map */
+.map-box {
+    background: white;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 2px 10px rgba(30, 23, 17, 0.08);
+    margin: 16px 0 26px;
+}
+
+.map-title {
+    color: #1E1711;
+}
+
+.map-box iframe {
+    display: block;
+    width: 100%;
+    height: 420px;
+    border: 0;
+    border-radius: 12px;
+    margin: 10px 0;
+}
+
+/* shorter map on phones */
+@media (max-width: 800px) {
+    .map-box iframe {
+        height: 300px;
+    }
+}

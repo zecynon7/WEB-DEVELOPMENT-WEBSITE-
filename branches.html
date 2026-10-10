@@ -59,13 +59,20 @@
             </button>
           </div>
           <p class="small" id="count">Showing 7 of 7 branches</p>
-          <p
-            class="notice center"
-            style="margin: 16px 0 26px; padding: 40px 20px"
-          >
-            Interactive map coming soon. Use “Get Directions” on any branch card
-            in the meantime.
-          </p>
+          <div class="map-box" id="map-box">
+            <p class="map-title">
+              Showing on map: <b id="map-title">Capipisa, Tanza – Main Branch</b>
+            </p>
+            <iframe
+              id="map"
+              title="Map of the selected Café BLK &amp; BRWN branch"
+              src="https://www.google.com/maps?q=Caf%C3%A9+BLK+%26+BRWN+Tanza+Cavite&amp;output=embed"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <p class="small">Tap “Show on map” on any branch card to move the map.</p>
+          </div>
           <div class="grid grid-big">
             <div class="card branch-card" data-region="Cavite">
               <img class="photo photo-card" src="assets/Branches/capipisa_tanza.jpg" alt="Café BLK &amp; BRWN Capipisa, Tanza – Main Branch" loading="lazy" />
