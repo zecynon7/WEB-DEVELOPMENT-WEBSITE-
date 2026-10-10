@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Branches | Café BLK &amp; BRWN</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/logo.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
   </head>
   <body>
     <header class="header">
       <div class="container header-box">
         <a class="brand" href="index.html"
-          ><span class="logo">B</span> Café BLK &amp; BRWN</a
+          ><img class="logo" src="assets/logo.jpg" alt="" /> Café BLK &amp;
+          BRWN</a
         >
         <button
           class="menu-button"
           onclick="toggleMenu()"
           aria-label="Open menu"
+          aria-expanded="false"
         >
           &#9776;
         </button>
@@ -29,7 +36,7 @@
           <a href="contact.html">Contact</a>
         </nav>
         <a class="btn btn-outline header-button" href="branches.html"
-          >Find a Branch</a
+          >Find a branch</a
         >
       </div>
     </header>
@@ -58,19 +65,32 @@
             </button>
           </div>
           <p class="small" id="count">Showing 7 of 7 branches</p>
-          <p
-            class="notice center"
-            style="margin: 16px 0 26px; padding: 40px 20px"
-          >
-            Interactive map coming soon. Use “Get Directions” on any branch card
-            in the meantime.
-          </p>
+          <div class="map-box" id="map-box">
+            <div class="map-top">
+              <p class="map-title">All 7 branches. Tap a pin for details.</p>
+              <button class="tab" onclick="showAllPins()">
+                Show all branches
+              </button>
+            </div>
+            <div id="map"></div>
+            <p class="small">
+              Tap “Show on map” on any branch card to zoom to that branch.
+            </p>
+          </div>
           <div class="grid grid-big">
             <div class="card branch-card" data-region="Cavite">
+              <img
+                class="photo photo-card"
+                src="assets/Branches/capipisa_tanza.jpg"
+                alt="Café BLK &amp; BRWN Capipisa, Tanza – Main Branch"
+                loading="lazy"
+              />
               <p class="region">Cavite</p>
               <h3>Capipisa, Tanza – Main Branch</h3>
               <p class="small">Tanza, Cavite</p>
-              <p class="small">Original and main branch of Café BLK & BRWN.</p>
+              <p class="small">
+                Original and main branch of Café BLK &amp; BRWN.
+              </p>
               <p class="small"><i>Hours coming soon.</i></p>
               <div class="buttons">
                 <a
@@ -83,6 +103,12 @@
               </div>
             </div>
             <div class="card branch-card" data-region="Cavite">
+              <img
+                class="photo photo-card"
+                src="assets/Branches/naic.jpg"
+                alt="Café BLK &amp; BRWN Naic Branch"
+                loading="lazy"
+              />
               <p class="region">Cavite</p>
               <h3>Naic Branch</h3>
               <p class="small">Naic, Cavite</p>
@@ -99,6 +125,12 @@
               </div>
             </div>
             <div class="card branch-card" data-region="Cavite">
+              <img
+                class="photo photo-card"
+                src="assets/Branches/general_trias.jpg"
+                alt="Café BLK &amp; BRWN General Trias Branch"
+                loading="lazy"
+              />
               <p class="region">Cavite</p>
               <h3>General Trias Branch</h3>
               <p class="small">General Trias, Cavite</p>
@@ -115,6 +147,12 @@
               </div>
             </div>
             <div class="card branch-card" data-region="Cavite">
+              <img
+                class="photo photo-card"
+                src="assets/Branches/kawit.jpg"
+                alt="Café BLK &amp; BRWN Kawit Branch"
+                loading="lazy"
+              />
               <p class="region">Cavite</p>
               <h3>Kawit Branch</h3>
               <p class="small">Kawit, Cavite</p>
@@ -133,6 +171,12 @@
               </div>
             </div>
             <div class="card branch-card" data-region="Cavite">
+              <img
+                class="photo photo-card"
+                src="assets/Branches/trece_martires.jpg"
+                alt="Café BLK &amp; BRWN Trece Martires Branch"
+                loading="lazy"
+              />
               <p class="region">Cavite</p>
               <h3>Trece Martires Branch</h3>
               <p class="small">Trece Martires City, Cavite</p>
@@ -151,6 +195,12 @@
               </div>
             </div>
             <div class="card branch-card" data-region="Cavite">
+              <img
+                class="photo photo-card"
+                src="assets/Branches/sm_city_tanza.jpg"
+                alt="Café BLK &amp; BRWN SM City Tanza Branch"
+                loading="lazy"
+              />
               <p class="region">Cavite</p>
               <h3>SM City Tanza Branch</h3>
               <p class="small">SM City Tanza, Cavite</p>
@@ -169,6 +219,12 @@
               </div>
             </div>
             <div class="card branch-card" data-region="Metro Manila">
+              <img
+                class="photo photo-card"
+                src="assets/Branches/festival_mall_alabang.jpg"
+                alt="Café BLK &amp; BRWN Festival Mall Alabang Branch"
+                loading="lazy"
+              />
               <p class="region">Metro Manila</p>
               <h3>Festival Mall Alabang Branch</h3>
               <p class="small">Festival Mall, Alabang, Metro Manila</p>
@@ -216,12 +272,14 @@
           </div>
         </div>
         <p class="copyright">
-          © 2026 Café BLK &amp; BRWN. All rights reserved. Website concept: “One
-          Coffee Stop, Wherever You Are” — CC 312 Web Development project.
+          © <span id="year">2026</span> Café BLK &amp; BRWN. All rights
+          reserved. Website concept: “One Coffee Stop, Wherever You Are” — CC
+          312 Web Development project.
         </p>
       </div>
     </footer>
-    <script src="js/nav.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="js/branches.js"></script>
   </body>
 </html>

@@ -1,10 +1,33 @@
-const items=[...document.querySelectorAll('.gallery__item')],lb=document.getElementById('lightbox');
-document.querySelectorAll('.filters__btn').forEach(b=>b.addEventListener('click',()=>{
- document.querySelectorAll('.filters__btn').forEach(x=>{x.classList.remove('is-active');x.classList.add('btn--ghost')});
- b.classList.add('is-active');b.classList.remove('btn--ghost');
- items.forEach(i=>i.hidden=b.dataset.filter!=='all'&&i.dataset.cat!==b.dataset.filter)}));
-document.querySelectorAll('.gallery__btn').forEach(b=>b.addEventListener('click',()=>{
- lb.querySelector('img').src=b.dataset.full;lb.querySelector('img').alt=b.querySelector('img').alt;
- lb.querySelector('p').textContent=b.dataset.caption;lb.showModal()}));
-lb.querySelector('.lightbox__close').addEventListener('click',()=>lb.close());
-lb.addEventListener('click',e=>{if(e.target===lb)lb.close()});
+// Gallery page: filter buttons and the photo popup (lightbox)
+const items = document.querySelectorAll(".gallery__item");
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = lightbox.querySelector("img");
+const lightboxCaption = lightbox.querySelector("p");
+
+function filterGallery(button, category) {
+  document.querySelectorAll(".tab").forEach((tab) => tab.classList.remove("on"));
+  button.classList.add("on");
+
+  items.forEach((item) => {
+    item.hidden = category !== "all" && item.dataset.cat !== category;
+  });
+}
+
+function openPhoto(button) {
+  const picture = button.querySelector("img");
+  lightboxImage.src = button.dataset.full;
+  lightboxImage.alt = picture.alt;
+  lightboxCaption.textContent = button.dataset.caption;
+  lightbox.showModal();
+}
+
+function closePhoto() {
+  lightbox.close();
+}
+
+// clicking the dark area around the photo also closes it
+lightbox.addEventListener("click", (event) => {
+  if (event.target === lightbox) {
+    closePhoto();
+  }
+});

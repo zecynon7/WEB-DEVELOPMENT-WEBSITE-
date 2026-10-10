@@ -56,3 +56,20 @@ textarea {
     margin-top: 12px;
     font-size: 14px;
 }
+/* Contact form messages */
+.is-invalid {
+    border-color: #9b1c1c;
+}
+
+.form__status {
+    margin-top: 12px;
+    font-weight: 600;
+}
+
+.form__status.ok {
+    color: #24521f;
+}
+
+.form__status.bad {
+    color: #9b1c1c;
+}

@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Gallery | Café BLK &amp; BRWN</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/logo.jpg" />
   </head>
   <body>
     <header class="header">
       <div class="container header-box">
         <a class="brand" href="index.html"
-          ><span class="logo">B</span> Café BLK &amp; BRWN</a
+          ><img class="logo" src="assets/logo.jpg" alt="" /> Café BLK &amp; BRWN</a
         >
         <button
           class="menu-button"
           onclick="toggleMenu()"
-          aria-label="Open menu"
+          aria-label="Open menu" aria-expanded="false"
         >
           &#9776;
         </button>
@@ -29,7 +30,7 @@
           <a href="contact.html">Contact</a>
         </nav>
         <a class="btn btn-outline header-button" href="branches.html"
-          >Find a Branch</a
+          >Find a branch</a
         >
       </div>
     </header>
@@ -37,23 +38,161 @@
       <section class="section">
         <div class="container">
           <h1>Coffee, food, and everyday moments</h1>
-          <p class="lead">
-            A look at what it’s like inside a Café BLK &amp; BRWN branch.
-            Placeholder visuals are shown below — to be replaced with real
-            branch photos.
-          </p>
+          <p class="lead">A look at our products, branches, and events.</p>
+          <div class="tabs">
+            <button class="tab on" onclick="filterGallery(this, 'all')">All</button>
+            <button class="tab" onclick="filterGallery(this, 'moments')">Café moments</button>
+            <button class="tab" onclick="filterGallery(this, 'branches')">Branches</button>
+            <button class="tab" onclick="filterGallery(this, 'drinks')">Drinks</button>
+            <button class="tab" onclick="filterGallery(this, 'food')">Food</button>
+          </div>
           <div class="gallery">
-            <div class="ph ph3 big">Coffee</div>
-            <div class="ph ph1">Food</div>
-            <div class="ph ph2">Café interior</div>
-            <div class="ph ph4">Branch</div>
-            <div class="ph ph3">Community</div>
-            <div class="ph ph2">Drinks</div>
-            <div class="ph ph1">Pastry</div>
-            <div class="ph ph4">Corner seats</div>
+          <div class="gallery__item" data-cat="moments">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Gallery/gallery1.jpg" data-caption="Café moment 1">
+              <img class="photo photo-gallery" src="assets/Gallery/gallery1.jpg" alt="Café BLK &amp; BRWN gallery photo 1" loading="lazy" />
+              <span class="gallery__caption">Café moment 1</span>
+            </button>
+          </div>
+          <div class="gallery__item" data-cat="moments">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Gallery/gallery2.jpg" data-caption="Café moment 2">
+              <img class="photo photo-gallery" src="assets/Gallery/gallery2.jpg" alt="Café BLK &amp; BRWN gallery photo 2" loading="lazy" />
+              <span class="gallery__caption">Café moment 2</span>
+            </button>
+          </div>
+          <div class="gallery__item" data-cat="moments">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Gallery/gallery3.jpg" data-caption="Café moment 3">
+              <img class="photo photo-gallery" src="assets/Gallery/gallery3.jpg" alt="Café BLK &amp; BRWN gallery photo 3" loading="lazy" />
+              <span class="gallery__caption">Café moment 3</span>
+            </button>
+          </div>
+          <div class="gallery__item" data-cat="moments">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Gallery/gallery4.jpg" data-caption="Café moment 4">
+              <img class="photo photo-gallery" src="assets/Gallery/gallery4.jpg" alt="Café BLK &amp; BRWN gallery photo 4" loading="lazy" />
+              <span class="gallery__caption">Café moment 4</span>
+            </button>
+          </div>
+          <div class="gallery__item" data-cat="moments">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Gallery/gallery5.jpg" data-caption="Café moment 5">
+              <img class="photo photo-gallery" src="assets/Gallery/gallery5.jpg" alt="Café BLK &amp; BRWN gallery photo 5" loading="lazy" />
+              <span class="gallery__caption">Café moment 5</span>
+            </button>
+          </div>
+          <div class="gallery__item" data-cat="moments">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Gallery/gallery6.jpg" data-caption="Café moment 6">
+              <img class="photo photo-gallery" src="assets/Gallery/gallery6.jpg" alt="Café BLK &amp; BRWN gallery photo 6" loading="lazy" />
+              <span class="gallery__caption">Café moment 6</span>
+            </button>
+          </div>
+          <div class="gallery__item" data-cat="moments">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Gallery/gallery7.jpg" data-caption="Café moment 7">
+              <img class="photo photo-gallery" src="assets/Gallery/gallery7.jpg" alt="Café BLK &amp; BRWN gallery photo 7" loading="lazy" />
+              <span class="gallery__caption">Café moment 7</span>
+            </button>
+          </div>
+          <div class="gallery__item" data-cat="moments">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Gallery/gallery8.jpg" data-caption="Café moment 8">
+              <img class="photo photo-gallery" src="assets/Gallery/gallery8.jpg" alt="Café BLK &amp; BRWN gallery photo 8" loading="lazy" />
+              <span class="gallery__caption">Café moment 8</span>
+            </button>
+          </div>
+          <div class="gallery__item" data-cat="branches">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Branches/capipisa_tanza.jpg" data-caption="Our Capipisa, Tanza main branch">
+              <img class="photo photo-gallery" src="assets/Branches/capipisa_tanza.jpg" alt="Café BLK &amp; BRWN Capipisa, Tanza main branch" loading="lazy" />
+              <span class="gallery__caption">Our Capipisa, Tanza main branch</span>
+            </button>
+          </div>
+          <div class="gallery__item" data-cat="branches">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Branches/naic.jpg" data-caption="Our Naic branch">
+              <img class="photo photo-gallery" src="assets/Branches/naic.jpg" alt="Café BLK &amp; BRWN Naic branch" loading="lazy" />
+              <span class="gallery__caption">Our Naic branch</span>
+            </button>
+          </div>
+          <div class="gallery__item" data-cat="branches">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Branches/general_trias.jpg" data-caption="Our General Trias branch">
+              <img class="photo photo-gallery" src="assets/Branches/general_trias.jpg" alt="Café BLK &amp; BRWN General Trias branch" loading="lazy" />
+              <span class="gallery__caption">Our General Trias branch</span>
+            </button>
+          </div>
+          <div class="gallery__item" data-cat="branches">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Branches/kawit.jpg" data-caption="Our Kawit branch">
+              <img class="photo photo-gallery" src="assets/Branches/kawit.jpg" alt="Café BLK &amp; BRWN Kawit branch" loading="lazy" />
+              <span class="gallery__caption">Our Kawit branch</span>
+            </button>
+          </div>
+          <div class="gallery__item" data-cat="branches">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Branches/trece_martires.jpg" data-caption="Our Trece Martires branch">
+              <img class="photo photo-gallery" src="assets/Branches/trece_martires.jpg" alt="Café BLK &amp; BRWN Trece Martires branch" loading="lazy" />
+              <span class="gallery__caption">Our Trece Martires branch</span>
+            </button>
+          </div>
+          <div class="gallery__item" data-cat="branches">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Branches/sm_city_tanza.jpg" data-caption="Our SM City Tanza branch">
+              <img class="photo photo-gallery" src="assets/Branches/sm_city_tanza.jpg" alt="Café BLK &amp; BRWN SM City Tanza branch" loading="lazy" />
+              <span class="gallery__caption">Our SM City Tanza branch</span>
+            </button>
+          </div>
+          <div class="gallery__item" data-cat="branches">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Branches/festival_mall_alabang.jpg" data-caption="Our Festival Mall Alabang branch">
+              <img class="photo photo-gallery" src="assets/Branches/festival_mall_alabang.jpg" alt="Café BLK &amp; BRWN Festival Mall Alabang branch" loading="lazy" />
+              <span class="gallery__caption">Our Festival Mall Alabang branch</span>
+            </button>
+          </div>
+          <div class="gallery__item" data-cat="drinks">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Freskaro%20Juices/lychee.jpg" data-caption="Lychee Freskaró juice">
+              <img class="photo photo-gallery" src="assets/Freskaro%20Juices/lychee.jpg" alt="Lychee Freskaró juice" loading="lazy" />
+              <span class="gallery__caption">Lychee Freskaró juice</span>
+            </button>
+          </div>
+          <div class="gallery__item" data-cat="drinks">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Kape%20Series/oreo_coffee.jpg" data-caption="Oreo coffee, Kape Series">
+              <img class="photo photo-gallery" src="assets/Kape%20Series/oreo_coffee.jpg" alt="Oreo coffee, Kape Series" loading="lazy" />
+              <span class="gallery__caption">Oreo coffee, Kape Series</span>
+            </button>
+          </div>
+          <div class="gallery__item" data-cat="drinks">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Over%20-%20Ice%20Series/spanish_latte.jpg" data-caption="Iced Spanish latte">
+              <img class="photo photo-gallery" src="assets/Over%20-%20Ice%20Series/spanish_latte.jpg" alt="Iced Spanish latte" loading="lazy" />
+              <span class="gallery__caption">Iced Spanish latte</span>
+            </button>
+          </div>
+          <div class="gallery__item" data-cat="drinks">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Chai%20Blend/taro.jpg" data-caption="Taro chai blend">
+              <img class="photo photo-gallery" src="assets/Chai%20Blend/taro.jpg" alt="Taro chai blend" loading="lazy" />
+              <span class="gallery__caption">Taro chai blend</span>
+            </button>
+          </div>
+          <div class="gallery__item" data-cat="food">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Food%20%26%20Snacks/baked_penne.jpg" data-caption="Baked penne pasta">
+              <img class="photo photo-gallery" src="assets/Food%20%26%20Snacks/baked_penne.jpg" alt="Baked penne pasta" loading="lazy" />
+              <span class="gallery__caption">Baked penne pasta</span>
+            </button>
+          </div>
+          <div class="gallery__item" data-cat="food">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Food%20%26%20Snacks/quesadilla.jpg" data-caption="Quesadilla from our kitchen">
+              <img class="photo photo-gallery" src="assets/Food%20%26%20Snacks/quesadilla.jpg" alt="Quesadilla from our kitchen" loading="lazy" />
+              <span class="gallery__caption">Quesadilla from our kitchen</span>
+            </button>
+          </div>
+          <div class="gallery__item" data-cat="food">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Food%20%26%20Snacks/nachos.jpg" data-caption="Nachos to share">
+              <img class="photo photo-gallery" src="assets/Food%20%26%20Snacks/nachos.jpg" alt="Nachos to share" loading="lazy" />
+              <span class="gallery__caption">Nachos to share</span>
+            </button>
+          </div>
+          <div class="gallery__item" data-cat="food">
+            <button class="gallery__btn" type="button" onclick="openPhoto(this)" data-full="assets/Food%20%26%20Snacks/chicken_alfredo.jpg" data-caption="Chicken alfredo pasta">
+              <img class="photo photo-gallery" src="assets/Food%20%26%20Snacks/chicken_alfredo.jpg" alt="Chicken alfredo pasta" loading="lazy" />
+              <span class="gallery__caption">Chicken alfredo pasta</span>
+            </button>
+          </div>
           </div>
         </div>
       </section>
+      <dialog class="lightbox" id="lightbox">
+        <button class="lightbox__close" type="button" onclick="closePhoto()" aria-label="Close photo">&times;</button>
+        <img src="" alt="" />
+        <p></p>
+      </dialog>
     </main>
     <footer class="footer">
       <div class="container">
@@ -81,11 +220,12 @@
           </div>
         </div>
         <p class="copyright">
-          © 2026 Café BLK &amp; BRWN. All rights reserved. Website concept: “One
+          © <span id="year">2026</span> Café BLK &amp; BRWN. All rights reserved. Website concept: “One
           Coffee Stop, Wherever You Are” — CC 312 Web Development project.
         </p>
       </div>
     </footer>
-    <script src="js/nav.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
   </body>
 </html>
