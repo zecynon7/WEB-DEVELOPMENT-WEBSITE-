@@ -1,38 +1,78 @@
 /* Cards, photos, panels and small labels */
 .card {
     background: white;
-    border-radius: 16px;
-    padding: 16px;
-    box-shadow: 0 2px 10px rgba(30, 23, 17, 0.08);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(26, 20, 16, 0.08);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(163, 74, 25, 0.05);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #a34a19, #c67c3c, transparent);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
 }
 
 .card:hover {
-    box-shadow: 0 8px 22px rgba(30, 23, 17, 0.15);
+    transform: translateY(-8px) translateX(0);
+    box-shadow: 0 12px 30px rgba(163, 74, 25, 0.18);
+    border-color: rgba(163, 74, 25, 0.15);
+}
+
+.card:hover::before {
+    transform: translateX(0);
 }
 
 .card h3 {
-    margin: 12px 0 4px;
+    margin: 16px 0 6px;
+    transition: color 0.3s ease;
+    font-size: 20px;
+}
+
+.card:hover h3 {
+    color: #a34a19;
 }
 
 .price {
     display: inline-block;
-    background: #EFE5D8;
-    color: #1E1711;
-    font-weight: 600;
-    padding: 2px 14px;
-    border-radius: 20px;
-    margin-top: 8px;
+    background: linear-gradient(135deg, rgba(163, 74, 25, 0.08), rgba(198, 124, 60, 0.08));
+    color: #a34a19;
+    font-weight: 700;
+    padding: 6px 16px;
+    border-radius: 30px;
+    margin-top: 12px;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(163, 74, 25, 0.15);
+}
+
+.card:hover .price {
+    background: linear-gradient(135deg, rgba(163, 74, 25, 0.15), rgba(198, 124, 60, 0.15));
+    border-color: rgba(163, 74, 25, 0.3);
 }
 
 .soon {
-    font-weight: 400;
+    font-weight: 500;
     font-style: italic;
+    color: #a34a19;
 }
 
 .region {
-    font-size: 13px;
-    font-weight: 600;
-    color: #8A5A2A;
+    font-size: 12px;
+    font-weight: 700;
+    color: #a34a19;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* Real photos (used on every page) */
@@ -40,8 +80,14 @@
     display: block;
     width: 100%;
     object-fit: cover;
-    border-radius: 14px;
-    background: #EFE5D8;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #f0e6da, #e8dace);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.photo:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 8px 20px rgba(163, 74, 25, 0.2));
 }
 
 .photo-card {
@@ -54,14 +100,47 @@
 
 .photo-hero {
     height: 380px;
-    box-shadow: 0 10px 30px rgba(30, 23, 17, 0.25);
+    box-shadow: 0 12px 40px rgba(163, 74, 25, 0.25);
+    border: 1px solid rgba(163, 74, 25, 0.1);
+}
+
+.photo-hero:hover {
+    transform: scale(1.03);
+    box-shadow: 0 16px 50px rgba(163, 74, 25, 0.3);
 }
 
 .panel {
-    background: #1E1711;
-    color: #EFE5D8;
-    border-radius: 18px;
-    padding: 36px;
+    background: linear-gradient(135deg, #1a1410, #3d2817);
+    color: #f5ede4;
+    border-radius: 20px;
+    padding: 48px;
+    box-shadow: 0 8px 30px rgba(26, 20, 16, 0.2);
+    border: 1px solid rgba(163, 74, 25, 0.15);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.panel::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(163, 74, 25, 0.1), transparent);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.panel:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(26, 20, 16, 0.3);
+}
+
+.panel:hover::before {
+    opacity: 1;
 }
 
 .panel h2,
@@ -70,14 +149,17 @@
 }
 
 .panel ul {
-    margin: 10px 0 0 20px;
+    margin: 12px 0 0 20px;
 }
 
 .notice {
-    background: #EFE5D8;
-    border: 1px solid #d9c8b0;
-    border-radius: 12px;
-    padding: 16px 20px;
+    background: linear-gradient(135deg, rgba(255, 253, 250, 0.7), rgba(245, 237, 228, 0.8));
+    border: 2px solid #dcd0c5;
+    border-radius: 16px;
+    padding: 20px 24px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
 }
 
 .badge {

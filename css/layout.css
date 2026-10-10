@@ -6,51 +6,115 @@
 }
 
 .section {
-    padding: 50px 0;
+    padding: 70px 0;
+    position: relative;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.section:nth-of-type(1) {
+    animation-delay: 0.1s;
+}
+
+.section:nth-of-type(2) {
+    animation-delay: 0.3s;
+}
+
+.section:nth-of-type(3) {
+    animation-delay: 0.5s;
+}
+
+.section:nth-of-type(4) {
+    animation-delay: 0.7s;
 }
 
 /* Grid: as many columns as will fit the screen */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 24px;
+    gap: 32px;
+    margin-top: 32px;
 }
+
+.grid > div {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.grid > div:nth-child(1) { animation-delay: 0.1s; }
+.grid > div:nth-child(2) { animation-delay: 0.2s; }
+.grid > div:nth-child(3) { animation-delay: 0.3s; }
+.grid > div:nth-child(4) { animation-delay: 0.4s; }
+.grid > div:nth-child(5) { animation-delay: 0.5s; }
+.grid > div:nth-child(6) { animation-delay: 0.6s; }
 
 .grid-big {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .hero {
-    background: linear-gradient(135deg, #FBF6F0, #EFE5D8);
-    padding: 70px 0;
+    background: linear-gradient(135deg, #faf6f1 0%, #f0e6da 50%, #e8dace 100%);
+    padding: 90px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(163, 74, 25, 0.03) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: glow 4s ease-in-out infinite;
 }
 
 .hero-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 50px;
     align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-box > div {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.hero-box img {
+    animation: slideInRight 0.8s ease-out 0.3s both;
 }
 
 .two-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 50px;
     align-items: center;
+}
+
+.two-col > div:first-child {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.two-col img {
+    animation: slideInRight 0.8s ease-out 0.2s both;
 }
 
 .form-layout {
     display: grid;
     grid-template-columns: 3fr 2fr;
-    gap: 30px;
+    gap: 40px;
     align-items: start;
-    margin-top: 24px;
+    margin-top: 32px;
 }
 
 .contact-layout {
     display: grid;
     grid-template-columns: 2fr 3fr;
-    gap: 30px;
+    gap: 40px;
     align-items: start;
-    margin-top: 24px;
+    margin-top: 32px;
 }

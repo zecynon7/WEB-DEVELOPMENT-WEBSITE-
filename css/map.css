@@ -1,10 +1,17 @@
 /* Branch map */
 .map-box {
     background: white;
-    border-radius: 16px;
-    padding: 16px;
-    box-shadow: 0 2px 10px rgba(30, 23, 17, 0.08);
-    margin: 16px 0 26px;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(26, 20, 16, 0.08);
+    margin: 20px 0 32px;
+    border: 1px solid rgba(163, 74, 25, 0.05);
+    transition: all 0.3s ease;
+}
+
+.map-box:hover {
+    box-shadow: 0 8px 25px rgba(26, 20, 16, 0.12);
+    border-color: rgba(163, 74, 25, 0.1);
 }
 
 .map-top {
@@ -12,12 +19,16 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 12px;
+    margin-bottom: 12px;
 }
 
 .map-title {
-    color: #1E1711;
-    font-weight: 600;
+    color: #1a1410;
+    font-weight: 700;
+    font-size: 18px;
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.3px;
 }
 
 /* z-index 0 keeps the map below the sticky header when scrolling */
@@ -25,17 +36,31 @@
     position: relative;
     z-index: 0;
     height: 450px;
-    border-radius: 12px;
-    margin: 10px 0;
-    background: #EFE5D8;
+    border-radius: 14px;
+    margin: 12px 0;
+    background: linear-gradient(135deg, #f0e6da, #e8dace);
+    box-shadow: inset 0 2px 8px rgba(26, 20, 16, 0.05);
+    transition: all 0.3s ease;
+}
+
+#map:hover {
+    box-shadow: inset 0 4px 12px rgba(163, 74, 25, 0.08);
 }
 
 /* the logo used as a map pin */
 .map-pin {
     border-radius: 50%;
-    border: 3px solid #A34A19;
+    border: 4px solid #a34a19;
     background: white;
     object-fit: cover;
+    box-shadow: 0 4px 12px rgba(163, 74, 25, 0.25);
+    transition: all 0.3s ease;
+}
+
+.map-pin:hover {
+    transform: scale(1.15);
+    border-color: #c67c3c;
+    box-shadow: 0 6px 18px rgba(163, 74, 25, 0.35);
 }
 
 /* shorter map on phones */
