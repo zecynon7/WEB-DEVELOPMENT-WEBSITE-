@@ -1,4 +1,4 @@
-/* Cards, picture placeholders, panels and small labels */
+/* Cards, photos, panels and small labels */
 .card {
     background: white;
     border-radius: 16px;
@@ -35,42 +35,26 @@
     color: #8A5A2A;
 }
 
-/* Picture placeholders: replace with <img> later */
-.ph {
+/* Real photos (used on every page) */
+.photo {
+    display: block;
+    width: 100%;
+    object-fit: cover;
     border-radius: 14px;
-    color: white;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 10px;
+    background: #EFE5D8;
+}
+
+.photo-card {
     height: 200px;
 }
 
-.ph1 {
-    background: linear-gradient(135deg, #8A5A2A, #2c1f15);
+.photo-wide {
+    height: 300px;
 }
 
-.ph2 {
-    background: linear-gradient(135deg, #c28a55, #8a3f12);
-}
-
-.ph3 {
-    background: linear-gradient(135deg, #a9794d, #5a3a1f);
-}
-
-.ph4 {
-    background: linear-gradient(135deg, #4a3526, #1E1711);
-}
-
-.ph-hero {
+.photo-hero {
     height: 380px;
     box-shadow: 0 10px 30px rgba(30, 23, 17, 0.25);
-}
-
-.ph-wide {
-    height: 300px;
 }
 
 .panel {

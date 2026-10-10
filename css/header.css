@@ -29,11 +29,8 @@
     width: 36px;
     height: 36px;
     border-radius: 50%;
+    object-fit: cover;
     background: #1E1711;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .nav {

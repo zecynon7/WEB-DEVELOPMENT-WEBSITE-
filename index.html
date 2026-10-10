@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Home | Café BLK &amp; BRWN</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/logo.jpg" />
   </head>
   <body>
     <header class="header">
       <div class="container header-box">
         <a class="brand" href="index.html"
-          ><span class="logo">B</span> Café BLK &amp; BRWN</a
+          ><img class="logo" src="assets/logo.jpg" alt="" /> Café BLK &amp; BRWN</a
         >
         <button
           class="menu-button"
           onclick="toggleMenu()"
-          aria-label="Open menu"
+          aria-label="Open menu" aria-expanded="false"
         >
           &#9776;
         </button>
@@ -29,7 +30,7 @@
           <a href="contact.html">Contact</a>
         </nav>
         <a class="btn btn-outline header-button" href="branches.html"
-          >Find a Branch</a
+          >Find a branch</a
         >
       </div>
     </header>
@@ -45,11 +46,11 @@
             </p>
             <div class="buttons">
               <a class="btn btn-primary" href="branches.html"
-                >Find Your Nearest Branch</a
-              ><a class="btn btn-dark" href="menu.html">View Menu</a>
+                >Find a branch</a
+              ><a class="btn btn-dark" href="menu.html">View menu</a>
             </div>
           </div>
-          <div class="ph ph1 ph-hero">Hero photo (placeholder)</div>
+          <img class="photo photo-hero" src="assets/hero_image.jpg" alt="Café BLK &amp; BRWN featured photo" />
         </div>
       </section>
 
@@ -72,28 +73,28 @@
           <p class="lead">Our confirmed best-selling refreshers.</p>
           <div class="grid">
             <div class="card">
-              <div class="ph ph1">Photo: Trueberries</div>
+              <img class="photo photo-card" src="assets/Freskaro%20Juices/trueberries.jpg" alt="Trueberries" loading="lazy" />
               <h3>Trueberries</h3>
-              <p class="small">Add ₱25 for extra shot</p>
-              <span class="price">₱110</span>
+              <p class="small">Add PHP 25 for extra shot</p>
+              <span class="price">PHP 110</span>
             </div>
             <div class="card">
-              <div class="ph ph2">Photo: AVC</div>
+              <img class="photo photo-card" src="assets/Freskaro%20Juices/avc.jpg" alt="AVC" loading="lazy" />
               <h3>AVC</h3>
-              <p class="small">Add ₱25 for extra shot</p>
-              <span class="price">₱100</span>
+              <p class="small">Add PHP 25 for extra shot</p>
+              <span class="price">PHP 100</span>
             </div>
             <div class="card">
-              <div class="ph ph3">Photo: Lychee</div>
+              <img class="photo photo-card" src="assets/Freskaro%20Juices/lychee.jpg" alt="Lychee" loading="lazy" />
               <h3>Lychee</h3>
-              <p class="small">Add ₱25 for extra shot</p>
-              <span class="price">₱100</span>
+              <p class="small">Add PHP 25 for extra shot</p>
+              <span class="price">PHP 100</span>
             </div>
             <div class="card">
-              <div class="ph ph4">Photo: Passion Fruit</div>
+              <img class="photo photo-card" src="assets/Freskaro%20Juices/passion_fruit.jpg" alt="Passion Fruit" loading="lazy" />
               <h3>Passion Fruit</h3>
-              <p class="small">Add ₱25 for extra shot</p>
-              <span class="price">₱100</span>
+              <p class="small">Add PHP 25 for extra shot</p>
+              <span class="price">PHP 100</span>
             </div>
           </div>
         </div>
@@ -142,7 +143,7 @@
             </p>
             <a class="btn btn-outline" href="about.html">Read Our Story</a>
           </div>
-          <div class="ph ph3 ph-wide">Café photo (placeholder)</div>
+          <img class="photo photo-wide" src="assets/Branches/capipisa_tanza.jpg" alt="Capipisa, Tanza branch of Café BLK &amp; BRWN" loading="lazy" />
         </div>
       </section>
 
@@ -150,13 +151,13 @@
         <div class="container">
           <h2>Gallery</h2>
           <div class="grid">
-            <div class="ph ph1">Photo 1</div>
-            <div class="ph ph2">Photo 2</div>
-            <div class="ph ph3">Photo 3</div>
-            <div class="ph ph4">Photo 4</div>
+            <img class="photo photo-card" src="assets/Gallery/gallery1.jpg" alt="Café BLK &amp; BRWN gallery photo 1" loading="lazy" />
+            <img class="photo photo-card" src="assets/Gallery/gallery2.jpg" alt="Café BLK &amp; BRWN gallery photo 2" loading="lazy" />
+            <img class="photo photo-card" src="assets/Gallery/gallery3.jpg" alt="Café BLK &amp; BRWN gallery photo 3" loading="lazy" />
+            <img class="photo photo-card" src="assets/Gallery/gallery4.jpg" alt="Café BLK &amp; BRWN gallery photo 4" loading="lazy" />
           </div>
           <div class="buttons">
-            <a class="btn btn-outline" href="gallery.html">View Full Gallery</a>
+            <a class="btn btn-outline" href="gallery.html">View the gallery</a>
           </div>
         </div>
       </section>
@@ -212,11 +213,11 @@
           </div>
         </div>
         <p class="copyright">
-          © 2026 Café BLK &amp; BRWN. All rights reserved. Website concept: “One
+          © <span id="year">2026</span> Café BLK &amp; BRWN. All rights reserved. Website concept: “One
           Coffee Stop, Wherever You Are” — CC 312 Web Development project.
         </p>
       </div>
     </footer>
-    <script src="js/nav.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

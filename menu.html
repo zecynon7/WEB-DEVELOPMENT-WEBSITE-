@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Menu | Café BLK &amp; BRWN</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/logo.jpg" />
   </head>
   <body>
     <header class="header">
       <div class="container header-box">
         <a class="brand" href="index.html"
-          ><span class="logo">B</span> Café BLK &amp; BRWN</a
+          ><img class="logo" src="assets/logo.jpg" alt="" /> Café BLK &amp; BRWN</a
         >
         <button
           class="menu-button"
           onclick="toggleMenu()"
-          aria-label="Open menu"
+          aria-label="Open menu" aria-expanded="false"
         >
           &#9776;
         </button>
@@ -29,7 +30,7 @@
           <a href="contact.html">Contact</a>
         </nav>
         <a class="btn btn-outline header-button" href="branches.html"
-          >Find a Branch</a
+          >Find a branch</a
         >
       </div>
     </header>
@@ -38,186 +39,515 @@
         <div class="container">
           <h1>Browse by category</h1>
           <p class="lead">
-            Freskaró Juices prices are confirmed. Other categories currently
-            show sample items pending confirmed menu details.
+            Freskaró Juices prices are confirmed. Prices for the other items
+            will be added once the café confirms them.
           </p>
           <div class="tabs">
-            <button class="tab" onclick="showCategory(this, 'coffee')">
-              Coffee
-            </button>
-            <button class="tab" onclick="showCategory(this, 'kape')">
-              Kape Series
-            </button>
-            <button class="tab" onclick="showCategory(this, 'chai')">
-              Chai Blend
-            </button>
-            <button class="tab" onclick="showCategory(this, 'choco')">
-              Choco Series
-            </button>
-            <button class="tab" onclick="showCategory(this, 'iced')">
-              Over-Ice Series
-            </button>
-            <button class="tab on" onclick="showCategory(this, 'juices')">
-              Freskaró Juices
-            </button>
-            <button class="tab" onclick="showCategory(this, 'hot')">
-              Hot Beverages
-            </button>
-            <button class="tab" onclick="showCategory(this, 'food')">
-              Food &amp; Snacks
-            </button>
-          </div>
-          <div class="grid menu-group" id="coffee">
-            <div class="card">
-              <div class="ph ph1">Photo: Espresso</div>
-              <h3>Espresso</h3>
-              <p class="small">Sample item – details pending.</p>
-              <span class="price soon">Price coming soon</span>
-            </div>
-            <div class="card">
-              <div class="ph ph2">Photo: Americano</div>
-              <h3>Americano</h3>
-              <p class="small">Sample item – details pending.</p>
-              <span class="price soon">Price coming soon</span>
-            </div>
-            <div class="card">
-              <div class="ph ph3">Photo: Latte</div>
-              <h3>Latte</h3>
-              <p class="small">Sample item – details pending.</p>
-              <span class="price soon">Price coming soon</span>
-            </div>
+          <button class="tab" onclick="showCategory(this, 'kape')">Kape Series</button>
+          <button class="tab" onclick="showCategory(this, 'chai')">Chai Blend</button>
+          <button class="tab" onclick="showCategory(this, 'choco')">Choco Series</button>
+          <button class="tab" onclick="showCategory(this, 'iced')">Over-Ice Series</button>
+          <button class="tab on" onclick="showCategory(this, 'juices')">Freskaró Juices</button>
+          <button class="tab" onclick="showCategory(this, 'hot')">Hot Beverages</button>
+          <button class="tab" onclick="showCategory(this, 'food')">Food &amp; Snacks</button>
           </div>
           <div class="grid menu-group" id="kape">
             <div class="card">
-              <div class="ph ph1">Photo: Kape sample 1</div>
-              <h3>Kape sample 1</h3>
-              <p class="small">Sample item – details pending.</p>
+              <img class="photo photo-card" src="assets/Kape%20Series/bnb_signature_kape.jpg" alt="BNB Signature Kape" loading="lazy" />
+              <h3>BNB Signature Kape</h3>
+              <p class="small">Kape Series</p>
               <span class="price soon">Price coming soon</span>
             </div>
             <div class="card">
-              <div class="ph ph2">Photo: Kape sample 2</div>
-              <h3>Kape sample 2</h3>
-              <p class="small">Sample item – details pending.</p>
+              <img class="photo photo-card" src="assets/Kape%20Series/cappucino.jpg" alt="Cappuccino" loading="lazy" />
+              <h3>Cappuccino</h3>
+              <p class="small">Kape Series</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Kape%20Series/caramel_macc_kape.jpg" alt="Caramel Macc Kape" loading="lazy" />
+              <h3>Caramel Macc Kape</h3>
+              <p class="small">Kape Series</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Kape%20Series/dark_mocha.jpg" alt="Dark Mocha" loading="lazy" />
+              <h3>Dark Mocha</h3>
+              <p class="small">Kape Series</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Kape%20Series/hp_salted_caramel_macc_kape.jpg" alt="HP Salted Caramel Macc Kape" loading="lazy" />
+              <h3>HP Salted Caramel Macc Kape</h3>
+              <p class="small">Kape Series</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Kape%20Series/mocha_kape.jpg" alt="Mocha Kape" loading="lazy" />
+              <h3>Mocha Kape</h3>
+              <p class="small">Kape Series</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Kape%20Series/oreo_coffee.jpg" alt="Oreo Coffee" loading="lazy" />
+              <h3>Oreo Coffee</h3>
+              <p class="small">Kape Series</p>
               <span class="price soon">Price coming soon</span>
             </div>
           </div>
           <div class="grid menu-group" id="chai">
             <div class="card">
-              <div class="ph ph1">Photo: Chai sample 1</div>
-              <h3>Chai sample 1</h3>
-              <p class="small">Sample item – details pending.</p>
+              <img class="photo photo-card" src="assets/Chai%20Blend/blackhole.jpg" alt="Blackhole" loading="lazy" />
+              <h3>Blackhole</h3>
+              <p class="small">Chai Blend</p>
               <span class="price soon">Price coming soon</span>
             </div>
             <div class="card">
-              <div class="ph ph2">Photo: Chai sample 2</div>
-              <h3>Chai sample 2</h3>
-              <p class="small">Sample item – details pending.</p>
+              <img class="photo photo-card" src="assets/Chai%20Blend/choco_brownies.jpg" alt="Choco Brownies" loading="lazy" />
+              <h3>Choco Brownies</h3>
+              <p class="small">Chai Blend</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Chai%20Blend/classic_milktea.jpg" alt="Classic Milktea" loading="lazy" />
+              <h3>Classic Milktea</h3>
+              <p class="small">Chai Blend</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Chai%20Blend/matcha.jpg" alt="Matcha" loading="lazy" />
+              <h3>Matcha</h3>
+              <p class="small">Chai Blend</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Chai%20Blend/okinawa.jpg" alt="Okinawa" loading="lazy" />
+              <h3>Okinawa</h3>
+              <p class="small">Chai Blend</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Chai%20Blend/oreo_cookies.jpg" alt="Oreo Cookies" loading="lazy" />
+              <h3>Oreo Cookies</h3>
+              <p class="small">Chai Blend</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Chai%20Blend/taro.jpg" alt="Taro" loading="lazy" />
+              <h3>Taro</h3>
+              <p class="small">Chai Blend</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Chai%20Blend/wintermelon.jpg" alt="Wintermelon" loading="lazy" />
+              <h3>Wintermelon</h3>
+              <p class="small">Chai Blend</p>
               <span class="price soon">Price coming soon</span>
             </div>
           </div>
           <div class="grid menu-group" id="choco">
             <div class="card">
-              <div class="ph ph1">Photo: Choco sample 1</div>
-              <h3>Choco sample 1</h3>
-              <p class="small">Sample item – details pending.</p>
+              <img class="photo photo-card" src="assets/Choco%20Series/cheesecake.jpg" alt="Cheesecake" loading="lazy" />
+              <h3>Cheesecake</h3>
+              <p class="small">Choco Series</p>
               <span class="price soon">Price coming soon</span>
             </div>
             <div class="card">
-              <div class="ph ph2">Photo: Choco sample 2</div>
-              <h3>Choco sample 2</h3>
-              <p class="small">Sample item – details pending.</p>
+              <img class="photo photo-card" src="assets/Choco%20Series/choco_fudge.jpg" alt="Choco Fudge" loading="lazy" />
+              <h3>Choco Fudge</h3>
+              <p class="small">Choco Series</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Choco%20Series/matcha_kitkat.jpg" alt="Matcha Kitkat" loading="lazy" />
+              <h3>Matcha Kitkat</h3>
+              <p class="small">Choco Series</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Choco%20Series/nutella_ferrero.jpg" alt="Nutella Ferrero" loading="lazy" />
+              <h3>Nutella Ferrero</h3>
+              <p class="small">Choco Series</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Choco%20Series/oreo_vanilla.jpg" alt="Oreo Vanilla" loading="lazy" />
+              <h3>Oreo Vanilla</h3>
+              <p class="small">Choco Series</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Choco%20Series/roasted_almond.jpg" alt="Roasted Almond" loading="lazy" />
+              <h3>Roasted Almond</h3>
+              <p class="small">Choco Series</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Choco%20Series/strawberry_creme.jpg" alt="Strawberry Creme" loading="lazy" />
+              <h3>Strawberry Creme</h3>
+              <p class="small">Choco Series</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Choco%20Series/ube_cream_cheese.jpg" alt="Ube Cream Cheese" loading="lazy" />
+              <h3>Ube Cream Cheese</h3>
+              <p class="small">Choco Series</p>
               <span class="price soon">Price coming soon</span>
             </div>
           </div>
           <div class="grid menu-group" id="iced">
             <div class="card">
-              <div class="ph ph1">Photo: Iced sample 1</div>
-              <h3>Iced sample 1</h3>
-              <p class="small">Sample item – details pending.</p>
+              <img class="photo photo-card" src="assets/Over%20-%20Ice%20Series/americano.jpg" alt="Americano" loading="lazy" />
+              <h3>Americano</h3>
+              <p class="small">Over-Ice Series</p>
               <span class="price soon">Price coming soon</span>
             </div>
             <div class="card">
-              <div class="ph ph2">Photo: Iced sample 2</div>
-              <h3>Iced sample 2</h3>
-              <p class="small">Sample item – details pending.</p>
+              <img class="photo photo-card" src="assets/Over%20-%20Ice%20Series/bnb_signature.jpg" alt="BNB Signature" loading="lazy" />
+              <h3>BNB Signature</h3>
+              <p class="small">Over-Ice Series</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Over%20-%20Ice%20Series/cafe_latte.jpg" alt="Cafe Latte" loading="lazy" />
+              <h3>Cafe Latte</h3>
+              <p class="small">Over-Ice Series</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Over%20-%20Ice%20Series/caramel_macc.jpg" alt="Caramel Macc" loading="lazy" />
+              <h3>Caramel Macc</h3>
+              <p class="small">Over-Ice Series</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Over%20-%20Ice%20Series/hp_salted_caramel.jpg" alt="HP Salted Caramel" loading="lazy" />
+              <h3>HP Salted Caramel</h3>
+              <p class="small">Over-Ice Series</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Over%20-%20Ice%20Series/irish_coffee.jpg" alt="Irish Coffee" loading="lazy" />
+              <h3>Irish Coffee</h3>
+              <p class="small">Over-Ice Series</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Over%20-%20Ice%20Series/matcha_latte.jpg" alt="Matcha Latte" loading="lazy" />
+              <h3>Matcha Latte</h3>
+              <p class="small">Over-Ice Series</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Over%20-%20Ice%20Series/mocha.jpg" alt="Mocha" loading="lazy" />
+              <h3>Mocha</h3>
+              <p class="small">Over-Ice Series</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Over%20-%20Ice%20Series/roasted_almond_oatmilk_latte.jpg" alt="Roasted Almond Oatmilk Latte" loading="lazy" />
+              <h3>Roasted Almond Oatmilk Latte</h3>
+              <p class="small">Over-Ice Series</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Over%20-%20Ice%20Series/spanish_latte.jpg" alt="Spanish Latte" loading="lazy" />
+              <h3>Spanish Latte</h3>
+              <p class="small">Over-Ice Series</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Over%20-%20Ice%20Series/triple_choco.jpg" alt="Triple Choco" loading="lazy" />
+              <h3>Triple Choco</h3>
+              <p class="small">Over-Ice Series</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Over%20-%20Ice%20Series/white_mocha.jpg" alt="White Mocha" loading="lazy" />
+              <h3>White Mocha</h3>
+              <p class="small">Over-Ice Series</p>
               <span class="price soon">Price coming soon</span>
             </div>
           </div>
           <div class="grid menu-group show" id="juices">
             <div class="card">
-              <div class="ph ph1">Photo: Trueberries</div>
-              <h3>Trueberries</h3>
-              <p class="small">Add ₱25 for extra shot</p>
-              <span class="price">₱110</span>
-            </div>
-            <div class="card">
-              <div class="ph ph2">Photo: AVC</div>
+              <img class="photo photo-card" src="assets/Freskaro%20Juices/avc.jpg" alt="AVC" loading="lazy" />
               <h3>AVC</h3>
-              <p class="small">Add ₱25 for extra shot</p>
-              <span class="price">₱100</span>
+              <p class="small">Add PHP 25 for extra shot</p>
+              <span class="price">PHP 100</span>
             </div>
             <div class="card">
-              <div class="ph ph3">Photo: Lychee</div>
-              <h3>Lychee</h3>
-              <p class="small">Add ₱25 for extra shot</p>
-              <span class="price">₱100</span>
-            </div>
-            <div class="card">
-              <div class="ph ph4">Photo: Healtea</div>
-              <h3>Healtea</h3>
-              <p class="small">Add ₱25 for extra shot</p>
-              <span class="price">₱95</span>
-            </div>
-            <div class="card">
-              <div class="ph ph1">Photo: Lemonade</div>
-              <h3>Lemonade</h3>
-              <p class="small">Add ₱25 for extra shot</p>
-              <span class="price">₱95</span>
-            </div>
-            <div class="card">
-              <div class="ph ph2">Photo: Passion Fruit</div>
-              <h3>Passion Fruit</h3>
-              <p class="small">Add ₱25 for extra shot</p>
-              <span class="price">₱100</span>
-            </div>
-            <div class="card">
-              <div class="ph ph3">Photo: Pineapple</div>
-              <h3>Pineapple</h3>
-              <p class="small">Add ₱25 for extra shot</p>
-              <span class="price">₱95</span>
-            </div>
-            <div class="card">
-              <div class="ph ph4">Photo: Four Seasons</div>
+              <img class="photo photo-card" src="assets/Freskaro%20Juices/four_seasons.jpg" alt="Four Seasons" loading="lazy" />
               <h3>Four Seasons</h3>
-              <p class="small">Add ₱25 for extra shot</p>
-              <span class="price">₱95</span>
+              <p class="small">Add PHP 25 for extra shot</p>
+              <span class="price">PHP 95</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Freskaro%20Juices/healtea.jpg" alt="Healtea" loading="lazy" />
+              <h3>Healtea</h3>
+              <p class="small">Add PHP 25 for extra shot</p>
+              <span class="price">PHP 95</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Freskaro%20Juices/lemonade.jpg" alt="Lemonade" loading="lazy" />
+              <h3>Lemonade</h3>
+              <p class="small">Add PHP 25 for extra shot</p>
+              <span class="price">PHP 95</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Freskaro%20Juices/lychee.jpg" alt="Lychee" loading="lazy" />
+              <h3>Lychee</h3>
+              <p class="small">Add PHP 25 for extra shot</p>
+              <span class="price">PHP 100</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Freskaro%20Juices/passion_fruit.jpg" alt="Passion Fruit" loading="lazy" />
+              <h3>Passion Fruit</h3>
+              <p class="small">Add PHP 25 for extra shot</p>
+              <span class="price">PHP 100</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Freskaro%20Juices/pineapple.jpg" alt="Pineapple" loading="lazy" />
+              <h3>Pineapple</h3>
+              <p class="small">Add PHP 25 for extra shot</p>
+              <span class="price">PHP 95</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Freskaro%20Juices/trueberries.jpg" alt="Trueberries" loading="lazy" />
+              <h3>Trueberries</h3>
+              <p class="small">Add PHP 25 for extra shot</p>
+              <span class="price">PHP 110</span>
             </div>
           </div>
           <div class="grid menu-group" id="hot">
             <div class="card">
-              <div class="ph ph1">Photo: Hot sample 1</div>
-              <h3>Hot sample 1</h3>
-              <p class="small">Sample item – details pending.</p>
+              <img class="photo photo-card" src="assets/Hot%20Beverages/brewed_coffee.jpg" alt="Brewed Coffee" loading="lazy" />
+              <h3>Brewed Coffee</h3>
+              <p class="small">Hot Beverages</p>
               <span class="price soon">Price coming soon</span>
             </div>
             <div class="card">
-              <div class="ph ph2">Photo: Hot sample 2</div>
-              <h3>Hot sample 2</h3>
-              <p class="small">Sample item – details pending.</p>
+              <img class="photo photo-card" src="assets/Hot%20Beverages/coffee_latte.jpg" alt="Coffee Latte" loading="lazy" />
+              <h3>Coffee Latte</h3>
+              <p class="small">Hot Beverages</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Hot%20Beverages/espresso.jpg" alt="Espresso" loading="lazy" />
+              <h3>Espresso</h3>
+              <p class="small">Hot Beverages</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Hot%20Beverages/hot_americano.jpg" alt="Hot Americano" loading="lazy" />
+              <h3>Hot Americano</h3>
+              <p class="small">Hot Beverages</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Hot%20Beverages/hot_bnb_signature.jpg" alt="Hot BNB Signature" loading="lazy" />
+              <h3>Hot BNB Signature</h3>
+              <p class="small">Hot Beverages</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Hot%20Beverages/hot_cappucino.jpg" alt="Hot Cappuccino" loading="lazy" />
+              <h3>Hot Cappuccino</h3>
+              <p class="small">Hot Beverages</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Hot%20Beverages/hot_caramel_macc.jpg" alt="Hot Caramel Macc" loading="lazy" />
+              <h3>Hot Caramel Macc</h3>
+              <p class="small">Hot Beverages</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Hot%20Beverages/hot_healtea.jpg" alt="Hot Healtea" loading="lazy" />
+              <h3>Hot Healtea</h3>
+              <p class="small">Hot Beverages</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Hot%20Beverages/hot_irish_coffee.jpg" alt="Hot Irish Coffee" loading="lazy" />
+              <h3>Hot Irish Coffee</h3>
+              <p class="small">Hot Beverages</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Hot%20Beverages/hot_matcha_latte.jpg" alt="Hot Matcha Latte" loading="lazy" />
+              <h3>Hot Matcha Latte</h3>
+              <p class="small">Hot Beverages</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Hot%20Beverages/hot_roasted_almond.jpg" alt="Hot Roasted Almond" loading="lazy" />
+              <h3>Hot Roasted Almond</h3>
+              <p class="small">Hot Beverages</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Hot%20Beverages/hot_triple_choco.jpg" alt="Hot Triple Choco" loading="lazy" />
+              <h3>Hot Triple Choco</h3>
+              <p class="small">Hot Beverages</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Hot%20Beverages/mocha_latte.jpg" alt="Mocha Latte" loading="lazy" />
+              <h3>Mocha Latte</h3>
+              <p class="small">Hot Beverages</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Hot%20Beverages/tea.jpg" alt="Tea" loading="lazy" />
+              <h3>Tea</h3>
+              <p class="small">Hot Beverages</p>
               <span class="price soon">Price coming soon</span>
             </div>
           </div>
           <div class="grid menu-group" id="food">
             <div class="card">
-              <div class="ph ph1">Photo: Pasta (sample)</div>
-              <h3>Pasta (sample)</h3>
-              <p class="small">Sample item – details pending.</p>
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/aglio_e_olio_tuyo.jpg" alt="Aglio e Olio Tuyo" loading="lazy" />
+              <h3>Aglio e Olio Tuyo</h3>
+              <p class="small">Food &amp; Snacks</p>
               <span class="price soon">Price coming soon</span>
             </div>
             <div class="card">
-              <div class="ph ph2">Photo: Sandwich (sample)</div>
-              <h3>Sandwich (sample)</h3>
-              <p class="small">Sample item – details pending.</p>
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/bacon_and_pancakes.jpg" alt="Bacon and Pancakes" loading="lazy" />
+              <h3>Bacon and Pancakes</h3>
+              <p class="small">Food &amp; Snacks</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/baked_penne.jpg" alt="Baked Penne" loading="lazy" />
+              <h3>Baked Penne</h3>
+              <p class="small">Food &amp; Snacks</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/bnb_toast.jpg" alt="BNB Toast" loading="lazy" />
+              <h3>BNB Toast</h3>
+              <p class="small">Food &amp; Snacks</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/chicken_alfredo.jpg" alt="Chicken Alfredo" loading="lazy" />
+              <h3>Chicken Alfredo</h3>
+              <p class="small">Food &amp; Snacks</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/chicken_fajita_roll.jpg" alt="Chicken Fajita Roll" loading="lazy" />
+              <h3>Chicken Fajita Roll</h3>
+              <p class="small">Food &amp; Snacks</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/chicken_nuggets.jpg" alt="Chicken Nuggets" loading="lazy" />
+              <h3>Chicken Nuggets</h3>
+              <p class="small">Food &amp; Snacks</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/chicken_popcorn.jpg" alt="Chicken Popcorn" loading="lazy" />
+              <h3>Chicken Popcorn</h3>
+              <p class="small">Food &amp; Snacks</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/chicken_salad.jpg" alt="Chicken Salad" loading="lazy" />
+              <h3>Chicken Salad</h3>
+              <p class="small">Food &amp; Snacks</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/creamy_pesto.jpg" alt="Creamy Pesto" loading="lazy" />
+              <h3>Creamy Pesto</h3>
+              <p class="small">Food &amp; Snacks</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/gochujang_pork.jpg" alt="Gochujang Pork" loading="lazy" />
+              <h3>Gochujang Pork</h3>
+              <p class="small">Food &amp; Snacks</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/ham_n_cheese.jpg" alt="Ham n Cheese" loading="lazy" />
+              <h3>Ham n Cheese</h3>
+              <p class="small">Food &amp; Snacks</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/hash_and_egg.jpg" alt="Hash and Egg" loading="lazy" />
+              <h3>Hash and Egg</h3>
+              <p class="small">Food &amp; Snacks</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/korean_bulgogi.jpg" alt="Korean Bulgogi" loading="lazy" />
+              <h3>Korean Bulgogi</h3>
+              <p class="small">Food &amp; Snacks</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/mandarin_orange.jpg" alt="Mandarin Orange" loading="lazy" />
+              <h3>Mandarin Orange</h3>
+              <p class="small">Food &amp; Snacks</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/meatballs.jpg" alt="Meatballs" loading="lazy" />
+              <h3>Meatballs</h3>
+              <p class="small">Food &amp; Snacks</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/meatballs_and_rice.jpg" alt="Meatballs and Rice" loading="lazy" />
+              <h3>Meatballs and Rice</h3>
+              <p class="small">Food &amp; Snacks</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/nachos.jpg" alt="Nachos" loading="lazy" />
+              <h3>Nachos</h3>
+              <p class="small">Food &amp; Snacks</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/potato_fries.jpg" alt="Potato Fries" loading="lazy" />
+              <h3>Potato Fries</h3>
+              <p class="small">Food &amp; Snacks</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/quesadilla.jpg" alt="Quesadilla" loading="lazy" />
+              <h3>Quesadilla</h3>
+              <p class="small">Food &amp; Snacks</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/spaghetti_meatballs.jpg" alt="Spaghetti Meatballs" loading="lazy" />
+              <h3>Spaghetti Meatballs</h3>
+              <p class="small">Food &amp; Snacks</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/spam_musubi.jpg" alt="Spam Musubi" loading="lazy" />
+              <h3>Spam Musubi</h3>
+              <p class="small">Food &amp; Snacks</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/tuna_chives.jpg" alt="Tuna Chives" loading="lazy" />
+              <h3>Tuna Chives</h3>
+              <p class="small">Food &amp; Snacks</p>
+              <span class="price soon">Price coming soon</span>
+            </div>
+            <div class="card">
+              <img class="photo photo-card" src="assets/Food%20%26%20Snacks/tuna_pasta.jpg" alt="Tuna Pasta" loading="lazy" />
+              <h3>Tuna Pasta</h3>
+              <p class="small">Food &amp; Snacks</p>
               <span class="price soon">Price coming soon</span>
             </div>
           </div>
@@ -250,12 +580,12 @@
           </div>
         </div>
         <p class="copyright">
-          © 2026 Café BLK &amp; BRWN. All rights reserved. Website concept: “One
+          © <span id="year">2026</span> Café BLK &amp; BRWN. All rights reserved. Website concept: “One
           Coffee Stop, Wherever You Are” — CC 312 Web Development project.
         </p>
       </div>
     </footer>
-    <script src="js/nav.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/menu.js"></script>
   </body>
 </html>

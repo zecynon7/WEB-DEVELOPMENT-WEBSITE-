@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>About Us | Café BLK &amp; BRWN</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="assets/logo.jpg" />
   </head>
   <body>
     <header class="header">
       <div class="container header-box">
         <a class="brand" href="index.html"
-          ><span class="logo">B</span> Café BLK &amp; BRWN</a
+          ><img class="logo" src="assets/logo.jpg" alt="" /> Café BLK &amp; BRWN</a
         >
         <button
           class="menu-button"
           onclick="toggleMenu()"
-          aria-label="Open menu"
+          aria-label="Open menu" aria-expanded="false"
         >
           &#9776;
         </button>
@@ -29,7 +30,7 @@
           <a href="contact.html">Contact</a>
         </nav>
         <a class="btn btn-outline header-button" href="branches.html"
-          >Find a Branch</a
+          >Find a branch</a
         >
       </div>
     </header>
@@ -59,7 +60,7 @@
                 down, work, or catch up with a friend.
               </p>
             </div>
-            <div class="ph ph3 ph-hero">Café photo (placeholder)</div>
+            <img class="photo photo-hero" src="assets/Gallery/gallery1.jpg" alt="A moment at Café BLK &amp; BRWN" loading="lazy" />
           </div>
 
           <h2 style="margin-top: 30px">What matters to us</h2>
@@ -122,11 +123,11 @@
           </div>
         </div>
         <p class="copyright">
-          © 2026 Café BLK &amp; BRWN. All rights reserved. Website concept: “One
+          © <span id="year">2026</span> Café BLK &amp; BRWN. All rights reserved. Website concept: “One
           Coffee Stop, Wherever You Are” — CC 312 Web Development project.
         </p>
       </div>
     </footer>
-    <script src="js/nav.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
