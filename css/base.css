@@ -1,5 +1,70 @@
 /* Fonts, reset, colors of text, headings */
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700;900&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(163, 74, 25, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(163, 74, 25, 0.2);
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -8,37 +73,45 @@
 }
 
 body {
-  font-family: Inter, Arial, sans-serif;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  color: #6A5947;
-  background: #FBF6F0;
+  color: #5a4a41;
+  background: linear-gradient(135deg, #faf6f1 0%, #f5ede4 100%);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 h1,
 h2,
 h3 {
-  font-family: Fraunces, Georgia, serif;
-  color: #1E1711;
+  font-family: 'Playfair Display', 'Fraunces', Georgia, serif;
+  color: #1a1410;
   line-height: 1.2;
+  font-weight: 900;
+  letter-spacing: -0.5px;
 }
 
 h1 {
-  font-size: 44px;
-  margin-bottom: 12px;
+  font-size: 48px;
+  margin-bottom: 16px;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
 h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
+  font-size: 36px;
+  margin-bottom: 16px;
+  animation: fadeInUp 0.8s ease-out 0.1s both;
 }
 
 h3 {
-  font-size: 19px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
 a {
   color: inherit;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 a:focus,
@@ -46,12 +119,14 @@ button:focus,
 input:focus,
 select:focus,
 textarea:focus {
-  outline: 3px solid #A34A19;
+  outline: 3px solid #a34a19;
   outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(163, 74, 25, 0.1);
 }
 
 .small {
   font-size: 14px;
+  color: #8a7060;
 }
 
 .center {
@@ -61,11 +136,18 @@ textarea:focus {
 .lead {
   max-width: 620px;
   margin-bottom: 24px;
+  font-size: 17px;
+  color: #6a5a50;
+  line-height: 1.8;
+  animation: fadeInUp 0.8s ease-out 0.3s both;
 }
 
 .label {
-  font-size: 13px;
-  font-weight: 600;
-  color: #8A5A2A;
-  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #a34a19;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeInUp 0.8s ease-out both;
 }
