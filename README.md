@@ -1,5 +1,15 @@
 # Café BLK & BRWN – Static Website (CC 312)
 
+Submitted by:
+  Cuajao, Stephanie N.
+  De Guzman, Ramlei Cyrus C.
+  Herrera, Clark Jerzon M.
+  Litana, John Michael C.
+  Magtangob, Jiano Freo
+  Nucos, Ericka R.
+
+Course & Section: BSIS 3A
+
 Open `index.html` in a browser. No installs needed.
 
 ```
