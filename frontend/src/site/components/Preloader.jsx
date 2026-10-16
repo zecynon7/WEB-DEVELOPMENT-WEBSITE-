@@ -1,21 +1,20 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { bootProgress, retry } from "../../lib/boot";
+import { retry } from "../../lib/boot";
 import { setReady } from "../../motion/engine";
 import { useBoot } from "../SiteContext";
-import { Cup } from "./Cup";
+import { BrandMark } from "./BrandMark";
 
-const MIN_MS = 1800; // even on a warm server the intro shows long enough to be seen
+const MIN_MS = 2200; // even on a warm server the animation shows long enough to be seen
 
 /**
- * Intro screen: a cup draws and fills while the site loads.
- * The counter and the cup follow the real startup (see lib/boot.js):
- *   server awake  →  content downloaded  →  fonts + hero photo ready  →  100%
- * While the server is still starting the counter creeps slowly but never passes the step it is waiting for.
- * If the server never answers (see GIVE_UP_MS in boot.js) the screen says "Server error".
+ * Intro screen: the logo inside a spinning loader with the brand name underneath, for as long as the site really needs.
+ * It opens only when the server has answered, the content is downloaded and the fonts + hero photo are ready
+ * (see lib/boot.js), so a Render cold start simply keeps it spinning.
+ * If the server never answers (GIVE_UP_MS in boot.js) it stops and says "Server error".
  */
-export function Preloader({ assetsReady, brand, heroSrc, onDone }) {
+export function Preloader({ assetsReady, heroSrc, onDone }) {
+  // (a `brand` prop may still be passed by SiteLayout; it is not needed any more, BrandMark reads the brand itself)
   const box = useRef(null);
-  const counter = useRef(null);
   const [done, setDone] = useState(false);
   const boot = useBoot();
   const bootRef = useRef(boot);
@@ -45,33 +44,10 @@ export function Preloader({ assetsReady, brand, heroSrc, onDone }) {
 
   useEffect(() => {
     const t0 = performance.now();
-    let raf = 0,
-      last = t0,
-      shown = 0;
-    const step = (now) => {
-      const dt = Math.min(64, now - last) / 16.67; // frames since the last tick
-      last = now;
-      const b = bootRef.current;
-      const { real, ceil } = bootProgress(b, assets.current);
-
-      if (shown < real) shown += (real - shown) * Math.min(1, 0.12 * dt); // catch up quickly when a step really finishes
-      else shown += (Math.min(ceil, 0.99) - shown) * Math.min(1, 0.004 * dt); // otherwise creep slowly towards the ceiling
-
-      const e = Math.min(1, shown);
-      if (counter.current) counter.current.textContent = String(Math.round(e * 100));
-      box.current?.style.setProperty("--pl", e.toFixed(3));
-
-      if (b.phase === "ready" && assets.current && now - t0 >= MIN_MS && shown > 0.985) {
-        finish();
-        return;
-      }
-      raf = requestAnimationFrame(step);
-    };
+    let raf = 0;
     const finish = () => {
       if (readyRef.current) return;
       readyRef.current = true;
-      if (counter.current) counter.current.textContent = "100";
-      box.current?.style.setProperty("--pl", "1");
       box.current?.classList.add("is-done");
       setTimeout(() => setReady(true), 520);
       setTimeout(() => {
@@ -85,39 +61,30 @@ export function Preloader({ assetsReady, brand, heroSrc, onDone }) {
         onDone();
       }, 1300);
     };
+    const step = (now) => {
+      if (bootRef.current.phase === "ready" && assets.current && now - t0 >= MIN_MS) {
+        finish();
+        return;
+      }
+      raf = requestAnimationFrame(step);
+    };
     raf = requestAnimationFrame(step);
     return () => cancelAnimationFrame(raf);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (done) return null;
-  const letters = brand.replace(/\s+/g, "").toUpperCase().split("");
+  const failed = boot.phase === "failed";
   return (
     <div className="preloader" ref={box}>
       <div className="preloader__panel preloader__panel--top" aria-hidden="true" />
       <div className="preloader__panel preloader__panel--bot" aria-hidden="true" />
-      <div className="preloader__inner">
-        <div aria-hidden="true">
-          <Cup k="p" />
-        </div>
-        <p className="preloader__word" aria-hidden="true">
-          {assetsReady &&
-            letters.map((c, i) => (
-              <span key={i} style={{ "--i": i }}>
-                {c}
-              </span>
-            ))}
+      <div className={`preloader__inner${failed ? " is-failed" : ""}`}>
+        <BrandMark />
+        <p className={`preloader__msg${failed ? " is-on" : ""}`} role="status" aria-live="polite">
+          {failed ? "Server error" : ""}
         </p>
-        <div className="preloader__count" ref={counter} aria-hidden="true">
-          0
-        </div>
-        <div className="preloader__bar" aria-hidden="true">
-          <i />
-        </div>
-        <p className={`preloader__msg${boot.phase === "failed" ? " is-on" : ""}`} role="status" aria-live="polite">
-          {boot.phase === "failed" ? "Server error" : ""}
-        </p>
-        {boot.phase === "failed" && (
+        {failed && (
           <button type="button" className="btn btn--primary btn--sm" onClick={retry}>
             Try again
           </button>
