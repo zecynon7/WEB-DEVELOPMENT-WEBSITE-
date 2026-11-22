@@ -214,8 +214,6 @@ export const PAGES = [
           t("start_eyebrow", "Small label"),
           ...headline("start", "Heading"),
           ta("start_lead", "Lead paragraph", undefined, 4),
-          t("start_notice", "Notice box text", "A dashed box, e.g. “More history coming soon”."),
-          t("start_notice_badge", "Notice badge", undefined, "COMING SOON"),
           t("serve_title", "“What we serve” heading"),
           ta("serve_text", "“What we serve” text", undefined, 4),
           img("photo", "Photo", "Portrait (4:5) works best."),
