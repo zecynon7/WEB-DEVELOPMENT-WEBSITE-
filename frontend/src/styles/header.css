@@ -35,7 +35,7 @@
 
 .brand { display: flex; flex: none; align-items: center; gap: var(--space-3); white-space: nowrap; }
 .brand img { width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--line-strong); transition: transform 0.8s var(--ease-spring), width 0.4s, height 0.4s; }
-.brand:hover img { transform: rotate(360deg) scale(1.06); }
+.brand:hover img { transform: scale(1.06); }
 .site-header.is-scrolled .brand img { width: 40px; height: 40px; }
 .brand__name { display: block; font: 700 var(--step-1)/1.1 var(--font-body); letter-spacing: 0.01em; }
 .brand__tag { display: block; font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.16em; color: var(--latte); }

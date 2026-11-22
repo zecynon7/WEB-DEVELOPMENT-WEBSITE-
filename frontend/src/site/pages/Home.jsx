@@ -6,6 +6,7 @@ import { useScene } from "../../motion/hooks";
 import { Counter } from "../components/Counter";
 import { Cup } from "../components/Cup";
 import { Icon } from "../components/Icon";
+import { useLightbox } from "../components/Lightbox";
 import { Marquee } from "../components/Marquee";
 import { usePageMeta } from "../components/Seo";
 import { Split } from "../components/Split";
@@ -469,6 +470,7 @@ function Tanza({ c }) {
 
 /* ----------------------------------------------------------------- STRIPS */
 function Strips({ c, gallery }) {
+  const { open, node } = useLightbox();
   const items = gallery.filter((g) => g.featured);
   if (!items.length) return null;
   const rowA = items.filter((_, i) => i % 2 === 0),
@@ -477,7 +479,16 @@ function Strips({ c, gallery }) {
     <Marquee className="strip" dir={dir} speed={speed}>
       {list.map((g) => (
         <figure className="marquee__item" key={g.item_id}>
-          <img src={cdn(g.image_url, 600)} alt={g.alt || g.caption || ""} loading="lazy" />
+          {/* tabIndex -1: the looping copies are hidden from assistive tech, so keyboard users use the gallery link above */}
+          <button
+            className="marquee__btn"
+            type="button"
+            tabIndex={-1}
+            aria-label={`View photo: ${g.alt || g.caption || "gallery photo"}`}
+            onClick={(e) => open({ src: cdn(g.image_url, 1600), alt: g.alt || g.caption, caption: g.caption }, e.currentTarget.querySelector("img"))}
+          >
+            <img src={cdn(g.image_url, 600)} alt={g.alt || g.caption || ""} loading="lazy" />
+          </button>
         </figure>
       ))}
     </Marquee>
@@ -500,6 +511,7 @@ function Strips({ c, gallery }) {
       </div>
       {row(rowA, "left", 45)}
       {rowB.length > 0 && row(rowB, "right", 38)}
+      {node}
     </section>
   );
 }
