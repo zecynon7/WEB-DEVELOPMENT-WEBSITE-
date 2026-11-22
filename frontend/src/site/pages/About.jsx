@@ -35,6 +35,11 @@ export default function About() {
                   {c.start_lead}
                 </p>
               )}
+              {c.start_notice && (
+                <p className="notice" data-reveal="rise">
+                  {c.start_notice} {c.start_notice_badge && <span className="soon-badge">{c.start_notice_badge}</span>}
+                </p>
+              )}
               {c.serve_title && (
                 <h3 className="heading-md" data-reveal="rise" style={{ marginTop: "var(--space-5)" }}>
                   {c.serve_title}
