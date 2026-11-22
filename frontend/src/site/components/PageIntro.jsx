@@ -1,5 +1,6 @@
 
 
+import { PageBeans } from "./PageBeans";
 import { Split } from "./Split";
 
 /** First block of every inner page. Reads <prefix>_eyebrow / _title / _accent / _lead from the page content. */
@@ -11,6 +12,7 @@ export function PageIntro({ c, prefix = "intro", children }) {
   if (!eyebrow && !title && !accent && !lead) return null;
   return (
     <header className="container page-intro">
+      <PageBeans />
       <div className="stack">
         {eyebrow && (
           <p className="eyebrow" data-reveal="rise">
