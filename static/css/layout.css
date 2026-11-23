@@ -32,6 +32,7 @@ main { display: block; }
 
 /* First block on every inner page */
 .page-intro { position: relative; overflow-x: clip; padding-block: var(--space-8) var(--space-5); }
+.page-intro > .stack { position: relative; z-index: 1; } /* text sits above the floating beans */
 .page-intro .stack > * + * { margin-top: var(--space-4); }
 .page-intro .lead { max-width: 56ch; color: var(--text-muted); }
 .page-intro h1 { font-size: var(--step-6); line-height: 1.04; letter-spacing: -0.035em; }
