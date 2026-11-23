@@ -1,5 +1,16 @@
 # Café BLK & BRWN Website
 
+Submitted by:
+  Cuajao, Stephanie N.
+  De Guzman, Ramlei Cyrus C.
+  Herrera, Clark Jerzon M.
+  Litana, John Michael C.
+  Magtangob, Jiano Freo
+  Nucos, Ericka R.
+
+Course & Section: BSIS 3A
+
+Open `index.html` in a browser. No installs needed.
 ## Project Overview
 This website was developed by BSIS 3rd year students as part of their Web Development (CC 312) course at the Technological University of the Philippines – College of Science. It is a centralized website for Café BLK & BRWN, a multi-branch coffee shop and restaurant brand based in Tanza, Cavite. It showcases the café's menu, seven branches, gallery, and contact information, and lets customers request a table through a Reserve a Table page.
 
