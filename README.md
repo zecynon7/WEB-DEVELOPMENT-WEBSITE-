@@ -1,6 +1,73 @@
-# Café BLK & BRWN: website + editor
-live site:https://cafe-blk-and-brwn.onrender.com
+# Café BLK & BRWN Website
 
+## Project Overview
+This website was developed by BSIS 3rd year students as part of their Web Development (CC 312) course at the Technological University of the Philippines – College of Science. It is a centralized website for Café BLK & BRWN, a multi-branch coffee shop and restaurant brand based in Tanza, Cavite. It showcases the café's menu, seven branches, gallery, and contact information, and lets customers request a table through a Reserve a Table page.
+
+## Purpose
+To give Café BLK & BRWN one official online place where customers can discover the brand, browse the menu, find the nearest branch, request a table, and contact the café, instead of searching across Facebook, Instagram, and Google listings.
+
+## Team Members & Roles
+- **Clark Jerzon M. Herrera** – Project Manager
+- **Ramlei Cyrus C. De Guzman** – UI/UX Designer
+- **John Michael C. Litana** – Front-End Developer
+- **Stephanie N. Cuajao** – Content Writer & Researcher
+- **Jiano Freo Magtangob** – Web Developer
+- **Ericka R. Nucos** – Content Writer
+
+Submitted to: Prof. Mary Joy D. Viñas
+
+## Tools Used
+- HTML, CSS, JavaScript
+- React 19 and Vite (frontend)
+- Node.js and Express (backend API)
+- PostgreSQL on Neon (database) and Cloudinary (image storage)
+- Visual Studio Code
+- Figma (wireframes and design)
+- Git & GitHub
+- GitHub Pages (frontend deployment) and Render (backend API)
+
+Note: our proposal planned PHP and MySQL. During development we changed to Node.js (Express) and PostgreSQL (Neon) so that the whole system uses one language, JavaScript, for both the frontend and the backend. This made teamwork easier, since every member could read and edit the same codebase. It also let us deploy the backend and database on free cloud services (Render and Neon). Our proposal itself noted that GitHub Pages cannot run PHP or MySQL. The change kept the planned reservation features: validation, a database-backed reservation list, a reference number, a status page, and a protected staff login.
+
+## Site Structure
+- `index.html` – Entry page of the project
+- `package.json` – Project scripts and dependencies
+- `frontend/` – React + Vite public website and the staff editor
+  - `src/site/pages/` – Home, About, Menu, Branches, Gallery, Contact, Reserve, Track (Reservation Status), Privacy
+  - `src/site/components/` – Header, Footer, Tabs, and other reusable parts
+  - `src/admin/` – Private staff editor (reservations, messages, menu, branches, gallery)
+  - `src/motion/` – Scroll and animation effects
+  - `src/styles/` – Stylesheets
+- `backend/` – Express API (`/api/public`, `/api/auth`, `/api/admin`)
+- `static/` – 
+- `README.md` – Project documentation
+- `.gitignore` – Files excluded from version control
+
+## Design Concept
+- **Color Scheme**: Dark espresso theme with cream text and tan accents. Espresso Black `#17100A`, Dark Roast `#342214`, Cream White `#FEFAF7`, Latte `#E2CBBB`, Tan Border `#D9C5AD`, Soft Taupe `#CEC9C5`
+- **Typography**: Playfair Display (serif) fhttps://github.com/zecynon7/WEB-DEVELOPMENT-WEBSITE-/pulseor headings and DM Sans (sans-serif) for body text
+- **Layout**: Consistent spacing, mobile-first responsive grid; the navigation collapses into a menu button on small screens
+
+## Deployment
+- GitHub Repository: https://github.com/zecynon7/WEB-DEVELOPMENT-WEBSITE-.git
+- Live Site: https://cafe-blk-and-brwn.onrender.com
+- Backend API (Render): [elis-server-dj06.onrender.com](https://cafe-blk-and-brwn-server.onrender.com)
+
+## Lessons Learned
+- Improved collaboration using Git
+- Learned how to deploy static sites via GitHub Pages
+- Practiced responsive design and semantic HTML
+- Learned to adjust our technical plan when requirements changed, moving from PHP/MySQL to Node.js/PostgreSQL after finding that GitHub Pages only hosts static files.
+
+## Timeline
+| Phase | Task | Date |
+|-------|------|------|
+| Proposal | Planning & wireframe | September 2026 |
+| Development | Coding & testing | Oct–Nov, 2026 |
+| Deployment | GitHub setup & launch | Nov 21–23, 2026 |
+| Submission | Final documentation | Nov 23, 2026 |
+| Submission | Final documentation | Nov 26, 2026 |
+
+## Technical Guide
 A React website whose **every word, photo, menu item, branch and gallery image is edited from a private
 editor page**, backed by one Express API (the same API powers the website and the editor). The frontend and the backend are hosted separately.
 
