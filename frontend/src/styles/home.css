@@ -1,0 +1,201 @@
+/* ==========================================================================
+   HOME: scroll-driven scenes
+   js/scenes.js writes one number, --p (0 to 1), onto each [data-scene]
+   element. Everything below is plain CSS maths on that number, so the
+   motion is tied to the scroll bar like a video you scrub through.
+   ========================================================================== */
+
+/* 1. HERO: copy fades back while the photo window opens to full screen ---- */
+.hero-scene {
+  --p: 0;
+  --e:  clamp(0, calc((var(--p) - 0.03) / 0.5), 1);          /* window opening */
+  --e2: calc(var(--e) * var(--e) * (3 - 2 * var(--e)));      /* eased */
+  --c:  clamp(0, calc(var(--p) / 0.3), 1);                   /* copy leaving */
+  --c2: calc(var(--c) * var(--c));
+  --w-t: 12%; --w-r: 4%; --w-b: 8%; --w-l: 56%;               /* where the photo window starts */
+  position: relative;
+  height: 320vh;
+}
+.hero-stage { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; display: grid; align-items: center; }
+
+.hero-copy {
+  position: relative;
+  z-index: 3;
+  width: min(var(--container), 100% - 2 * var(--gutter));
+  margin-inline: auto;
+  padding-top: calc(var(--header-h) + var(--space-5));
+  display: grid;
+  gap: var(--space-5);
+  transform-origin: 0 50%;
+  translate: calc(var(--c2) * -9vw) calc(var(--c2) * -7vh);
+  scale: calc(1 - 0.12 * var(--c2));
+  opacity: calc(1 - var(--c2) * 1.3);
+}
+.hero-copy > * { max-width: min(48vw, 640px); }
+.hero-scene.copy-gone .hero-copy { visibility: hidden; }
+.hero-title { font-size: clamp(3rem, 1.4rem + 5.2vw, 7rem); line-height: 1; letter-spacing: -0.04em; }
+.hero-copy .lead { max-width: 30ch; color: var(--text); }
+
+.hero__stats { display: flex; flex-wrap: wrap; gap: var(--space-5) var(--space-7); padding-top: var(--space-5); border-top: 1px solid var(--line); }
+.hero__stats dt { font-size: var(--step--1); letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faint); }
+.hero__stats dd { font: 600 var(--step-3)/1.1 var(--font-heading); color: var(--white); font-variant-numeric: tabular-nums; }
+
+.hero-photo {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  top:    calc(var(--w-t) * (1 - var(--e2)));
+  right:  calc(var(--w-r) * (1 - var(--e2)));
+  bottom: calc(var(--w-b) * (1 - var(--e2)));
+  left:   calc(var(--w-l) * (1 - var(--e2)));
+  border-radius: calc(36px * (1 - var(--e2)));
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+  --r: 36px;
+}
+.hero-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 42%; scale: calc(1.16 - 0.16 * var(--e2)); }
+.hero-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11, 8, 6, 0.1), rgba(11, 8, 6, 0.78)); opacity: calc(0.1 + 0.9 * var(--e2)); }
+
+.hero-badge { position: absolute; z-index: 3; left: calc(var(--w-l) - 66px); bottom: calc(var(--w-b) + 28px); opacity: calc(1 - var(--e2) * 2.4); scale: calc(1 - 0.3 * var(--e2)); }
+
+.hero-beans { opacity: calc(1 - var(--e2) * 1.6); }
+
+.hero-overlay {
+  position: absolute;
+  z-index: 4;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  padding: 0 var(--gutter);
+  text-align: center;
+  font: 600 clamp(2.5rem, 1rem + 6.6vw, 8.2rem)/1.02 var(--font-heading);
+  letter-spacing: -0.035em;
+  color: var(--white);
+  pointer-events: none;
+  text-wrap: balance;
+}
+.hero-overlay .sw {
+  --wo: clamp(0, calc((var(--p) - 0.5) * 9 - var(--i) * 0.9), 1);
+  opacity: var(--wo);
+  translate: 0 calc((1 - var(--wo)) * 80px);
+  rotate: calc((1 - var(--wo)) * 4deg);
+}
+.hero-overlay em { font-style: italic; font-weight: 500; color: var(--latte); }
+.hero-scroll { position: absolute; z-index: 3; left: 0; right: 0; bottom: 22px; display: flex; justify-content: center; opacity: calc(1 - var(--p) * 10); }
+
+/* 2. SCRUB TEXT: words light up as you read down the page ----------------- */
+.scrub-section { padding-block: var(--space-9) var(--space-8); }
+.scrub { --p: 0; max-width: 24em; font: 600 clamp(1.9rem, 0.9rem + 3.5vw, 4.4rem)/1.16 var(--font-heading); letter-spacing: -0.028em; color: var(--white); text-wrap: pretty; }
+.scrub .sw { opacity: clamp(0.14, calc(0.14 + (var(--p) * (var(--n) + 4) - var(--i)) * 0.86), 1); }
+.scrub em { font-style: italic; font-weight: 500; color: var(--latte); }
+
+/* 3. DRINKS: a pinned showcase that changes cup as you scroll ------------- */
+.drinks { --p: 0; position: relative; height: 560vh; }
+.drinks__stage { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; display: flex; flex-direction: column; justify-content: center; gap: var(--space-4); padding-top: calc(var(--header-h) + var(--space-3)); padding-bottom: var(--space-6); }
+.drinks__head { display: flex; justify-content: space-between; align-items: flex-end; gap: var(--space-5); }
+.drinks__head h2 { font-size: var(--step-4); }
+.drinks__grid { flex: 1; min-height: 0; display: grid; grid-template-columns: 0.85fr 1.2fr 0.95fr; align-items: center; gap: var(--space-6); }
+
+.drinks__list { display: grid; gap: var(--space-1); }
+.drinks__list button {
+  display: flex; align-items: baseline; gap: var(--space-3);
+  padding: 0.35rem 0; border: 0; background: none; text-align: left; cursor: pointer;
+  font: 600 var(--step-3)/1.1 var(--font-heading); letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.3);
+  transition: color 0.6s, translate 0.7s var(--ease-out);
+}
+.drinks__list button b { font: 700 0.75rem/1 var(--font-body); letter-spacing: 0.16em; color: var(--latte); opacity: 0.5; transition: opacity 0.5s; }
+.drinks__list button:hover { color: rgba(255, 255, 255, 0.7); }
+.drinks__list button.is-active { color: var(--white); translate: 16px 0; }
+.drinks__list button.is-active b { opacity: 1; }
+
+.drinks__visual { position: relative; justify-self: center; width: min(40vw, 58vh, 540px); aspect-ratio: 1; }
+.drinks__ring { position: absolute; inset: -9%; width: 118%; height: 118%; rotate: calc(var(--p) * 540deg); }
+.drinks__ring circle { fill: none; stroke: rgba(226, 195, 163, 0.5); stroke-width: 1; stroke-dasharray: 2 9; }
+.drinks__ring circle:nth-child(2) { stroke: rgba(226, 195, 163, 0.18); stroke-dasharray: none; }
+.drinks__glow { position: absolute; inset: -28%; border-radius: 50%; background: radial-gradient(circle, var(--tint) 0%, transparent 62%); opacity: 0; transition: opacity 1s; pointer-events: none; }
+.drinks__glow.is-active { opacity: 1; }
+.drinks__imgs { position: absolute; inset: 0; animation: bob 7s ease-in-out infinite; }
+.drinks__imgs img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  border-radius: 50%; border: 1px solid var(--line-strong);
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.55);
+  transition: translate 1.1s var(--ease-out), rotate 1.1s var(--ease-out), scale 1.1s var(--ease-out), opacity 0.7s, filter 1s;
+}
+.drinks__imgs img.is-before { translate: -48% 0; rotate: -48deg; scale: 0.45; opacity: 0; filter: blur(12px); }
+.drinks__imgs img.is-after  { translate: 48% 0;  rotate: 48deg;  scale: 0.45; opacity: 0; filter: blur(12px); }
+.drinks__tag { position: absolute; z-index: 3; right: -2%; bottom: 8%; padding: 10px 18px; border-radius: var(--radius-pill); font-size: 0.8125rem; font-weight: 700; background: var(--cta-gradient); color: var(--black); box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45); rotate: -6deg; }
+
+.drinks__info { display: grid; gap: var(--space-3); align-content: center; }
+.roll { display: grid; overflow: hidden; padding: 0.06em 0 0.16em; margin-bottom: -0.1em; }
+.roll > * { grid-area: 1 / 1; transition: translate 0.9s var(--ease-out), opacity 0.6s; }
+.roll > .is-before { translate: 0 -115%; opacity: 0; }
+.roll > .is-after  { translate: 0 115%;  opacity: 0; }
+.drinks__cat { font-size: var(--step--1); font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--latte); }
+.drinks__name { font: 600 clamp(2.2rem, 1.2rem + 3.4vw, 4.2rem)/1.04 var(--font-heading); letter-spacing: -0.03em; color: var(--white); text-wrap: balance; }
+.drinks__price { font: 700 clamp(2.6rem, 1.4rem + 3.6vw, 4.6rem)/1 var(--font-body); letter-spacing: -0.04em; color: var(--white); font-variant-numeric: tabular-nums; }
+.drinks__price small { margin-right: 6px; font-size: 0.3em; font-weight: 700; letter-spacing: 0.12em; color: var(--latte); vertical-align: 0.9em; }
+.drinks__note { font-size: 0.9375rem; color: var(--text-muted); }
+.drinks__bar { position: absolute; left: var(--gutter); right: var(--gutter); bottom: 22px; height: 2px; border-radius: 2px; background: rgba(255, 255, 255, 0.14); }
+.drinks__bar i { display: block; height: 100%; transform-origin: left; transform: scaleX(var(--p)); background: var(--caramel-gradient); box-shadow: 0 0 10px rgba(226, 195, 163, 0.7); }
+
+/* 4. BRANCHES: vertical scroll drives a horizontal ride ------------------- */
+.hscroll { position: relative; height: 420vh; }
+.hscroll__stage { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; display: flex; flex-direction: column; justify-content: center; padding-top: calc(var(--header-h) + var(--space-3)); }
+.hscroll__track { display: flex; gap: var(--space-5); width: max-content; align-items: stretch; padding-inline: max(var(--gutter), calc((100vw - var(--container)) / 2)); will-change: transform; }
+.hscroll__bar { position: absolute; left: var(--gutter); right: var(--gutter); bottom: 22px; height: 2px; border-radius: 2px; background: rgba(255, 255, 255, 0.14); }
+.hscroll__bar i { display: block; height: 100%; transform-origin: left; transform: scaleX(var(--p)); background: var(--caramel-gradient); box-shadow: 0 0 10px rgba(226, 195, 163, 0.7); }
+
+.hcard { position: relative; flex: none; display: flex; flex-direction: column; width: min(26rem, 78vw); height: min(64vh, 560px); padding: var(--space-3); border-radius: var(--radius-lg); }
+.hcard__photo { position: relative; flex: 1; min-height: 0; overflow: hidden; border-radius: var(--radius-md); }
+.hcard__photo img { position: absolute; top: 0; left: -12%; width: 124%; height: 100%; max-width: none; object-fit: cover; will-change: transform; }
+.hcard__no { position: absolute; z-index: 2; top: 10px; right: 18px; font: italic 600 4.2rem/1 var(--font-heading); color: transparent; -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7); }
+.hcard__body { display: grid; gap: 4px; padding: var(--space-4) var(--space-3) var(--space-2); }
+.hcard__body h3 { font-size: var(--step-2); }
+.hcard__body .small { color: var(--text-muted); font-size: 0.875rem; }
+.hcard__region { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--latte); }
+.hcard--intro { width: min(30rem, 82vw); padding: 0 var(--space-4) 0 0; justify-content: center; gap: var(--space-5); background: none; border: 0; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; }
+.hcard--intro::before { display: none; }
+.hcard--end { width: min(24rem, 78vw); justify-content: center; align-items: flex-start; gap: var(--space-5); padding: var(--space-6); background: var(--khaki-gradient); border-color: rgba(255, 255, 255, 0.6); }
+.hcard--end h3 { color: var(--espresso); font-size: var(--step-3); }
+.hcard--end p { color: #4a2f1d; }
+.hcard--end .btn--primary { background: var(--brown-gradient); color: var(--white); }
+
+/* 5. GALLERY STRIPS ------------------------------------------------------- */
+.strips { position: relative; padding-block: var(--space-8); overflow: hidden; }
+.strip { rotate: -2.2deg; margin-block: var(--space-4); }
+.strip + .strip { rotate: -2.2deg; }
+.strip .marquee__item { flex: none; height: clamp(170px, 30vh, 300px); aspect-ratio: 4 / 5; margin-right: var(--space-4); border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--line); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4); }
+.strip .marquee__btn { display: block; width: 100%; height: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; }
+.strip .marquee__item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease-out); }
+.strip .marquee__item:hover img { transform: scale(1.1); }
+
+/* 6. STORY BAND + CLOSING CTA -------------------------------------------- */
+.how { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: var(--space-7); align-items: center; }
+.how .glass { padding: var(--space-6); }
+
+
+.loop { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: var(--space-7); padding: var(--space-7); overflow: hidden; }
+.loop__cup { width: clamp(140px, 22vw, 260px); }
+
+.drinks__tag { opacity: 0; scale: 0.6; transition: opacity 0.5s, scale 0.8s var(--ease-spring); }
+.drinks__tag.is-active { opacity: 1; scale: 1; }
+.parallax--tall { aspect-ratio: 4 / 5; }
+
+/* Reduced motion / no JavaScript: pinned scenes become ordinary sections */
+:is(html.no-motion, html:not(.js)) .hero-scene { height: auto; --e2: 0; --c2: 0; }
+:is(html.no-motion, html:not(.js)) .hero-stage { position: relative; height: auto; min-height: 100vh; padding-bottom: var(--space-7); }
+:is(html.no-motion, html:not(.js)) .hero-overlay,
+:is(html.no-motion, html:not(.js)) .hero-scroll,
+:is(html.no-motion, html:not(.js)) .hero-badge { display: none; }
+:is(html.no-motion, html:not(.js)) .hero-copy { translate: none; scale: none; opacity: 1; }
+:is(html.no-motion, html:not(.js)) .drinks { height: auto; }
+:is(html.no-motion, html:not(.js)) .drinks__stage { position: relative; height: auto; padding-block: var(--space-7); }
+:is(html.no-motion, html:not(.js)) .hscroll { height: auto !important; }
+:is(html.no-motion, html:not(.js)) .hscroll__stage { position: relative; height: auto; padding-block: var(--space-7); }
+:is(html.no-motion, html:not(.js)) .hscroll__track { overflow-x: auto; width: auto; padding-bottom: var(--space-4); }
+:is(html.no-motion, html:not(.js)) .hscroll__bar, :is(html.no-motion, html:not(.js)) .drinks__bar { display: none; }
+:is(html.no-motion, html:not(.js)) .scrub .sw, :is(html.no-motion, html:not(.js)) .steps--scrub .steps__item { opacity: 1; }
+:is(html.no-motion, html:not(.js)) .marquee { overflow-x: auto; }
+
+.drinks__dots { display: none; }
+.drinks__cta { justify-self: start; }

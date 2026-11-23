@@ -1,0 +1,1416 @@
+{
+ "pages": {
+  "site": {
+   "brand_name": "BLK & BRWN",
+   "brand_tagline": "COFFEE · COMMUNITY · COMFORT",
+   "logo": {
+    "$img": "logo.jpg"
+   },
+   "phone": "+63 927 007 3822",
+   "email": "cafeblkandbrwn@gmail.com",
+   "facebook_url": "https://web.facebook.com/cafeblkandbrwn",
+   "instagram_url": "https://www.instagram.com/cafeblkandbrwn/",
+   "footer_title": "Slow down.",
+   "footer_accent": "Sip better.",
+   "footer_blurb": "Warm cups. Good food. Familiar places.",
+   "footer_credit": "Café BLK & BRWN. All rights reserved. Website concept: “One Coffee Stop, Wherever You Are” — CC 312 Web Development project.",
+   "meta_description": "Café BLK & BRWN: coffee, food and warm corners across Cavite and Alabang. See our menu and prices, find a branch, and reserve a table."
+  },
+  "home": {
+   "hero_eyebrow": "Your everyday coffee stop",
+   "hero_title": "Slow down.",
+   "hero_accent": "Sip better.",
+   "hero_lead": "A little pause. A familiar cup. A warm corner made for you.",
+   "hero_image": {
+    "$img": "hero_image.jpg"
+   },
+   "hero_image_alt": "Milk and espresso pouring into an iced coffee in a BLK & BRWN cup",
+   "stats": [
+    {
+     "label": "Branches",
+     "value": "7",
+     "suffix": "",
+     "plain": false
+    },
+    {
+     "label": "Brewing since",
+     "value": "2021",
+     "suffix": "",
+     "plain": true
+    },
+    {
+     "label": "Menu favorites",
+     "value": "80",
+     "suffix": "+",
+     "plain": false
+    }
+   ],
+   "badge_text": "Coffee · Community · Comfort · Coffee · Community · Comfort ·",
+   "overlay_text": "Good coffee.",
+   "overlay_accent": "Even better company.",
+   "marquee_words": [
+    "Kape Series",
+    "Chai Blend",
+    "Choco Series",
+    "Over-Ice Series",
+    "Freskaró Juices",
+    "Hot Brews",
+    "Food & Snacks"
+   ],
+   "story_eyebrow": "Who we are",
+   "story_text": "Café BLK & BRWN started in Barangay Capipisa, Tanza, in May 2021. What began as one small coffee shop has grown into a café and restaurant across Cavite and Metro Manila, serving espresso, chai and chocolate drinks, Freskaró juices and hearty food. The idea stays simple: good coffee, good food, and",
+   "story_accent": "room to connect.",
+   "facts": [
+    {
+     "icon": "coffee",
+     "title": "Coffee and more",
+     "text": "Espresso drinks, chai, chocolate, Freskaró juices and hearty food."
+    },
+    {
+     "icon": "map-pin",
+     "title": "Cavite to Alabang",
+     "text": "Seven branches across Cavite and Metro Manila."
+    },
+    {
+     "icon": "calendar",
+     "title": "Reserve ahead",
+     "text": "Send a table request and our staff will confirm it."
+    }
+   ],
+   "drinks_eyebrow": "Find your next favorite",
+   "drinks_title": "A cup for",
+   "drinks_accent": "every mood.",
+   "ride_eyebrow": "Our locations",
+   "ride_title": "Seven warm corners,",
+   "ride_accent": "one cup.",
+   "ride_lead": "From our home in Tanza to Cavite and Alabang.",
+   "ride_end_title": "Which one is closest to you?",
+   "ride_end_text": "Search all seven branches, see hours, and get directions in one tap.",
+   "tanza_eyebrow": "Local roots. More warm corners.",
+   "tanza_title": "From Tanza, with a",
+   "tanza_accent": "lot of heart.",
+   "tanza_lead": "What started with passion in Barangay Capipisa has grown across Cavite and into Metro Manila — same coffee, same welcome.",
+   "tanza_text": "Good coffee, good food, and room to connect.",
+   "tanza_image": {
+    "$img": "Branches/capipisa_tanza.jpg"
+   },
+   "tanza_image_alt": "Capipisa, Tanza branch of Café BLK & BRWN",
+   "strips_eyebrow": "Life at BLK & BRWN",
+   "strips_title": "Stay a little",
+   "strips_accent": "longer.",
+   "how_eyebrow": "Less waiting. More catching up.",
+   "how_title": "Your plans. Our",
+   "how_accent": "warm corners.",
+   "how_lead": "Choose your branch, pick a time, and send a table request in about a minute.",
+   "how_steps": [
+    {
+     "title": "Pick your place",
+     "text": "Find a branch that feels close to home."
+    },
+    {
+     "title": "Make a little time",
+     "text": "Choose your date, time and group size."
+    },
+    {
+     "title": "We’ll save your moment",
+     "text": "Staff review your request and confirm it."
+    }
+   ],
+   "loop_eyebrow": "What’s brewing?",
+   "loop_title": "Keep in the",
+   "loop_accent": "loop.",
+   "loop_text": "For current promotions and branch announcements, follow the café’s social pages — @cafeblkandbrwn."
+  },
+  "about": {
+   "intro_eyebrow": "Our story",
+   "intro_title": "More than a",
+   "intro_accent": "coffee stop.",
+   "intro_lead": "A warm place to take a break, meet a friend, and enjoy a good cup of coffee.",
+   "start_eyebrow": "Est. May 2021 · Tanza, Cavite",
+   "start_title": "Started with passion.",
+   "start_accent": "Shared with everyone.",
+   "start_lead": "Café BLK & BRWN started with passion in May 2021, opening its original branch in Barangay Capipisa, Tanza, Cavite. From that first location, the café grew steadily across Cavite and eventually into Metro Manila, including a branch at Festival Mall, Alabang.",
+   "serve_title": "What we serve",
+   "serve_text": "Our menu is built around espresso-based coffee, chai and chocolate drinks, iced drinks, Freskaró fruit juices, and food such as pasta and sandwiches — made for people who want to sit down, work, or catch up with a friend.",
+   "photo": {
+    "$img": "Gallery/gallery1.jpg"
+   },
+   "photo_alt": "A moment at Café BLK & BRWN",
+   "grow_eyebrow": "How we grew",
+   "grow_title": "One warm corner",
+   "grow_accent": "at a time.",
+   "grow_text": "From a single shop in Capipisa to seven branches, the idea has stayed simple.",
+   "timeline": [
+    {
+     "title": "May 2021 · Capipisa, Tanza",
+     "text": "The original branch opens in Barangay Capipisa, Tanza, Cavite."
+    },
+    {
+     "title": "Across Cavite",
+     "text": "Naic, General Trias, Kawit, Trece Martires and SM City Tanza."
+    },
+    {
+     "title": "Into Metro Manila",
+     "text": "Festival Mall, Alabang brings the café beyond Cavite."
+    }
+   ],
+   "values_eyebrow": "What matters to us",
+   "values_title": "Quality,",
+   "values_accent": "consistency, closeness.",
+   "values": [
+    "Quality coffee, drinks, and food in a comfortable, approachable space",
+    "A consistent, recognizable experience across every branch",
+    "Growing our reach while staying local and unhurried",
+    "Making it easy to find, visit, and return to a nearby branch"
+   ],
+   "mission": "To serve well-made coffee, drinks, and food in warm, welcoming spaces where people can slow down, connect, and enjoy the moment.",
+   "vision": "To become a well-loved and recognizable café brand that customers in Cavite, Metro Manila, and nearby areas can easily discover, visit, and return to.",
+   "expect_eyebrow": "What you can expect",
+   "expect_title": "The cup, the space,",
+   "expect_accent": "the people.",
+   "expect": [
+    {
+     "icon": "coffee",
+     "title": "Thoughtfully made",
+     "text": "Coffee, specialty drinks, and food for your everyday pause."
+    },
+    {
+     "icon": "star",
+     "title": "Warm and welcoming",
+     "text": "Comfortable spaces to slow down and enjoy the moment."
+    },
+    {
+     "icon": "users",
+     "title": "Better together",
+     "text": "A familiar meeting place for friends, families, and the community."
+    }
+   ],
+   "cta_eyebrow": "Your next warm corner is waiting",
+   "cta_title": "Come sit",
+   "cta_accent": "a while.",
+   "cta_text": "Reserve a table or find the branch nearest you."
+  },
+  "menu": {
+   "intro_eyebrow": "Something for every mood",
+   "intro_title": "Your next favorite",
+   "intro_accent": "starts here.",
+   "intro_lead": "Pick a category, find your favorite, and make it a little more you with migalo.",
+   "footnote_title": "Found your favorite?",
+   "footnote_text": "All prices are in Philippine pesos (PHP). Availability and prices may vary by branch."
+  },
+  "branches": {
+   "intro_eyebrow": "Our locations",
+   "intro_title": "Your next",
+   "intro_accent": "warm corner.",
+   "intro_lead": "From our home in Tanza to Cavite and Alabang. Search by branch name or area, or filter by region.",
+   "map_title": "All 7 branches. Tap a pin for details.",
+   "note_title": "A quick note before your visit",
+   "note_text": "Opening hours may change on holidays and event nights. Contact your branch to confirm your visit."
+  },
+  "gallery": {
+   "intro_eyebrow": "Life at BLK & BRWN",
+   "intro_title": "Stay a little",
+   "intro_accent": "longer.",
+   "intro_lead": "A look at our products, branches, and events.",
+   "cta_eyebrow": "Come see it for yourself",
+   "cta_title": "Pull up",
+   "cta_accent": "a chair.",
+   "cta_text": "Reserve a table or find your nearest branch."
+  },
+  "contact": {
+   "intro_eyebrow": "Let’s connect",
+   "intro_title": "We’re happy to",
+   "intro_accent": "hear from you.",
+   "intro_lead": "Questions, orders, or feedback? Send us a message and we will reply within one to two days.",
+   "hello_title": "Say hello",
+   "home_branch": "Capipisa, Tanza, Cavite, Philippines",
+   "hours_text": "Each branch keeps its own hours.",
+   "branch_card_title": "Looking for a branch?",
+   "branch_card_text": "Use the Branch Finder for directions and details on all 7 locations.",
+   "form_note": "Public contact details only — no personal staff information is shown.",
+   "success_message": "Thank you! Your message has been sent."
+  },
+  "reserve": {
+   "intro_eyebrow": "Make a little time",
+   "intro_title": "A table for your",
+   "intro_accent": "next moment.",
+   "intro_lead": "Choose your place, bring your people, and enjoy a little pause. It takes about a minute.",
+   "guidelines_title": "Reservation guidelines",
+   "guidelines": [
+    {
+     "icon": "clock",
+     "text": "Requests are confirmed by the branch within a few hours during business hours."
+    },
+    {
+     "icon": "users",
+     "text": "Walk-ins are always welcome — a reservation just holds your table."
+    },
+    {
+     "icon": "phone",
+     "text": "Groups of 8 or more, please call the branch directly."
+    },
+    {
+     "icon": "hourglass",
+     "text": "Kindly cancel or reschedule at least 2 hours before your slot."
+    }
+   ],
+   "next_title": "What happens next",
+   "steps": [
+    {
+     "title": "You send your request",
+     "text": "Your details reach the café."
+    },
+    {
+     "title": "Staff check availability",
+     "text": "We review your branch, date and group size."
+    },
+    {
+     "title": "You get a confirmation",
+     "text": "By email or phone, with your reference."
+    },
+    {
+     "title": "Enjoy your visit",
+     "text": "Your corner is ready when you arrive."
+    }
+   ],
+   "call_title": "Prefer to call instead?",
+   "call_text": "Every branch has its own details and directions on the Branch Finder.",
+   "submit_note": "Reservations are requests, not automatic confirmations — a staff member will confirm by call, text, or email.",
+   "success_message": "Thank you! Your reservation request was sent. The branch will confirm it soon."
+  },
+  "track": {
+   "intro_eyebrow": "Your next visit",
+   "intro_title": "Your plans,",
+   "intro_accent": "in one place.",
+   "intro_lead": "See where your reservation stands, from request to confirmed table.",
+   "help_eyebrow": "Plans changed?",
+   "help_title": "Let us know early",
+   "help_text": "To move, add guests to, or cancel a reservation, contact the café with your reference and we will update your table."
+  },
+  "privacy": {
+   "intro_eyebrow": "Your information",
+   "intro_title": "A little care for",
+   "intro_accent": "your data.",
+   "intro_lead": "What we ask for when you reserve a table or send an inquiry, and why.",
+   "sections": [
+    {
+     "heading": "Reservation information",
+     "body": "When you send a reservation request we ask for your name, email, mobile number, preferred branch, date, time, number of guests, and an optional note. Inquiries include your name, email and message. Please do not include payment details or other sensitive information in notes."
+    },
+    {
+     "heading": "Why we need it",
+     "body": "These details let café staff review your request, prepare for your visit, and contact you to confirm or reschedule. Branch staff can see their own branch’s reservations; administrators can see reservations across branches. Reports summarize reservation counts and guest numbers, not revenue."
+    },
+    {
+     "heading": "Your reservation status",
+     "body": "Keep your reservation reference safe. Anyone with your reference can see limited booking details on the reservation status page. Confirmations are sent by email or phone by café staff."
+    },
+    {
+     "heading": "Questions and record requests",
+     "body": "To correct or delete your information, contact cafeblkandbrwn@gmail.com."
+    }
+   ]
+  }
+ },
+ "categories": [
+  {
+   "slug": "kape",
+   "label": "Kape Series",
+   "items": [
+    {
+     "name": "BNB Signature Kape",
+     "price": 140,
+     "note": "Add migalo +PHP 35",
+     "badge": "Popular pick",
+     "image": "Kape Series/bnb_signature_kape.jpg",
+     "featured": true,
+     "feature_order": 1
+    },
+    {
+     "name": "Cappuccino",
+     "price": 125,
+     "note": "Add migalo +PHP 35",
+     "badge": "Popular pick",
+     "image": "Kape Series/cappucino.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Caramel Macc Kape",
+     "price": 145,
+     "note": "Add migalo +PHP 35",
+     "badge": null,
+     "image": "Kape Series/caramel_macc_kape.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Dark Mocha",
+     "price": 150,
+     "note": "Add migalo +PHP 35",
+     "badge": "Popular pick",
+     "image": "Kape Series/dark_mocha.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "HP Salted Caramel Macc Kape",
+     "price": 145,
+     "note": "Add migalo +PHP 35",
+     "badge": null,
+     "image": "Kape Series/hp_salted_caramel_macc_kape.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Mocha Kape",
+     "price": 150,
+     "note": "Add migalo +PHP 35",
+     "badge": null,
+     "image": "Kape Series/mocha_kape.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Oreo Coffee",
+     "price": 140,
+     "note": "Add migalo +PHP 35",
+     "badge": null,
+     "image": "Kape Series/oreo_coffee.jpg",
+     "featured": false,
+     "feature_order": 0
+    }
+   ]
+  },
+  {
+   "slug": "chai",
+   "label": "Chai Blend",
+   "items": [
+    {
+     "name": "Blackhole",
+     "price": 110,
+     "note": "Add migalo +PHP 30",
+     "badge": null,
+     "image": "Chai Blend/blackhole.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Choco Brownies",
+     "price": 125,
+     "note": "Add migalo +PHP 30",
+     "badge": null,
+     "image": "Chai Blend/choco_brownies.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Classic Milktea",
+     "price": 115,
+     "note": "Add migalo +PHP 30",
+     "badge": null,
+     "image": "Chai Blend/classic_milktea.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Matcha",
+     "price": 120,
+     "note": "Add migalo +PHP 30",
+     "badge": null,
+     "image": "Chai Blend/matcha.jpg",
+     "featured": true,
+     "feature_order": 3
+    },
+    {
+     "name": "Okinawa",
+     "price": 120,
+     "note": "Add migalo +PHP 30",
+     "badge": "Popular pick",
+     "image": "Chai Blend/okinawa.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Oreo Cookies",
+     "price": 115,
+     "note": "Add migalo +PHP 30",
+     "badge": null,
+     "image": "Chai Blend/oreo_cookies.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Taro",
+     "price": 120,
+     "note": "Add migalo +PHP 30",
+     "badge": "Popular pick",
+     "image": "Chai Blend/taro.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Wintermelon",
+     "price": 120,
+     "note": "Add migalo +PHP 30",
+     "badge": "Popular pick",
+     "image": "Chai Blend/wintermelon.jpg",
+     "featured": false,
+     "feature_order": 0
+    }
+   ]
+  },
+  {
+   "slug": "choco",
+   "label": "Choco Series",
+   "items": [
+    {
+     "name": "Cheesecake",
+     "price": 165,
+     "note": "Add migalo +PHP 45",
+     "badge": "Popular pick",
+     "image": "Choco Series/cheesecake.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Choco Fudge",
+     "price": 170,
+     "note": "Add migalo +PHP 45",
+     "badge": "Popular pick",
+     "image": "Choco Series/choco_fudge.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Matcha Kitkat",
+     "price": 170,
+     "note": "Add migalo +PHP 45",
+     "badge": null,
+     "image": "Choco Series/matcha_kitkat.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Nutella Ferrero",
+     "price": 180,
+     "note": "Add migalo +PHP 45",
+     "badge": null,
+     "image": "Choco Series/nutella_ferrero.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Oreo Vanilla",
+     "price": 160,
+     "note": "Add migalo +PHP 45",
+     "badge": "Popular pick",
+     "image": "Choco Series/oreo_vanilla.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Roasted Almond",
+     "price": 175,
+     "note": "Add migalo +PHP 45",
+     "badge": null,
+     "image": "Choco Series/roasted_almond.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Strawberry Creme",
+     "price": 155,
+     "note": "Add migalo +PHP 45",
+     "badge": null,
+     "image": "Choco Series/strawberry_creme.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Ube Cream Cheese",
+     "price": 160,
+     "note": "Add migalo +PHP 45",
+     "badge": null,
+     "image": "Choco Series/ube_cream_cheese.jpg",
+     "featured": false,
+     "feature_order": 0
+    }
+   ]
+  },
+  {
+   "slug": "iced",
+   "label": "Over-Ice Series",
+   "items": [
+    {
+     "name": "Americano",
+     "price": 100,
+     "note": "Add migalo +PHP 30",
+     "badge": null,
+     "image": "Over - Ice Series/americano.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "BNB Signature",
+     "price": 120,
+     "note": "Add migalo +PHP 30",
+     "badge": "Popular pick",
+     "image": "Over - Ice Series/bnb_signature.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Cafe Latte",
+     "price": 115,
+     "note": "Add migalo +PHP 30",
+     "badge": "Popular pick",
+     "image": "Over - Ice Series/cafe_latte.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Caramel Macc",
+     "price": 120,
+     "note": "Add migalo +PHP 30",
+     "badge": "Popular pick",
+     "image": "Over - Ice Series/caramel_macc.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "HP Salted Caramel",
+     "price": 125,
+     "note": "Add migalo +PHP 30",
+     "badge": null,
+     "image": "Over - Ice Series/hp_salted_caramel.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Irish Coffee",
+     "price": 145,
+     "note": "Add migalo +PHP 30",
+     "badge": null,
+     "image": "Over - Ice Series/irish_coffee.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Matcha Latte",
+     "price": 125,
+     "note": "Add migalo +PHP 30",
+     "badge": null,
+     "image": "Over - Ice Series/matcha_latte.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Mocha",
+     "price": 125,
+     "note": "Add migalo +PHP 30",
+     "badge": null,
+     "image": "Over - Ice Series/mocha.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Roasted Almond Oatmilk Latte",
+     "price": 170,
+     "note": "Add migalo +PHP 30",
+     "badge": null,
+     "image": "Over - Ice Series/roasted_almond_oatmilk_latte.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Spanish Latte",
+     "price": 125,
+     "note": "Add migalo +PHP 30",
+     "badge": null,
+     "image": "Over - Ice Series/spanish_latte.jpg",
+     "featured": true,
+     "feature_order": 2
+    },
+    {
+     "name": "Triple Choco",
+     "price": 145,
+     "note": "Add migalo +PHP 30",
+     "badge": null,
+     "image": "Over - Ice Series/triple_choco.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "White Mocha",
+     "price": 155,
+     "note": "Add migalo +PHP 30",
+     "badge": null,
+     "image": "Over - Ice Series/white_mocha.jpg",
+     "featured": false,
+     "feature_order": 0
+    }
+   ]
+  },
+  {
+   "slug": "juices",
+   "label": "Freskaró Juices",
+   "items": [
+    {
+     "name": "AVC",
+     "price": 100,
+     "note": "Add migalo +PHP 25",
+     "badge": "Popular pick",
+     "image": "Freskaro Juices/avc.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Four Seasons",
+     "price": 95,
+     "note": "Add migalo +PHP 25",
+     "badge": null,
+     "image": "Freskaro Juices/four_seasons.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Healtea",
+     "price": 95,
+     "note": "Add migalo +PHP 25",
+     "badge": null,
+     "image": "Freskaro Juices/healtea.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Lemonade",
+     "price": 95,
+     "note": "Add migalo +PHP 25",
+     "badge": null,
+     "image": "Freskaro Juices/lemonade.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Lychee",
+     "price": 100,
+     "note": "Add migalo +PHP 25",
+     "badge": "Popular pick",
+     "image": "Freskaro Juices/lychee.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Passion Fruit",
+     "price": 100,
+     "note": "Add migalo +PHP 25",
+     "badge": null,
+     "image": "Freskaro Juices/passion_fruit.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Pineapple",
+     "price": 95,
+     "note": "Add migalo +PHP 25",
+     "badge": null,
+     "image": "Freskaro Juices/pineapple.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Trueberries",
+     "price": 110,
+     "note": "Add migalo +PHP 25",
+     "badge": "Popular pick",
+     "image": "Freskaro Juices/trueberries.jpg",
+     "featured": true,
+     "feature_order": 4
+    }
+   ]
+  },
+  {
+   "slug": "hot",
+   "label": "Hot Beverages",
+   "items": [
+    {
+     "name": "Brewed Coffee",
+     "price": 90,
+     "note": null,
+     "badge": null,
+     "image": "Hot Beverages/brewed_coffee.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Coffee Latte",
+     "price": 125,
+     "note": null,
+     "badge": null,
+     "image": "Hot Beverages/coffee_latte.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Espresso",
+     "price": 75,
+     "note": null,
+     "badge": null,
+     "image": "Hot Beverages/espresso.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Hot Americano",
+     "price": 100,
+     "note": null,
+     "badge": null,
+     "image": "Hot Beverages/hot_americano.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Hot BNB Signature",
+     "price": 120,
+     "note": null,
+     "badge": null,
+     "image": "Hot Beverages/hot_bnb_signature.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Hot Cappuccino",
+     "price": 130,
+     "note": null,
+     "badge": null,
+     "image": "Hot Beverages/hot_cappucino.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Hot Caramel Macc",
+     "price": 135,
+     "note": null,
+     "badge": "Popular pick",
+     "image": "Hot Beverages/hot_caramel_macc.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Hot Healtea",
+     "price": 95,
+     "note": null,
+     "badge": null,
+     "image": "Hot Beverages/hot_healtea.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Hot Irish Coffee",
+     "price": 130,
+     "note": null,
+     "badge": "Popular pick",
+     "image": "Hot Beverages/hot_irish_coffee.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Hot Matcha Latte",
+     "price": 130,
+     "note": null,
+     "badge": null,
+     "image": "Hot Beverages/hot_matcha_latte.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Hot Roasted Almond",
+     "price": 90,
+     "note": null,
+     "badge": null,
+     "image": "Hot Beverages/hot_roasted_almond.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Hot Triple Choco",
+     "price": 135,
+     "note": null,
+     "badge": null,
+     "image": "Hot Beverages/hot_triple_choco.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Mocha Latte",
+     "price": 135,
+     "note": null,
+     "badge": "Popular pick",
+     "image": "Hot Beverages/mocha_latte.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Tea",
+     "price": 90,
+     "note": null,
+     "badge": null,
+     "image": "Hot Beverages/tea.jpg",
+     "featured": false,
+     "feature_order": 0
+    }
+   ]
+  },
+  {
+   "slug": "food",
+   "label": "Food & Snacks",
+   "items": [
+    {
+     "name": "Aglio e Olio Tuyo",
+     "price": 165,
+     "note": null,
+     "badge": null,
+     "image": "Food & Snacks/aglio_e_olio_tuyo.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Bacon and Pancakes",
+     "price": 175,
+     "note": null,
+     "badge": null,
+     "image": "Food & Snacks/bacon_and_pancakes.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Baked Penne",
+     "price": 170,
+     "note": null,
+     "badge": null,
+     "image": "Food & Snacks/baked_penne.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "BNB Toast",
+     "price": 135,
+     "note": null,
+     "badge": null,
+     "image": "Food & Snacks/bnb_toast.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Chicken Alfredo",
+     "price": 170,
+     "note": null,
+     "badge": null,
+     "image": "Food & Snacks/chicken_alfredo.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Chicken Fajita Roll",
+     "price": 175,
+     "note": null,
+     "badge": null,
+     "image": "Food & Snacks/chicken_fajita_roll.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Chicken Nuggets",
+     "price": 165,
+     "note": null,
+     "badge": null,
+     "image": "Food & Snacks/chicken_nuggets.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Chicken Popcorn",
+     "price": 185,
+     "note": null,
+     "badge": null,
+     "image": "Food & Snacks/chicken_popcorn.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Chicken Salad",
+     "price": 105,
+     "note": null,
+     "badge": null,
+     "image": "Food & Snacks/chicken_salad.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Creamy Pesto",
+     "price": 165,
+     "note": null,
+     "badge": null,
+     "image": "Food & Snacks/creamy_pesto.jpg",
+     "featured": true,
+     "feature_order": 5
+    },
+    {
+     "name": "Gochujang Pork",
+     "price": 185,
+     "note": null,
+     "badge": null,
+     "image": "Food & Snacks/gochujang_pork.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Ham n Cheese",
+     "price": 115,
+     "note": null,
+     "badge": null,
+     "image": "Food & Snacks/ham_n_cheese.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Hash and Egg",
+     "price": 145,
+     "note": null,
+     "badge": null,
+     "image": "Food & Snacks/hash_and_egg.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Korean Bulgogi",
+     "price": 185,
+     "note": null,
+     "badge": null,
+     "image": "Food & Snacks/korean_bulgogi.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Mandarin Orange",
+     "price": 185,
+     "note": null,
+     "badge": null,
+     "image": "Food & Snacks/mandarin_orange.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Meatballs",
+     "price": 165,
+     "note": null,
+     "badge": null,
+     "image": "Food & Snacks/meatballs.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Meatballs and Rice",
+     "price": 185,
+     "note": null,
+     "badge": null,
+     "image": "Food & Snacks/meatballs_and_rice.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Nachos",
+     "price": 145,
+     "note": null,
+     "badge": null,
+     "image": "Food & Snacks/nachos.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Potato Fries",
+     "price": 95,
+     "note": "Share size PHP 145",
+     "badge": null,
+     "image": "Food & Snacks/potato_fries.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Quesadilla",
+     "price": 165,
+     "note": null,
+     "badge": null,
+     "image": "Food & Snacks/quesadilla.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Spaghetti Meatballs",
+     "price": 170,
+     "note": null,
+     "badge": null,
+     "image": "Food & Snacks/spaghetti_meatballs.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Spam Musubi",
+     "price": 220,
+     "note": null,
+     "badge": null,
+     "image": "Food & Snacks/spam_musubi.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Tuna Chives",
+     "price": 105,
+     "note": "Add egg +PHP 25",
+     "badge": null,
+     "image": "Food & Snacks/tuna_chives.jpg",
+     "featured": false,
+     "feature_order": 0
+    },
+    {
+     "name": "Tuna Pasta",
+     "price": 170,
+     "note": null,
+     "badge": null,
+     "image": "Food & Snacks/tuna_pasta.jpg",
+     "featured": false,
+     "feature_order": 0
+    }
+   ]
+  }
+ ],
+ "branches": [
+  {
+   "name": "Capipisa, Tanza – Main Branch",
+   "short_name": "Capipisa, Tanza",
+   "area": "Tanza, Cavite",
+   "region": "Cavite",
+   "description": "Original and main branch of Café BLK & BRWN.",
+   "badge": "The original",
+   "glance": "Daily · 8:00 AM – 10:00 PM",
+   "image": "Branches/capipisa_tanza.jpg",
+   "hours": [
+    {
+     "label": "Daily",
+     "value": "8:00 AM – 10:00 PM"
+    }
+   ],
+   "note": null,
+   "facebook_url": "https://web.facebook.com/cafeblkandbrwn",
+   "directions_url": null,
+   "latitude": 14.3945,
+   "longitude": 120.851
+  },
+  {
+   "name": "Naic Branch",
+   "short_name": "Naic",
+   "area": "Naic, Cavite",
+   "region": "Cavite",
+   "description": "Serves customers within the Naic area.",
+   "badge": null,
+   "glance": "Mon–Thu until 11 PM · Fri–Sun until 12 AM",
+   "image": "Branches/naic.jpg",
+   "hours": [
+    {
+     "label": "Mon–Thu",
+     "value": "11:00 AM – 11:00 PM"
+    },
+    {
+     "label": "Fri–Sun",
+     "value": "11:00 AM – 12:00 AM"
+    }
+   ],
+   "note": null,
+   "facebook_url": "https://web.facebook.com/profile.php?id=61578167730025",
+   "directions_url": null,
+   "latitude": 14.3188,
+   "longitude": 120.766
+  },
+  {
+   "name": "General Trias Branch",
+   "short_name": "General Trias",
+   "area": "General Trias, Cavite",
+   "region": "Cavite",
+   "description": "Expands the café’s presence within Cavite.",
+   "badge": null,
+   "glance": "Mon–Thu until 11 PM · Fri–Sun until 12 AM",
+   "image": "Branches/general_trias.jpg",
+   "hours": [
+    {
+     "label": "Mon–Thu",
+     "value": "11:00 AM – 11:00 PM"
+    },
+    {
+     "label": "Fri–Sun",
+     "value": "11:00 AM – 12:00 AM"
+    }
+   ],
+   "note": null,
+   "facebook_url": "https://web.facebook.com/profile.php?id=61564802605947",
+   "directions_url": null,
+   "latitude": 14.3869,
+   "longitude": 120.8814
+  },
+  {
+   "name": "Kawit Branch",
+   "short_name": "Kawit",
+   "area": "Kawit, Cavite",
+   "region": "Cavite",
+   "description": "Another accessible location for Cavite customers.",
+   "badge": "Event nights",
+   "glance": "Select event nights · cocktails 6 PM, live DJ 8 PM",
+   "image": "Branches/kawit.jpg",
+   "hours": [
+    {
+     "label": "Regular hours",
+     "value": "Contact the branch"
+    },
+    {
+     "label": "Select event nights",
+     "value": "Cocktails from 6:00 PM · live DJ from 8:00 PM"
+    }
+   ],
+   "note": "Event-night times are not regular opening or closing hours. Please confirm the evening’s schedule with the branch.",
+   "facebook_url": "https://web.facebook.com/profile.php?id=61578072724691",
+   "directions_url": null,
+   "latitude": 14.4436,
+   "longitude": 120.9061
+  },
+  {
+   "name": "Trece Martires Branch",
+   "short_name": "Trece Martires",
+   "area": "Trece Martires City, Cavite",
+   "region": "Cavite",
+   "description": "Extends the brand toward the Tanza–Trece Martires area.",
+   "badge": null,
+   "glance": "Mon–Thu until 11 PM · Fri–Sun until 12 AM",
+   "image": "Branches/trece_martires.jpg",
+   "hours": [
+    {
+     "label": "Mon–Thu",
+     "value": "11:00 AM – 11:00 PM"
+    },
+    {
+     "label": "Fri–Sun",
+     "value": "11:00 AM – 12:00 AM"
+    }
+   ],
+   "note": null,
+   "facebook_url": "https://web.facebook.com/profile.php?id=61577944301164",
+   "directions_url": null,
+   "latitude": 14.2822,
+   "longitude": 120.8669
+  },
+  {
+   "name": "SM City Tanza Branch",
+   "short_name": "SM City Tanza",
+   "area": "SM City Tanza, Cavite",
+   "region": "Cavite",
+   "description": "Mall-based location serving customers within the area.",
+   "badge": null,
+   "glance": "Daily · 10:00 AM – 9:00 PM",
+   "image": "Branches/sm_city_tanza.jpg",
+   "hours": [
+    {
+     "label": "Daily",
+     "value": "10:00 AM – 9:00 PM"
+    }
+   ],
+   "note": null,
+   "facebook_url": "https://web.facebook.com/cafeblkandbrwn",
+   "directions_url": null,
+   "latitude": 14.356,
+   "longitude": 120.859
+  },
+  {
+   "name": "Festival Mall Alabang Branch",
+   "short_name": "Festival Mall, Alabang",
+   "area": "Festival Mall, Alabang, Metro Manila",
+   "region": "Metro Manila",
+   "description": "Mall-based location extending the brand into Metro Manila.",
+   "badge": null,
+   "glance": "Check current mall hours with the branch",
+   "image": "Branches/festival_mall_alabang.jpg",
+   "hours": [
+    {
+     "label": "Daily",
+     "value": "Contact the branch"
+    }
+   ],
+   "note": "Please check with the branch for current mall hours.",
+   "facebook_url": "https://web.facebook.com/cafeblkandbrwn",
+   "directions_url": null,
+   "latitude": 14.417,
+   "longitude": 121.0395
+  }
+ ],
+ "gallery": [
+  {
+   "category": "moments",
+   "caption": "Café moment 1",
+   "alt": "Café BLK & BRWN gallery photo 1",
+   "image": "Gallery/gallery1.jpg",
+   "featured": true
+  },
+  {
+   "category": "moments",
+   "caption": "Café moment 2",
+   "alt": "Café BLK & BRWN gallery photo 2",
+   "image": "Gallery/gallery2.jpg",
+   "featured": true
+  },
+  {
+   "category": "moments",
+   "caption": "Café moment 3",
+   "alt": "Café BLK & BRWN gallery photo 3",
+   "image": "Gallery/gallery3.jpg",
+   "featured": true
+  },
+  {
+   "category": "moments",
+   "caption": "Café moment 4",
+   "alt": "Café BLK & BRWN gallery photo 4",
+   "image": "Gallery/gallery4.jpg",
+   "featured": true
+  },
+  {
+   "category": "moments",
+   "caption": "Café moment 5",
+   "alt": "Café BLK & BRWN gallery photo 5",
+   "image": "Gallery/gallery5.jpg",
+   "featured": true
+  },
+  {
+   "category": "moments",
+   "caption": "Café moment 6",
+   "alt": "Café BLK & BRWN gallery photo 6",
+   "image": "Gallery/gallery6.jpg",
+   "featured": true
+  },
+  {
+   "category": "moments",
+   "caption": "Café moment 7",
+   "alt": "Café BLK & BRWN gallery photo 7",
+   "image": "Gallery/gallery7.jpg",
+   "featured": true
+  },
+  {
+   "category": "moments",
+   "caption": "Café moment 8",
+   "alt": "Café BLK & BRWN gallery photo 8",
+   "image": "Gallery/gallery8.jpg",
+   "featured": true
+  },
+  {
+   "category": "branches",
+   "caption": "Our Capipisa, Tanza main branch",
+   "alt": "Café BLK & BRWN Capipisa, Tanza main branch",
+   "image": "Branches/capipisa_tanza.jpg",
+   "featured": false
+  },
+  {
+   "category": "branches",
+   "caption": "Our Naic branch",
+   "alt": "Café BLK & BRWN Naic branch",
+   "image": "Branches/naic.jpg",
+   "featured": false
+  },
+  {
+   "category": "branches",
+   "caption": "Our General Trias branch",
+   "alt": "Café BLK & BRWN General Trias branch",
+   "image": "Branches/general_trias.jpg",
+   "featured": false
+  },
+  {
+   "category": "branches",
+   "caption": "Our Kawit branch",
+   "alt": "Café BLK & BRWN Kawit branch",
+   "image": "Branches/kawit.jpg",
+   "featured": false
+  },
+  {
+   "category": "branches",
+   "caption": "Our Trece Martires branch",
+   "alt": "Café BLK & BRWN Trece Martires branch",
+   "image": "Branches/trece_martires.jpg",
+   "featured": false
+  },
+  {
+   "category": "branches",
+   "caption": "Our SM City Tanza branch",
+   "alt": "Café BLK & BRWN SM City Tanza branch",
+   "image": "Branches/sm_city_tanza.jpg",
+   "featured": false
+  },
+  {
+   "category": "branches",
+   "caption": "Our Festival Mall Alabang branch",
+   "alt": "Café BLK & BRWN Festival Mall Alabang branch",
+   "image": "Branches/festival_mall_alabang.jpg",
+   "featured": false
+  },
+  {
+   "category": "drinks",
+   "caption": "Lychee Freskaró juice",
+   "alt": "Lychee Freskaró juice",
+   "image": "Freskaro Juices/lychee.jpg",
+   "featured": false
+  },
+  {
+   "category": "drinks",
+   "caption": "Oreo coffee, Kape Series",
+   "alt": "Oreo coffee, Kape Series",
+   "image": "Kape Series/oreo_coffee.jpg",
+   "featured": false
+  },
+  {
+   "category": "drinks",
+   "caption": "Iced Spanish latte",
+   "alt": "Iced Spanish latte",
+   "image": "Over - Ice Series/spanish_latte.jpg",
+   "featured": false
+  },
+  {
+   "category": "drinks",
+   "caption": "Taro chai blend",
+   "alt": "Taro chai blend",
+   "image": "Chai Blend/taro.jpg",
+   "featured": false
+  },
+  {
+   "category": "food",
+   "caption": "Baked penne pasta",
+   "alt": "Baked penne pasta",
+   "image": "Food & Snacks/baked_penne.jpg",
+   "featured": false
+  },
+  {
+   "category": "food",
+   "caption": "Quesadilla from our kitchen",
+   "alt": "Quesadilla from our kitchen",
+   "image": "Food & Snacks/quesadilla.jpg",
+   "featured": false
+  },
+  {
+   "category": "food",
+   "caption": "Nachos to share",
+   "alt": "Nachos to share",
+   "image": "Food & Snacks/nachos.jpg",
+   "featured": false
+  },
+  {
+   "category": "food",
+   "caption": "Chicken alfredo pasta",
+   "alt": "Chicken alfredo pasta",
+   "image": "Food & Snacks/chicken_alfredo.jpg",
+   "featured": false
+  }
+ ]
+}

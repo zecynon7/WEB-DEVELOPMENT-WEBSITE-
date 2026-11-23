@@ -1,0 +1,5 @@
+/* Logo + name on the loading screens (loaded together with BrandMark.jsx). The spinner itself is in motion.css. */
+.loader__logo { position: relative; width: 54%; aspect-ratio: 1; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 1px rgba(226, 195, 163, 0.35), 0 12px 40px rgba(0, 0, 0, 0.55); animation: ld-float 3.2s ease-in-out infinite; }
+@keyframes ld-float { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+/* a little bigger than the old intro text; the extra specificity beats motion.css whatever the load order */
+.loader + .preloader__word { min-height: 1rem; font-size: 1rem; }

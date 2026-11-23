@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b0806" />
+    <title></title>
+    <script>
+      // Marks JS as available, plays the intro only on the first visit of a session, and falls back to a
+      // plain page ONLY if the app itself never starts (main.jsx sets window.__bbBooted). Waiting for a
+      // sleeping backend must not trigger this, because the loading screen is supposed to stay up for that.
+      document.documentElement.classList.add("js");
+      try {
+        if (location.pathname === "/" && !sessionStorage.getItem("bb-pre")) document.documentElement.classList.add("is-loading");
+      } catch (e) {
+        if (location.pathname === "/") document.documentElement.classList.add("is-loading");
+      }
+      setTimeout(function () {
+        if (!window.__bbBooted && !document.documentElement.classList.contains("motion-ready")) {
+          document.documentElement.classList.add("no-motion");
+          document.documentElement.classList.remove("is-loading");
+        }
+      }, 6000);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

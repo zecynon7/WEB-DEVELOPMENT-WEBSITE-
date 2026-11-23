@@ -1,0 +1,77 @@
+/* FORMS: one visual style for every field ---------------------------------- */
+
+.form-layout { display: grid; grid-template-columns: 1.4fr 0.8fr; gap: var(--space-6); align-items: start; }
+.contact-layout { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: var(--space-6); align-items: start; }
+.form { display: grid; gap: var(--space-6); }
+.form-box { padding: var(--space-6); }
+.fieldset { display: grid; gap: var(--space-4); padding: 0; margin: 0; border: 0; min-width: 0; }
+.fieldset__title { display: flex; align-items: center; gap: var(--space-3); padding: 0; margin-bottom: var(--space-1); font: 600 var(--step-2)/1.2 var(--font-heading); color: var(--white); }
+.fieldset__title .icon-badge { width: 40px; height: 40px; font-size: 1.1rem; }
+.fields { align-items: start; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); }
+.field { display: grid; gap: var(--space-2); }
+.field--full { grid-column: 1 / -1; }
+.field__label { font-size: 0.9375rem; font-weight: 600; color: var(--white); }
+.field__label small { font-weight: 400; color: var(--text-faint); font-size: 0.8125rem; }
+.field__hint { font-size: 0.8125rem; color: var(--text-faint); }
+
+.input, .select, .textarea {
+  width: 100%;
+  min-height: 52px;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: rgba(0, 0, 0, 0.32);
+  color: var(--white);
+  font-size: var(--step-0);
+  transition: border-color 0.25s, background-color 0.25s, box-shadow 0.35s var(--ease-out), transform 0.35s var(--ease-out);
+}
+.input::placeholder, .textarea::placeholder { color: var(--text-faint); }
+.input:hover, .select:hover, .textarea:hover { border-color: rgba(255, 255, 255, 0.45); }
+.input:focus, .select:focus, .textarea:focus { outline: none; border-color: var(--latte); background: rgba(0, 0, 0, 0.45); box-shadow: 0 0 0 4px rgba(226, 195, 163, 0.22); transform: translateY(-2px); }
+.textarea { min-height: 120px; resize: vertical; }
+.select { appearance: none; -webkit-appearance: none; padding-right: 2.75rem; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e2c3a3' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; background-size: 18px; }
+.select option { color: #000; }
+.input[type="date"], .input[type="time"] { color-scheme: dark; }
+.input.is-invalid, .textarea.is-invalid { border-color: #ffb3a1; box-shadow: 0 0 0 4px rgba(255, 140, 120, 0.2); animation: shake 0.45s; }
+@keyframes shake { 20%, 60% { translate: -6px 0; } 40%, 80% { translate: 6px 0; } }
+
+.search { background-image: none; padding-left: 1.25rem; border-radius: var(--radius-pill); }
+
+/* Phone field: country prefix + number as one control */
+.input-group { display: flex; border: 1px solid var(--line-strong); border-radius: var(--radius-sm); background: rgba(0, 0, 0, 0.32); transition: border-color 0.2s, box-shadow 0.2s; }
+.input-group:focus-within { border-color: var(--latte); box-shadow: 0 0 0 4px rgba(226, 195, 163, 0.22); }
+.input-group__prefix { display: inline-flex; align-items: center; gap: var(--space-2); padding: 0 var(--space-4); border-right: 1px solid var(--line-strong); font-weight: 600; white-space: nowrap; color: var(--latte); }
+.input-group .input { border: 0; background: transparent; box-shadow: none; transform: none; }
+
+.form-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4) var(--space-5); padding-top: var(--space-5); border-top: 1px solid var(--line); }
+.form-actions p { font-size: 0.875rem; max-width: 36ch; }
+
+.aside-list > li { display: flex; gap: var(--space-3); padding-block: var(--space-3); }
+.aside-list > li + li { border-top: 1px solid var(--line); }
+.aside-list .icon { margin-top: 3px; color: var(--latte); }
+
+/* Form progress (reservation page): fills as you complete fields */
+.progress { height: 10px; border-radius: var(--radius-pill); background: rgba(255, 255, 255, 0.14); overflow: hidden; }
+.progress__fill { display: block; height: 100%; width: var(--value, 0%); border-radius: inherit; background: var(--caramel-gradient); box-shadow: 0 0 16px rgba(226, 195, 163, 0.6); transition: width 0.7s var(--ease-out); }
+.flow { position: sticky; top: calc(var(--header-h) + var(--space-3)); z-index: 20; padding: var(--space-4) var(--space-5); border-radius: var(--radius-md); background: rgba(20, 13, 9, 0.82); }
+.flow__head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-3); font-weight: 700; }
+.flow__head span:last-child { color: var(--latte); font-size: 0.9375rem; font-variant-numeric: tabular-nums; }
+
+/* Success / error messages */
+.success, .form__status { display: none; }
+.success.is-shown { display: flex; align-items: center; gap: var(--space-4); margin-top: var(--space-5); padding: var(--space-4) var(--space-5); border-radius: var(--radius-md); background: linear-gradient(135deg, rgba(232, 217, 188, 0.28), rgba(194, 165, 120, 0.12)); border: 1px solid rgba(226, 195, 163, 0.5); animation: pop-in 0.7s var(--ease-spring); }
+.success p { color: var(--white); font-weight: 600; }
+.form__status { margin-top: var(--space-4); font-weight: 700; padding: var(--space-3) var(--space-4); border-radius: var(--radius-sm); }
+.form__status.ok, .form__status.bad { display: block; animation: pop-in 0.5s var(--ease-spring); }
+.form__status.ok { background: rgba(232, 217, 188, 0.2); border-left: 3px solid var(--latte); color: var(--white); }
+.form__status.bad { background: rgba(255, 140, 120, 0.14); border-left: 3px solid #ffb3a1; color: #ffd9d1; }
+.error { color: #ffb3a1; font-weight: 600; min-height: 1.4em; font-size: 0.9375rem; }
+@keyframes pop-in { from { opacity: 0; transform: translateY(14px) scale(0.94); } to { opacity: 1; transform: none; } }
+
+/* Animated check mark that draws itself */
+.check-draw { width: 44px; height: 44px; flex: none; }
+.check-draw circle { fill: none; stroke: var(--latte); stroke-width: 3; stroke-dasharray: 1; stroke-dashoffset: 1; }
+.check-draw path { fill: none; stroke: var(--white); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 1; }
+.is-shown .check-draw circle { animation: draw 0.8s var(--ease-out) forwards; }
+.is-shown .check-draw path { animation: draw 0.5s 0.5s var(--ease-out) forwards; }
+@keyframes draw { to { stroke-dashoffset: 0; } }

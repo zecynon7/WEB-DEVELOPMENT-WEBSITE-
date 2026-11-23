@@ -1,0 +1,247 @@
+/* ==========================================================================
+   BASE: fonts, design tokens, reset, living background, typography
+   Fonts are self-hosted in assets/fonts (DM Sans for text, Playfair Display
+   for headings) so the site looks the same offline.
+   ========================================================================== */
+
+@font-face { font-family: "DM Sans"; font-weight: 400; font-style: normal; font-display: swap; src: url("/fonts/DMSans-Regular.ttf") format("truetype"); }
+@font-face { font-family: "DM Sans"; font-weight: 500; font-style: normal; font-display: swap; src: url("/fonts/DMSans-Medium.ttf") format("truetype"); }
+@font-face { font-family: "DM Sans"; font-weight: 600; font-style: normal; font-display: swap; src: url("/fonts/DMSans-SemiBold.ttf") format("truetype"); }
+@font-face { font-family: "DM Sans"; font-weight: 700; font-style: normal; font-display: swap; src: url("/fonts/DMSans-Bold.ttf") format("truetype"); }
+@font-face { font-family: "Playfair Display"; font-weight: 500; font-style: normal; font-display: swap; src: url("/fonts/PlayfairDisplay-Medium.ttf") format("truetype"); }
+@font-face { font-family: "Playfair Display"; font-weight: 600; font-style: normal; font-display: swap; src: url("/fonts/PlayfairDisplay-SemiBold.ttf") format("truetype"); }
+@font-face { font-family: "Playfair Display"; font-weight: 700; font-style: normal; font-display: swap; src: url("/fonts/PlayfairDisplay-Bold.ttf") format("truetype"); }
+@font-face { font-family: "Playfair Display"; font-weight: 500; font-style: italic; font-display: swap; src: url("/fonts/PlayfairDisplay-MediumItalic.ttf") format("truetype"); }
+@font-face { font-family: "Playfair Display"; font-weight: 600; font-style: italic; font-display: swap; src: url("/fonts/PlayfairDisplay-SemiBoldItalic.ttf") format("truetype"); }
+
+:root {
+  /* Colour: black, brown and white, lifted by a light khaki family */
+  --black:       #0b0806;
+  --espresso:    #170f09;
+  --brown-900:   #261710;
+  --brown-700:   #4a2f1d;
+  --brown-500:   #7a4e2d;
+  --caramel:     #b9824f;
+  --latte:       #e2c3a3;
+  --white:       #ffffff;
+
+  --khaki-100:   #f4ecdc;
+  --khaki-200:   #e8d9bc;
+  --khaki-300:   #d6bf96;
+  --khaki-400:   #c2a578;
+  --khaki-600:   #8c6b45;
+
+  --text:        rgba(255, 255, 255, 0.96);
+  --text-muted:  rgba(255, 255, 255, 0.74);
+  --text-faint:  rgba(255, 255, 255, 0.56);
+  --line:        rgba(255, 255, 255, 0.16);
+  --line-strong: rgba(255, 255, 255, 0.28);
+
+  --glass-bg:    linear-gradient(135deg, rgba(244, 236, 220, 0.18), rgba(214, 191, 150, 0.07));
+  --glass-solid: rgba(58, 40, 27, 0.94);
+  --brown-gradient:   linear-gradient(135deg, #7a4e2d 0%, #4a2f1d 55%, #261710 100%);
+  --caramel-gradient: linear-gradient(135deg, #e2c3a3 0%, #b9824f 100%);
+  --cta-gradient:     linear-gradient(135deg, #ffffff 0%, #f1dfcc 100%);
+  --khaki-gradient:   linear-gradient(135deg, #f1e6cf 0%, #d9c29b 55%, #c2a578 100%);
+
+  /* Type */
+  --font-body:    "DM Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --font-heading: "Playfair Display", Georgia, "Times New Roman", serif;
+
+  --step--1: 0.8125rem;
+  --step-0:  1rem;
+  --step-1:  1.25rem;
+  --step-2:  1.5625rem;
+  --step-3:  clamp(1.75rem, 1.4rem + 1.2vw, 2.1875rem);
+  --step-4:  clamp(2.125rem, 1.6rem + 2vw, 3.0625rem);
+  --step-5:  clamp(2.75rem, 1.9rem + 4vw, 4.75rem);
+  --step-6:  clamp(3.5rem, 2rem + 7vw, 7rem);
+
+  /* Spacing: 8-point scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 7rem;
+
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+
+  --container: 1200px;
+  --gutter: max(clamp(1rem, 4vw, 2.5rem), env(safe-area-inset-left), env(safe-area-inset-right));
+  --header-h: 84px;
+  --tap: 44px;
+
+  --shadow-glass: 0 24px 60px rgba(0, 0, 0, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  --shadow-cta:   0 10px 30px rgba(226, 195, 163, 0.28);
+
+  /* Motion */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-io:     cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Reset ------------------------------------------------------------------ */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + var(--space-5));
+  -webkit-text-size-adjust: 100%;
+  background: #1a110b;
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font: 400 var(--step-0)/1.65 var(--font-body);
+  color: var(--text);
+  background: #2a1b12;
+  overflow-x: hidden;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+h1, h2, h3, h4, p, dl, dd, figure, blockquote { margin: 0; }
+address { font-style: normal; }
+button, input, select, textarea { font: inherit; color: inherit; }
+table { border-collapse: collapse; width: 100%; }
+svg { display: block; }
+
+/* Living background ------------------------------------------------------
+   Layer 1 (body::before): a warm gradient field the glass can blur.
+   Layer 2 (.ambient): three soft light blobs that drift slowly, so the page
+   is never a flat dark brown.
+   Layer 3 (.grain): fine film grain that shifts a few times a second. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(55% 45% at 90% 2%,  rgba(214, 191, 150, 0.42), transparent 70%),
+    radial-gradient(50% 42% at 2% 40%,  rgba(194, 165, 120, 0.30), transparent 70%),
+    radial-gradient(60% 50% at 96% 96%, rgba(140, 107, 69, 0.55),  transparent 70%),
+    linear-gradient(180deg, #1f140d 0%, #36251a 50%, #241810 100%);
+}
+
+.ambient { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.ambient i {
+  position: absolute;
+  display: block;
+  width: 70vmax;
+  height: 70vmax;
+  border-radius: 50%;
+  will-change: transform;
+  background: radial-gradient(circle at 50% 50%, var(--c, rgba(214, 191, 150, 0.30)) 0%, transparent 62%);
+}
+.ambient i:nth-child(1) { --c: rgba(226, 195, 163, 0.32); top: -30vmax; left: -20vmax; animation: drift-a 26s ease-in-out infinite alternate; }
+.ambient i:nth-child(2) { --c: rgba(185, 130, 79, 0.30);  top: 30vh;   right: -30vmax; animation: drift-b 32s ease-in-out infinite alternate; }
+.ambient i:nth-child(3) { --c: rgba(140, 107, 69, 0.38);  bottom: -35vmax; left: 10vw; animation: drift-c 38s ease-in-out infinite alternate; }
+
+@keyframes drift-a { from { transform: translate3d(0, 0, 0) scale(1); }    to { transform: translate3d(22vw, 16vh, 0) scale(1.18); } }
+@keyframes drift-b { from { transform: translate3d(0, 0, 0) scale(1.1); }  to { transform: translate3d(-24vw, -14vh, 0) scale(0.9); } }
+@keyframes drift-c { from { transform: translate3d(0, 0, 0) scale(0.95); } to { transform: translate3d(18vw, -20vh, 0) scale(1.2); } }
+
+.grain {
+  position: fixed;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  z-index: 95;
+  pointer-events: none;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 0.9s steps(1) infinite;
+}
+@keyframes grain {
+  0%   { transform: translate(0, 0); }
+  20%  { transform: translate(-6%, 4%); }
+  40%  { transform: translate(5%, -7%); }
+  60%  { transform: translate(-4%, -3%); }
+  80%  { transform: translate(7%, 6%); }
+}
+
+/* Typography --------------------------------------------------------------- */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  text-wrap: balance;
+}
+h1 { font-size: var(--step-5); letter-spacing: -0.03em; }
+h2 { font-size: var(--step-4); }
+h3 { font-size: var(--step-1); letter-spacing: -0.01em; }
+h4 { font-size: var(--step-0); font-family: var(--font-body); font-weight: 700; letter-spacing: 0; }
+
+p { color: var(--text-muted); max-width: 62ch; }
+.lead { font-size: var(--step-1); line-height: 1.55; color: var(--text); }
+.muted { color: var(--text-muted); }
+.small { font-size: var(--step--1); }
+.center { text-align: center; }
+.center p { margin-inline: auto; }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--step--1);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--latte);
+}
+
+/* Accent: italic brown-to-latte gradient on the one word that matters */
+.accent {
+  font-style: italic;
+  font-weight: 500;
+  background: var(--caramel-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding: 0.06em 0.14em 0.18em 0.08em;
+  margin: -0.06em -0.14em -0.18em -0.08em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* Accessibility ------------------------------------------------------------ */
+.skip-link { position: absolute; left: var(--space-4); top: -100px; z-index: 300; padding: var(--space-3) var(--space-4); border-radius: var(--radius-sm); background: var(--white); color: var(--black); font-weight: 700; }
+.skip-link:focus { top: var(--space-3); }
+:focus-visible { outline: 3px solid var(--white); outline-offset: 3px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.hidden { display: none !important; }
+
+::selection { background: var(--latte); color: var(--black); }
+
+/* Scrollbar */
+html { scrollbar-width: thin; scrollbar-color: var(--brown-500) #1a110b; }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #1a110b; }
+::-webkit-scrollbar-thumb { background: var(--brown-500); border-radius: 10px; border: 2px solid #1a110b; }
+
+/* Icons: inline SVG sprite (see js/icons.js) */
+.icon {
+  display: inline-block;
+  flex: none;
+  width: 1.25em;
+  height: 1.25em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.icon--lg { width: 1.75em; height: 1.75em; }

@@ -1,0 +1,130 @@
+/* BUTTONS, TABS AND LINKS ---------------------------------------------------
+   One primary action per view: white gradient, dark text, soft glow, and a
+   light sweep that crosses it every few seconds. Secondary is glass. */
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--tap);
+  padding: 0.75rem 1.5rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  font-size: var(--step-0);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.35s var(--ease-spring), box-shadow 0.3s ease, background-color 0.25s ease;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(0.97); }
+.btn .icon { transition: transform 0.4s var(--ease-spring); }
+.btn:hover .icon-arrow, .btn:hover .icon--arrow { transform: translateX(5px); }
+
+.btn--primary { background: var(--cta-gradient); color: var(--black); box-shadow: var(--shadow-cta); }
+.btn--primary:hover { box-shadow: 0 14px 38px rgba(226, 195, 163, 0.45); }
+.btn--primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(105deg, transparent 35%, rgba(185, 130, 79, 0.45) 50%, transparent 65%);
+  transform: translateX(-120%);
+  animation: sheen 5s ease-in-out 1.5s infinite;
+}
+@keyframes sheen { 0%, 62% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
+
+.btn--secondary {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--line-strong);
+  color: var(--white);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.btn--secondary:hover { background: rgba(255, 255, 255, 0.16); }
+
+.btn--sm { min-height: 40px; padding: 0.5rem 1.1rem; font-size: 0.9375rem; }
+.btn--lg { min-height: 56px; padding: 1rem 2rem; font-size: var(--step-1); }
+.btn--block { width: 100%; }
+.btn--icon { width: 40px; padding-inline: 0; }
+
+.text-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--tap);
+  font-weight: 600;
+  color: var(--latte);
+}
+.text-link::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 8px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s var(--ease-out);
+}
+.text-link:hover { color: var(--white); }
+.text-link:hover::after { transform: scaleX(1); transform-origin: left; }
+.text-link .icon { transition: transform 0.4s var(--ease-spring); }
+.text-link:hover .icon { transform: translateX(5px); }
+
+/* Filter tabs with a gliding highlight (js/menu.js, js/branches.js, js/gallery.js) */
+.tabs {
+  position: relative;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  padding: var(--space-2);
+  margin: var(--space-5) 0 var(--space-6);
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line);
+  background: rgba(20, 13, 9, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.tab {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 var(--space-4);
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.tab:hover { color: var(--white); }
+.tab.on { color: var(--black); }
+.tabs__glide {
+  position: absolute;
+  z-index: 0;
+  top: var(--space-2);
+  left: 0;
+  height: 40px;
+  width: var(--gw, 0px);
+  border-radius: var(--radius-pill);
+  background: var(--cta-gradient);
+  box-shadow: 0 6px 20px rgba(226, 195, 163, 0.35);
+  transform: translate3d(var(--gx, 0px), var(--gy, 0px), 0);
+  transition: transform 0.55s var(--ease-out), width 0.55s var(--ease-out);
+  pointer-events: none;
+}
+/* tabs without JS still show which one is active */
+html:not(.js) .tab.on { background: var(--cta-gradient); }
+
+.link-button { background: none; border: 0; color: var(--latte); font-weight: 700; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; padding: 10px 4px; }
+.link-button:hover { color: var(--white); }
