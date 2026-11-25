@@ -10,10 +10,11 @@
       // plain page ONLY if the app itself never starts (main.jsx sets window.__bbBooted). Waiting for a
       // sleeping backend must not trigger this, because the loading screen is supposed to stay up for that.
       document.documentElement.classList.add("js");
+      var home = "%BASE_URL%";
       try {
-        if (location.pathname === "/" && !sessionStorage.getItem("bb-pre")) document.documentElement.classList.add("is-loading");
+        if (location.pathname === home && !sessionStorage.getItem("bb-pre")) document.documentElement.classList.add("is-loading");
       } catch (e) {
-        if (location.pathname === "/") document.documentElement.classList.add("is-loading");
+        if (location.pathname === home) document.documentElement.classList.add("is-loading");
       }
       setTimeout(function () {
         if (!window.__bbBooted && !document.documentElement.classList.contains("motion-ready")) {

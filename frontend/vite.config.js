@@ -3,7 +3,10 @@ import { defineConfig } from "vite";
 
 // In development the React app talks to the backend through this proxy (no CORS setup needed).
 // In production the frontend and backend are hosted separately: set VITE_API_BASE_URL (see .env.example).
+// GitHub Pages serves a project site from /<repo-name>/, so the deploy workflow sets VITE_BASE to that path.
+// Leave it unset (base "/") for local development, Vercel/Netlify, or a custom domain.
 export default defineConfig({
+  base: process.env.VITE_BASE || "/",
   plugins: [react()],
   server: {
     port: 5173,

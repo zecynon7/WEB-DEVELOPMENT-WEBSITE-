@@ -73,7 +73,7 @@ export default function Shell() {
             {link("/account", "Password")}
           </nav>
           <div className="adm-side__foot">
-            <a className="btn btn--secondary btn--sm" href="/" target="_blank" rel="noopener noreferrer">
+            <a className="btn btn--secondary btn--sm" href={import.meta.env.BASE_URL} target="_blank" rel="noopener noreferrer">
               View website ↗
             </a>
             <button className="btn btn--sm adm-btn-ghost" onClick={logout}>
