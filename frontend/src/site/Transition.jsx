@@ -1,5 +1,5 @@
 import { createContext, useCallback, useContext, useRef } from "react";
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import { reduceMotion, setReady } from "../motion/engine";
 
 const Ctx = createContext({ go: () => {}, curtain: { current: null } });
@@ -40,20 +40,24 @@ export function TransitionProvider({ children }) {
 export const useTransition = () => useContext(Ctx);
 
 /** Internal link: sweeps the curtain, then changes route. Ctrl/Cmd/middle-click still open a new tab. */
+// the app may be served from a sub-path (GitHub Pages), so real hrefs need the base in front
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, "");
+
 export function SiteLink({ to, children, className, onClick, ...rest }) {
+  const location = useLocation();
   const { go } = useTransition();
   const handle = (e) => {
     onClick?.(e);
     if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     e.preventDefault();
-    if (to === window.location.pathname) {
+    if (to === location.pathname) {
       window.scrollTo({ top: 0, behavior: "smooth" });
       return;
     }
     go(to);
   };
   return (
-    <a href={to} className={className} onClick={handle} {...rest}>
+    <a href={BASE + to} className={className} onClick={handle} {...rest}>
       {children}
     </a>
   );

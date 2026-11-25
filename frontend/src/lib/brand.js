@@ -6,7 +6,7 @@
  *   2. the built-in defaults below (the logo file is frontend/public/logo.jpg)
  */
 const KEY = "bb_brand";
-export const DEFAULT_BRAND = { name: "BLK & BRWN", logo: "/logo.jpg" };
+export const DEFAULT_BRAND = { name: "BLK & BRWN", logo: import.meta.env.BASE_URL + "logo.jpg" };
 
 export function readBrand() {
   try {
