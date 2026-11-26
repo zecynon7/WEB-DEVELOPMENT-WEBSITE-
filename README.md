@@ -8,7 +8,6 @@ Submitted by:
   Magtangob, Jiano Freo
   Nucos, Ericka R.
 
-Course & Section: BSIS 3A
 
 Open `index.html` in a browser. No installs needed.
 ## Project Overview
